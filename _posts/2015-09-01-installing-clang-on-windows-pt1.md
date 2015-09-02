@@ -6,11 +6,10 @@ published: true
 
 <div class="message">
 **Installing clang++ on windows so it just works**
-
-- Part 1 - The Goal
-- Part 2 - Approach 1
-- Part 3 - Approach 2
-
+<br>
+- Part 1 - The Goal<br>
+- Part 2 - Approach 1<br>
+- Part 3 - Approach<br>
 </div>
 
 
