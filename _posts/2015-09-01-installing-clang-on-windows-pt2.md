@@ -13,13 +13,13 @@ published: true
   </thead>
   <tbody>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 1 : The Goal</a></td>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt1/>Part 1 : The Goal</a></td>
     </tr>
     <tr>
       <td></em>Part 2 : Approach 1 - Clang 3.7<em></td>
     </tr>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 : Approach 2 - MSYS2</3></td>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 : Approach 2 - MSYS2</a></td>
     </tr>
     <tr>
       <td>Part 4 : Wrapping Up (Coming Soon)</td>
