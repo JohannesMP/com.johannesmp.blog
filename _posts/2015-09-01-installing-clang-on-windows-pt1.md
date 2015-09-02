@@ -4,14 +4,26 @@ title: "Installing clang++ on windows so it just works : Part 1"
 published: true
 ---
 
-<div class="message">
-**Installing clang++ on windows so it just works**
-<br>
-- Part 1 - The Goal<br>
-- Part 2 - Approach 1<br>
-- Part 3 - Approach<br>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Installing clang++ on windows so it just works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Part 1 - The Goal</em></td>
+    </tr>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 2 - Approach 1</a></td>
+    </tr>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 3 - Approach 2</3></td>
+    </tr>
+  </tbody>
+</table>
 
+# The Problem
 
 In the past I've struggled getting [clang](clang.llvm.org) to work on windows in as complete a capacity as it does when I'm working on mac or linux.
 
