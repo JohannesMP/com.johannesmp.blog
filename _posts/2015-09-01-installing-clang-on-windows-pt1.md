@@ -16,10 +16,10 @@ comments: true
       <td><em>Part 1 : The Goal</em></td>
     </tr>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 2 : Approach 1 - Clang 3.7</a></td>
+      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt2"/>Part 2 : Approach 1 - Clang 3.7</a></td>
     </tr>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 : Approach 2 - MSYS2</3></td>
+      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt3"/>Part 3 : Approach 2 - MSYS2</3></td>
     </tr>
     <tr>
       <td>Part 4 : Wrapping Up (Coming Soon)</td>
