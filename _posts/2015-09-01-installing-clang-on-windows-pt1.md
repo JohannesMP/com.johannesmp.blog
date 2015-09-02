@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing clang++ on windows so it just works : Part 1"
+title: "Installing clang++ to compile and link on Windows : Part 1"
 published: true
 ---
 
@@ -18,7 +18,7 @@ published: true
       <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 2 - Approach 1</a></td>
     </tr>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 - Approach 2</3></td>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 - Approach 2 (MSYS2)</3></td>
     </tr>
     <tr>
       <td>Part 4 - Wrapping Up (Coming Soon)</td>
@@ -71,7 +71,7 @@ It should also be noted that at this point my focus is less about performance, e
 
 #The Result
 
-In the end I came up with two different approaches, both of which satisfy all of my original goals.
+With some help from [Stack Overflow](http://stackoverflow.com/questions/32239122/what-do-you-need-to-install-to-use-clang-on-windows-to-build-c14-for-64-bit) I came upon two different approaches, both of which satisfy all of my original goals.
 
 
 ## Approach 1
