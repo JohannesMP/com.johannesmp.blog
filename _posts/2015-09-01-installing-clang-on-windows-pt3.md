@@ -27,7 +27,9 @@ published: true
 </table>
 
 
-##Approach 2: Clang and MinGW-w64 via MSYS2
+#Approach 2 - MSYS2
+
+In this approach we'll be installing MSYS2 to create a unix-like dev environment on windows that we will install clang and gcc on. That dev environment will then be interacted with through its bash shell.
 
 1. Download and install MSYS2 64 bit: [Download Link](http://sourceforge.net/projects/msys2/files/Base/x86_64/msys2-x86_64-20150512.exe/download) (you'd basically never need to download the 32 bit version, since the 64 bit version can install 32 bit packages)
 2. After the installer completes and the MSYS2 shell appears (to re-open it, the batch file is located in  `C:\msys64\msys2_shell.bat` ). We Need to update its packages:
