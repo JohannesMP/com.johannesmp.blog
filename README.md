@@ -2,7 +2,7 @@ This is the personal dev blog of Johannes Peter: [blog.johannesmp.com](http://bl
 
 - Hosted by [GitHub Pages](http://pages.github.com)
 - Created with [Jekyll](http://jekyllrb.com)
-- Using the [Poole](http://getpoole.com) theme
+- Using the [Lanyon](http://lanyon.getpoole.com/) theme
 - Edited with [Prose](http://prose.io/)
 
 
