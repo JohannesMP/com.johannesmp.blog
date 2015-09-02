@@ -5,7 +5,27 @@ published: true
 ---
 
 
-#Approach 1: Clang and MinGW-w64 installed alone and run through windows command promt
+<table>
+  <thead>
+    <tr>
+      <th>Installing clang++ on windows so it just works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt1/>Part 1 - The Goal</a></td>
+    </tr>
+    <tr>
+      <td><em>Part 2 - Approach 1</em></td>
+    </tr>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 3 - Approach 2</3></td>
+    </tr>
+  </tbody>
+</table>
+
+
+##Approach 1: Clang and MinGW-w64 installed alone and run through windows command promt
 
 First quickly consider the following:
 
