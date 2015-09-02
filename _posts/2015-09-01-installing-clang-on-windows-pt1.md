@@ -10,7 +10,7 @@ published: true
 - Part 1 - The Goal
 - Part 2 - Approach 1
 - Part 3 - Approach 2
-- 
+
 </div>
 
 
