@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing clang++ on windows so it just works : Part 1"
-published: false
+published: true
 ---
 
 
