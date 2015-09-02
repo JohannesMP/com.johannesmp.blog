@@ -20,6 +20,9 @@ published: true
     <tr>
       <td><em>Part 3 - Approach 2</em></td>
     </tr>
+    <tr>
+      <td>Part 4 - Wrapping Up (Coming Soon)</td>
+    </tr>
   </tbody>
 </table>
 
