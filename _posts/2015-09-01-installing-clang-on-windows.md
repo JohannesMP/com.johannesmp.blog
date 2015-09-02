@@ -46,7 +46,7 @@ It should also be noted that at this point my focus is less about performance, e
 
 #The Result
 
-![]({{site.baseurl}}/http://i.imgur.com/OOZjZd1.gif) - http://i.imgur.com/OOZjZd1.gif
+<img src=http://i.imgur.com/OOZjZd1.gif />
 
 I came up with two separate approaches:
 
