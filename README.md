@@ -1,1 +1,8 @@
-This is the personal dev blog of Johannes Peter, hosted by [GitHub Pages](http://pages.github.com) and created with [Jekyll](http://jekyllrb.com)'s using the [Poole](http://getpoole.com) theme. You can find it at [johannesmp.com](http://www.johannesmp.com).
+This is the personal dev blog of Johannes Peter: [blog.johannesmp.com](http://blog.johannesmp.com).
+
+- Hosted by [GitHub Pages](http://pages.github.com)
+- Created with [Jekyll](http://jekyllrb.com)
+- Using the [Poole](http://getpoole.com) theme
+- Edited with [Prose](http://prose.io/)
+
+
