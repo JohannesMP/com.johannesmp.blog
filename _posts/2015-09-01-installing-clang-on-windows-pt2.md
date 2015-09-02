@@ -28,7 +28,7 @@ published: true
 </table>
 
 
-#Approach 1 - Clang 3.7.0
+#Approach 1 - Clang 3.7
 
 In this approach we'll be installing Clang 3.7.0 and gcc 5.1.0 (via MinGW-w64), to allow us to build and link with clang from the standard windows command prompt.
 
