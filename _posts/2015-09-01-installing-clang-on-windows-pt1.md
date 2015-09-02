@@ -7,7 +7,7 @@ published: true
 <table>
   <thead>
     <tr>
-      <th>Installing clang++ on windows so it just works</th>
+      <th>Installing clang++ to compile and link on Windows</th>
     </tr>
   </thead>
   <tbody>
