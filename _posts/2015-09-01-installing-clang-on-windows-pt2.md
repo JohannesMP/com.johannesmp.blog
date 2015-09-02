@@ -53,7 +53,7 @@ Ok, let's get to the fun part:
     - **IMPORTANT**: because we technically just installed a different version of LLVM, the installer will see the 64 bit version as an 'older version' and will give you this warning:
         <img src="http://i.imgur.com/TcfUY3b.png" />
         You will want to click 'No', so that the 64 bit version doesn't get uninstalled. We want *both* the 32 *and* the 64 bit versions.
-    - You will once again be prompted to add LLVM to the path. This time leave it set to `Do **not** add LLVM to the system PATH`.
+    - You will once again be prompted to add LLVM to the path. This time leave it set to `Do not add LLVM to the system PATH`.
     - Use the default install location: `C:\Program Files (x86)\LLVM`
     - Once the installation completes hit 'Finish' At this point clang++.exe should be located in C:\Program Files (x86)\LLVM\bin, but should **NOT** be in your system path
 3. MinGW-w64 for 64 bit
