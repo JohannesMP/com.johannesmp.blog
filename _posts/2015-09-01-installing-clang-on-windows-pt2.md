@@ -21,6 +21,9 @@ published: true
     <tr>
       <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 - Approach 2</3></td>
     </tr>
+    <tr>
+      <td>Part 4 - Wrapping Up (Coming Soon)</td>
+    </tr>
   </tbody>
 </table>
 
