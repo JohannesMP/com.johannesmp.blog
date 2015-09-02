@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing clang++ on windows so it just works : Part 2"
+title: "Installing clang++ to compile and link on Windows : Part 2"
 published: true
 ---
 
