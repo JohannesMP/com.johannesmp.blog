@@ -54,4 +54,6 @@ I came up with two separate approaches:
 1. The first approach (as seen in the [above gif](http://i.imgur.com/OOZjZd1.gif)) works from the default windows commandline and allows you to switch between 32 and 64 bit compiling batch scripts that modify the path. This approach uses both the 32 and 64 bit builds of [clang 3.7.0 (pre-release)](http://llvm.org/pre-releases/3.7.0/) and [MinGW-W64](http://sourceforge.net/projects/mingw-w64) gcc version 5.1.0 (although 4.9.3 also works).
 2. The second approach uses [MSYS2](https://msys2.github.io/), a unix-like development environment (similar to cygwin) that uses pacman as its package manager. I particularly like its shell which is nicer and, at least with initial testing, has been more reliable than cygwin's terminal. It also installs both the 32 and 64 bit versions which you select by choosing the 32 bit or 64 bit shell.
 
-Note that these two approaches don't conflict with each other so you are welcome to try them both.
+As an added bonus, in both of these approaches you also get the fully working gcc and g++ compilers thrown in for free.
+
+Note that these two approaches don't conflict with each other so you are welcome to try them both, or go with the one you prefer.
