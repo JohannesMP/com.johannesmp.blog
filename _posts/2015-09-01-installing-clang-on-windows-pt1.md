@@ -1,8 +1,7 @@
 ---
-layout: post
-title: Installing clang++ on windows so it just works : Part 1
 published: false
 ---
+
 
 
 In the past I've struggled getting [clang](clang.llvm.org) to work on windows in as complete a capacity as it does when I'm working on mac or linux.
@@ -52,7 +51,13 @@ It should also be noted that at this point my focus is less about performance, e
 I came up with two separate approaches:
 
 1. The first approach (as seen in the [above gif](http://i.imgur.com/OOZjZd1.gif)) works from the default windows commandline and allows you to switch between 32 and 64 bit compiling batch scripts that modify the path. This approach uses both the 32 and 64 bit builds of [clang 3.7.0 (pre-release)](http://llvm.org/pre-releases/3.7.0/) and [MinGW-W64](http://sourceforge.net/projects/mingw-w64) gcc version 5.1.0 (although 4.9.3 also works).
-2. The second approach uses [MSYS2](https://msys2.github.io/), a unix-like development environment (similar to cygwin) that uses pacman as its package manager. I particularly like its shell which is nicer and, at least with initial testing, has been more reliable than cygwin's terminal. It also installs both the 32 and 64 bit versions which you select by choosing the 32 bit or 64 bit shell.
+    - If you are more comfortable using Windows than Linux, and would rather not have to use another command promt, this approach is for you.
+    - **You can read about this approach in Part 2**
+    
+<img src=http://i.imgur.com/b0ijGq1.png />
+2. The second approach uses [MSYS2](https://msys2.github.io/), a unix-like development environment (similar to cygwin) that uses pacman as its package manager ([just like Arch Linux](https://wiki.archlinux.org/index.php/Pacman)). I particularly like its shell which is nicer and, at least with initial testing, has been more reliable than cygwin's terminal. It also installs both the 32 and 64 bit versions which you select by choosing the 32 bit or 64 bit shell.
+    - If you like using bash, having a robust package manager, and a commandline that you can resize on the fly or copy/paste into easily, this approach is for you.
+    - **You can read about this approach in Part 3**
 
 As an added bonus, in both of these approaches you also get the fully working gcc and g++ compilers thrown in for free.
 
