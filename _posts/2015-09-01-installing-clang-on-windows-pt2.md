@@ -62,7 +62,13 @@ Ok, let's get to the fun part:
     - I decided that, 64 bit should be the default, and if you want to use the 32 bit versions you can use batch files to temporarily add the 32 bit locations to the path. For that I created [two batch files](https://gist.github.com/JohannesMP/1e7ed200367460255971), **[setgcc32.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc32.bat)** (which prepends the 32 bit locations to the path) and **[setgcc64.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc64.bat)** (which resets the path to its previous state). Both batch files should be placed in the path, for example in  C:\Utils .
     
 And that's it! At this point, you should have the 32 bit and 64 bit versions of Clang 3.7.0 and MinGW-w64 5.1.0 installed. You can now compile 64 bit windows applications through clang like this:
-    <img src="http://i.imgur.com/mF9Z3Ij.png" />
+  
+  <img src="http://i.imgur.com/ZbQGQgT.png" />
+
+And if you need to compile to 32 bit, just run the batch script, which will temporarily modify your path to prefer the 32 bit versions:
+
+  <img src="http://i.imgur.com/hh0dRO2.png" />
+  
 
 Note: if you see a fatal error that some common library cannot be found when you try to compile, make sure that Only the 64 bit version of LLVM is on the PATH and `C:\mingw64\bin` should be on the path:
     <img src=http://i.imgur.com/UNerbDA.png />
