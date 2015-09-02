@@ -28,7 +28,10 @@ published: true
 </table>
 
 
-##Approach 1: Clang and MinGW-w64 installed alone and run through windows command promt
+#Approach 1 - Clang 3.7.0
+
+In this approach we'll be installing Clang 3.7.0 and gcc 5.1.0 (via MinGW-w64), to allow us to build and link with clang from the standard windows command prompt.
+
 
 First quickly consider the following:
 
