@@ -37,7 +37,7 @@ In this approach we'll be installing Clang 3.7.0 and gcc 5.1.0 (via MinGW-w64), 
 First quickly consider the following:
 
 - If you have an older version of clang installed, please use its uninstaller now. Make sure that **neither** `C:\Program Files\LLVM` and `C:\Program Files (x86)\LLVM` exist on your machine.
-- Since you'll want to be able to check the system PATH more easily than the default windows UI allows, consider grabbing the free *Windows Environment Variable Editor* or "Eveditor": **http://eveditor.com/**
+- Since you'll want to be able to check the system PATH more easily than the default windows UI allows, consider grabbing the free *Windows Environment Variable Editor* or "Eveditor": **[http://eveditor.com/](http://eveditor.com/)**
 - You will also need to be able to open `.7z` archives, so make sure to install **[7zip](http://www.7-zip.org/)** or something similar.
 
 
