@@ -11,19 +11,27 @@ relative_permalinks: true
 
 
 # Setup
-title:              The Dev Blog of Johannes Peter
-tagline:            'Assorted Code snippets and Dev notions'
-description:        'Assorted Code snippets and Dev notions'    
+title:              'Johannes Peter'
+tagline:            'CS Student at DigiPen'
+description:        'Assorted Code snippets and Dev devices'    
 url:                http://blog.johannesmp.com
+baseurl:            '/'
 paginate:           5
-baseurl:            http://blog.johannesmp.com
 
 
 # About/contact
 author:
-  name:              Johannes Peter
-  url:               https://twitter.com/jo_shadow
-  email:             joshadow@gmail.com
+  name:                 Johannes Peter
+  url:                  https://twitter.com/jo_shadow
+  email:                joshadow@gmail.com
+  email_md5:            9fa2131cef896ad0596d4fafc99f09d8
+  github:               JohannesMP
+  twitter:              jo_shadow
+  linkedin:             johannesmp
+  disqus_shortname:     JohannesMP
+  google_analytics_id:  UA-67064476-1
+  google_analytics_url: auto
+
 
 
 # Assets
@@ -41,4 +49,4 @@ github:
 
 
 # This is the list of pages to incldue in the header of the website.
-pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
+# pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
