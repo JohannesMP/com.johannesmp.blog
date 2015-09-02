@@ -4,6 +4,14 @@ title: "Installing clang++ on windows so it just works : Part 1"
 published: true
 ---
 
+<div class="message">
+**Installing clang++ on windows so it just works**
+
+- Part 1 - The Goal
+- Part 2 - Approach 1
+- Part 3 - Approach 2
+- 
+</div>
 
 
 In the past I've struggled getting [clang](clang.llvm.org) to work on windows in as complete a capacity as it does when I'm working on mac or linux.
