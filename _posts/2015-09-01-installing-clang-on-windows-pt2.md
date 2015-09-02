@@ -2,6 +2,7 @@
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 2"
 published: true
+comments:true
 ---
 
 
