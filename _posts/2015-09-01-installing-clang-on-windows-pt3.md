@@ -4,6 +4,25 @@ title: "Installing clang++ on windows so it just works : Part 3"
 published: true
 ---
 
+<table>
+  <thead>
+    <tr>
+      <th>Installing clang++ on windows so it just works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt1/>Part 1 - The Goal</a></td>
+    </tr>
+    <tr>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt1/>Part 2 - Approach 1</a></td>
+    </tr>
+    <tr>
+      <td><em>Part 3 - Approach 2</em></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ##Approach 2: Clang and MinGW-w64 via MSYS2
 
