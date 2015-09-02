@@ -20,6 +20,9 @@ published: true
     <tr>
       <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 - Approach 2</3></td>
     </tr>
+    <tr>
+      <td>Part 4 - Wrapping Up (Coming Soon)</td>
+    </tr>
   </tbody>
 </table>
 
@@ -32,6 +35,7 @@ I tried a few [online tutorials](https://yongweiwu.wordpress.com/2014/12/24/inst
 - Some solutions would require you to use a separate linking step (since as of the time of this writing clang for windows does not have its own linker)
 - Some solutions required massive `-I` and `-l` compiler flags so that all the proper headers and libraries were used.
 - And even when some solutions mostly worked, they often were unable to handle both 32 and 64 bit.
+- Some required you to build clang from source. Not a problem in its own right, but not very convenient, especially when compared to other platforms: `apt-get install sudo apt-get install clang-3.5`, `brew install llvm --with-clang --with-asan`, etc.
 
 So over the last month I tried to come up with a reliable tutorial to get clang to compiling *and* linking on windows that would avoid these issues.
 
