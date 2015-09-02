@@ -70,7 +70,7 @@ It should also be noted that at this point my focus is less about performance, e
 In the end I came up with two different approaches, both of which satisfy all of my original goals.
 
 ## Approach 1
-<img src=http://i.imgur.com/3ANTVFO.png />
+<img src=http://i.imgur.com/UXbYbAO.png />
 Works from the default windows command prompt and allows you to switch between 32 and 64 bit compiling batch scripts that modify the path. This approach uses both the 32 and 64 bit builds of [clang 3.7.0 (pre-release)](http://llvm.org/pre-releases/3.7.0/) and [MinGW-W64](http://sourceforge.net/projects/mingw-w64) gcc version 5.1.0 (although 4.9.3 also works).
 
   - If you are more comfortable using Windows than Linux, and would rather not have to use another command promt, this approach is for you.
