@@ -67,7 +67,7 @@ It should also be noted that at this point my focus is less about performance, e
 
 #The Result
 
-I came up with two separate approaches:
+In the end I came up with two different approaches, both of which satisfy all of my original goals.
 
 ## Approach 1
 <img src=http://i.imgur.com/3ANTVFO.png />
