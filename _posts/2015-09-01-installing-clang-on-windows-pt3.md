@@ -37,7 +37,14 @@ published: true
     - For more detailed information on MSYS2's package management see [sections 3-5 in the documentation](http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/)
 3. Install the 32 bit version of MinGW-w64 and Clang (currently gcc is version 5.2.0 and clang is version 3.6.2): `pacman -S mingw-w64-x86_64-clang mingw-w64-i686-clang`
 4. Similar to cygwin, the windows path `C:\` drive maps to the directory `/c` in MSYS2.
-5. To use the 64 bit versions launch the 64 bit shell batch file, located at  `C:\msys64\mingw64_shell.bat` and for the 32 bit versions use `C:\msys64\mingw32_shell.bat`.
+
+###Using MSYS2 to compile with Clang/GCC
+
+To use the 64 bit versions of clang/clang++/gcc/g++, launch the 64 bit shell batch file, located at  `C:\msys64\mingw64_shell.bat` and for the 32 bit versions use `C:\msys64\mingw32_shell.bat`. 
+
+- so you can use them from the commandline it may make sense to add `C:\msys64` to your system PATH.
+
+
 
 Other things to note with MSYS2:
 - If you know the name of a package you can install it like this (for the [man pages](https://www.kernel.org/doc/man-pages/)):  `pacman -S man`.
