@@ -109,9 +109,7 @@ And that's it! At this point, you should have the 32 bit and 64 bit versions of 
     - IMPORTANT: close the shell and re-open it here before doing anything else.
     - Now we can update all packages with: `pacman -Su`
     - For more detailed information on MSYS2's package management see [sections 3-5 in the documentation](http://sourceforge.net/p/msys2/wiki/MSYS2%20installation/)
-3. Install the 32 bit version of MinGW-w64 and Clang (currently gcc is version 5.2.0 and clang is version 3.6.2):
-    - 64 bit: `pacman -S mingw-w64-x86_64-clang`
-    - 32 bit: `pacman -S mingw-w64-i686-clang `
+3. Install the 32 bit version of MinGW-w64 and Clang (currently gcc is version 5.2.0 and clang is version 3.6.2): `pacman -S mingw-w64-x86_64-clang mingw-w64-i686-clang`
 4. Similar to cygwin, the windows path `C:\` drive maps to the directory `/c` in MSYS2.
 5. To use the 64 bit versions launch the 64 bit shell batch file, located at  `C:\msys64\mingw64_shell.bat` and for the 32 bit versions use `C:\msys64\mingw32_shell.bat`.
 
