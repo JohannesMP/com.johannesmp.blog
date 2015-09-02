@@ -1,0 +1,44 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+
+# Setup
+title:              The Dev Blog of Johannes Peter
+tagline:            'Assorted Code snippets and Dev notions'
+description:        'Assorted Code snippets and Dev notions'    
+url:                http://blog.johannesmp.com
+paginate:           5
+baseurl:            http://blog.johannesmp.com
+
+
+# About/contact
+author:
+  name:              Johannes Peter
+  url:               https://twitter.com/jo_shadow
+  email:             joshadow@gmail.com
+
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/JohannesMP/johannesmp.github.io
+
+
+# This is the list of pages to incldue in the header of the website.
+pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
