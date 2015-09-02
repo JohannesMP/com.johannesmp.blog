@@ -12,10 +12,10 @@ relative_permalinks: true
 
 # Setup
 title:              'Johannes Peter'
-tagline:            'CS Student at DigiPen'
-description:        'Assorted Code snippets and Dev devices'    
+tagline:            'Assorted Code snippets and Dev devices'
+description:        'Programmer, Graphic Designer, Web Developer and DigiPen Student' 
 url:                http://blog.johannesmp.com
-baseurl:            '/'
+baseurl:            ''
 paginate:           5
 
 
@@ -31,7 +31,6 @@ author:
   disqus_shortname:     JohannesMP
   google_analytics_id:  UA-67064476-1
   google_analytics_url: auto
-
 
 
 # Assets
