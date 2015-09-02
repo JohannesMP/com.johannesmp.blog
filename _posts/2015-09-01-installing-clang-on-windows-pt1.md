@@ -18,7 +18,7 @@ published: true
       <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 2 - Approach 1</a></td>
     </tr>
     <tr>
-      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt2/>Part 3 - Approach 2</3></td>
+      <td><a href=http://blog.johannesmp.com/2015/09/01/installing-clang-on-windows-pt3/>Part 3 - Approach 2</3></td>
     </tr>
   </tbody>
 </table>
