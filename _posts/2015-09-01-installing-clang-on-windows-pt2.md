@@ -64,7 +64,7 @@ Ok, let's get to the fun part:
 And that's it! At this point, you should have the 32 bit and 64 bit versions of Clang 3.7.0 and MinGW-w64 5.1.0 installed. You can now compile 64 bit windows applications through clang like this:
     <img src="http://i.imgur.com/mF9Z3Ij.png" />
 
-- Note: if you see a fatal error that some common library cannot be found when you try to compile, make sure that Only the 64 bit version of LLVM is on the PATH and `C:\mingw64\bin` should be on the path:
+Note: if you see a fatal error that some common library cannot be found when you try to compile, make sure that Only the 64 bit version of LLVM is on the PATH and `C:\mingw64\bin` should be on the path:
     <img src=http://i.imgur.com/UNerbDA.png />
 
 
