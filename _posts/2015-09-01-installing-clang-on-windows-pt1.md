@@ -1,31 +1,14 @@
 ---
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 1"
+category: programming
+tags: [clang, windows]
 published: true
 comments: true
+set_id: "Installing clang++ to compile and link on Windows"
+set_part_id: 1
+set_part_title: "The Problem"
 ---
-
-<table>
-  <thead>
-    <tr>
-      <th>Installing clang++ to compile and link on Windows</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Part 1 : The Goal</em></td>
-    </tr>
-    <tr>
-      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt2"/>Part 2 : Approach 1 - Clang 3.7</a></td>
-    </tr>
-    <tr>
-      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt3"/>Part 3 : Approach 2 - MSYS2</3></td>
-    </tr>
-    <tr>
-      <td>Part 4 : Wrapping Up (Coming Soon)</td>
-    </tr>
-  </tbody>
-</table>
 
 # The Problem
 
@@ -39,6 +22,7 @@ I tried a few [online tutorials](https://yongweiwu.wordpress.com/2014/12/24/inst
 - Some required you to build clang from source. Not a problem in its own right, but not very convenient, especially when compared to other platforms: `apt-get install clang-3.5`, `brew install llvm --with-clang --with-asan`, etc.
 
 So over the last month I tried to come up with a reliable tutorial to get clang to compiling *and* linking on windows that would avoid these issues.
+<!--more-->
 
 #The Goal
 

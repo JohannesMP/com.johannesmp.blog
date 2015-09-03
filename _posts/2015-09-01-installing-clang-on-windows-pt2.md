@@ -1,37 +1,19 @@
 ---
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 2"
+category: programming
+tags: [clang, windows]
 published: true
 comments: true
+set_id: "Installing clang++ to compile and link on Windows"
+set_part_id: 2
+set_part_title: "Approach 1 - Clang 3.7"
 ---
-
-<table>
-  <thead>
-    <tr>
-      <th>Installing clang++ to compile and link on Windows</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt1"/>Part 1 : The Goal</a></td>
-    </tr>
-    <tr>
-      <td><em>Part 2 : Approach 1 - Clang 3.7</em></td>
-    </tr>
-    <tr>
-      <td><a href="{{ site.baseurl }}/2015/09/01/installing-clang-on-windows-pt3"/>Part 3 : Approach 2 - MSYS2</a></td>
-    </tr>
-    <tr>
-      <td>Part 4 : Wrapping Up (Coming Soon)</td>
-    </tr>
-  </tbody>
-</table>
-
 
 #Approach 1 - Clang 3.7
 
 In this approach we'll be installing Clang 3.7.0 and gcc 5.1.0 (via MinGW-w64), to allow us to build and link with clang from the standard windows command prompt.
-
+<!--more-->
 
 First quickly consider the following:
 

@@ -1,0 +1,23 @@
+{% if page.set_id != null %}
+
+{% assign set_posts = site.posts | where:"set_id",page.set_id %}
+<table class="post-set">
+  {% if include.show_set_title == true %}
+  <thead>
+    <tr>
+      <th>{{page.set_id}}</th>
+    </tr>
+  </thead>
+  {% endif %}
+  <tbody>
+  {% for post in set_posts reversed  %}
+    <tr><td>
+    {% if post.url == page.url %}<em> {% else %}<a href="{{post.url}}">{% endif %}
+    Part {{post.set_part_id}} : {{post.set_part_title}}
+    {% if post.url == page.url %}</em> {% else %}</a>{% endif %}
+    </td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endif %}
