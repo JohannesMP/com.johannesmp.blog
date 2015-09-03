@@ -2,11 +2,7 @@
 layout: default
 ---
 
-<ul class="tags">
-{% for tag in page.tags %}
-<li><a href="/tags#{{tag}}" class="tag">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+{% include custom/post_tags.html %}
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
