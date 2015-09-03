@@ -2,13 +2,18 @@
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 3"
 category: programming
-tags: [clang, windows]
+tags: 
+  - clang
+  - windows
 published: true
 comments: true
-set_id: "Installing clang++ to compile and link on Windows"
+set_id: Installing clang++ to compile and link on Windows
 set_part_id: 3
 set_part_title: "Approach 2 - MSYS2"
 ---
+
+
+<img src=http://i.imgur.com/b0ijGq1.png />
 
 #Approach 2 - MSYS2
 
@@ -37,5 +42,3 @@ Other things to note with MSYS2:
 - once you've installed the man pages you can use `man pacman` to read up on some of its other commands.
 - If you want to find a package you can use `pacman -Ss NAME`.
 - Repositories can also be browser here http://repo.msys2.org/
-
-
