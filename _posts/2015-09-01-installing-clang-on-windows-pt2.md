@@ -2,13 +2,18 @@
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 2"
 category: programming
-tags: [clang, windows]
+tags: 
+  - clang
+  - windows
 published: true
 comments: true
-set_id: "Installing clang++ to compile and link on Windows"
+set_id: Installing clang++ to compile and link on Windows
 set_part_id: 2
 set_part_title: "Approach 1 - Clang 3.7"
 ---
+
+
+<img src=http://i.imgur.com/UXbYbAO.png />
 
 #Approach 1 - Clang 3.7
 
