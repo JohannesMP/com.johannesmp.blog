@@ -13,9 +13,9 @@ set_part_title: "Approach 2 - MSYS2"
 ---
 
 
-<img src=http://i.imgur.com/b0ijGq1.png />
-
 #Approach 2 - MSYS2
+
+<img src=http://i.imgur.com/b0ijGq1.png />
 
 In this approach we'll be installing [MSYS2](https://msys2.github.io/) to create a unix-like dev environment on windows that we will install clang and gcc on. That dev environment will then be interacted with through its bash shell.
 <!--more-->
