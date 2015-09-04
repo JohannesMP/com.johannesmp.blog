@@ -57,7 +57,7 @@ Ok, let's get to the fun part:
     - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/5.1.0/threads-posix/dwarf/i686-5.1.0-release-posix-dwarf-rt_v4-rev0.7z/download)** -  MinGW-w64: 32 bit, version 5.1.0 with posix threads and dwarf exceptions.
     - Extract the `x686….7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
     - Once done you should be able to find g++.exe in `C:\mingw32\bin`
-    - **Do NOT mingw32 to your path!**
+    - **Do NOT add mingw32 to your path!**
 5. Batch files
     - The 64 bit version of clang/g++ will be used by default. If you want to use the 32 bit versions you can temporarily modify your path with these batch files:
     - Right click **view raw** and save `setgcc32.bat` and `setgcc64.bat`:
