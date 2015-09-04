@@ -5,14 +5,14 @@ category: programming
 tags: 
   - clang
   - windows
+  - tutorial
+  - mingw-w64
 published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows
 set_part_id: 2
 set_part_title: "Approach 1 - Clang 3.7"
 ---
-
-
 
 
 #Approach 1 - Clang 3.7

@@ -5,6 +5,8 @@ category: programming
 tags: 
   - clang
   - windows
+  - tutorial
+  - c++14
 published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows

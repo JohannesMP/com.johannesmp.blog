@@ -5,6 +5,9 @@ category: programming
 tags: 
   - clang
   - windows
+  - tutorial
+  - msys2
+  - bash
 published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows
