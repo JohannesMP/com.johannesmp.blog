@@ -72,12 +72,12 @@ And if you need to compile to 32 bit, just run the batch script, which will temp
 
 Note: If you see a fatal error that some common library cannot be found when you try to compile, such as:
 
-    <img src=http://i.imgur.com/UNerbDA.png />
+  <img src=http://i.imgur.com/UNerbDA.png />
     
 If this happens check that:
 
-    - `C:\mingw64\bin` exists and **IS** in your system PATH
-    - `C:\mingw32\bin` exists and is **NOT** in your system PATH.
+  - `C:\mingw64\bin` exists and **IS** in your system PATH
+  - `C:\mingw32\bin` exists and is **NOT** in your system PATH.
 
 
 
