@@ -2,13 +2,16 @@
 layout: post
 title: "Installing clang++ to compile and link on Windows : Part 1"
 category: programming
-tags: [clang, windows]
+tags: 
+  - clang
+  - windows
 published: true
 comments: true
-set_id: "Installing clang++ to compile and link on Windows"
+set_id: Installing clang++ to compile and link on Windows
 set_part_id: 1
-set_part_title: "The Problem"
+set_part_title: The Problem
 ---
+
 
 # The Problem
 
@@ -31,18 +34,20 @@ To be acceptable, any valid solutions would:
 
 - Be able to compile and build a simple c++ program in a single command. So effectively, given the following program:
 
-        #include <iostream>
-        #include <vector>
-    
-        int main()
-        {
-            std::vector<int> vect {1, 2, 3, 4, 5};
-            for(auto el : vect)
-            {
-                std::cout << " - " << el << std::endl;
-            }
-            return 0;
-        }
+{% highlight c++ %} 
+#include <iostream>
+#include <vector>
+
+int main()
+{
+std::vector<int> vect {1, 2, 3, 4, 5};
+for(auto el : vect)
+{
+std::cout << " - " << el << std::endl;
+}
+return 0;
+}
+{% endhighlight %}
     
 	the compile string would be:
 
