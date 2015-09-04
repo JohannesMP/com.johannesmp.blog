@@ -59,7 +59,7 @@ Ok, let's get to the fun part:
     - Once done you should be able to find g++.exe in `C:\mingw32\bin`
     - **Do NOT mingw32 to your path!**
 5. Batch files
-    - The 64 bit version of clang/g++ will used by default. If you want to use the 32 bit versions you can temporarily modify your path with these batch files:
+    - The 64 bit version of clang/g++ will be used by default. If you want to use the 32 bit versions you can temporarily modify your path with these batch files:
     - Right click **view raw** and save `setgcc32.bat` and `setgcc64.bat`:
     {% gist 1e7ed200367460255971 %}
     - Both batch files should be in a folder on the PATH. For example, create `C:\Utils`, place the batch files in there and add `C:\Utils` to your path.
