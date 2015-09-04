@@ -48,13 +48,13 @@ std::cout << " - " << el << std::endl;
 return 0;
 }
 {% endhighlight %}
-    
-	the compile string would be:
 
-    	clang++ main.cpp -o main.exe -std=c++14
-    
-	and it would result in a working 64 bit windows executable.
-    
+the compile string would be:
+
+    clang++ main.cpp -o main.exe -std=c++14
+
+and it would result in a working 64 bit windows executable.
+
 - Be able to compile c++14 code
 - Be able to compile code as either 32 bit or 64 bit.
 
