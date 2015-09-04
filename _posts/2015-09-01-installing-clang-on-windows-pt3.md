@@ -41,6 +41,7 @@ To use the 64 bit versions of clang/clang++/gcc/g++, launch the 64 bit shell bat
 
 
 Other things to note with MSYS2:
+
 - If you know the name of a package you can install it like this (for the [man pages](https://www.kernel.org/doc/man-pages/)):  `pacman -S man`.
 - once you've installed the man pages you can use `man pacman` to read up on some of its other commands.
 - If you want to find a package you can use `pacman -Ss NAME`.
