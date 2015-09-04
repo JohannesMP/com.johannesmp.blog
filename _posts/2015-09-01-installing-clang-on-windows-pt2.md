@@ -49,12 +49,14 @@ Ok, let's get to the fun part:
     - clang++.exe should be located in `C:\Program Files (x86)\LLVM\bin`, but should **NOT** be in your system path.
 3. MinGW-w64 for 64 bit
     - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/5.1.0/threads-posix/seh/x86_64-5.1.0-release-posix-seh-rt_v4-rev0.7z/download)** - MinGW-w64: 64 bit, version 5.1.0 with posix threads and seh exceptions.
-    - Extract the `x86_64....7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
+    - Extract the `x86_64….7z` file, either to your desktop (and move it), or directly to your `C:` Drive:
+        <img src=http://i.imgur.com/uNrTJ7n.png />
+        <img src=http://i.imgur.com/73ppN2J.png />
     - Once done you should be able to find g++.exe in `C:\mingw64\bin`
     - Add `C:\mingw64\bin` to your system PATH.
 4. MinGW-w64 for 32 bit
     - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/5.1.0/threads-posix/dwarf/i686-5.1.0-release-posix-dwarf-rt_v4-rev0.7z/download)** -  MinGW-w64: 32 bit, version 5.1.0 with posix threads and dwarf exceptions.
-    - Extract the `x686...7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
+    - Extract the `x686….7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
     - Once done you should be able to find g++.exe in `C:\mingw32\bin`
     - **Do NOT mingw32 to your path!**
 5. Batch files
