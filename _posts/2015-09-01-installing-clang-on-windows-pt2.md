@@ -60,11 +60,11 @@ Ok, let's get to the fun part:
     - Once done you should be able to find g++.exe in `C:\mingw32\bin`
     - **Do NOT mingw32 to your path!**
 5. Batch files
-    - Downloads (right click and save): **[setgcc32.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc32.bat)** and **[setgcc64.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc64.bat)**.
-    - I decided that the 64 bit version of clang/g++ should be used by default, and if you want to use the 32 bit versions you can temporarily add the 32 bit versions to your path. For that I created [two batch files](https://gist.github.com/JohannesMP/1e7ed200367460255971)
-    - `setgcc32.bat` prepends the 32 bit locations to the path
-    - `setgcc64.bat` (which resets the path to its previous state).
+    - The 64 bit version of clang/g++ will used by default. If you want to use the 32 bit versions you can temporarily modify your path with these batch files:
+    - Right click **view raw** and save `setgcc32.bat` and `setgcc64.bat`:
+    {% gist 1e7ed200367460255971 %}
     - Both batch files should be in a folder on the PATH. For example, create `C:\Utils`, place the batch files in there and add `C:\Utils` to your path.
+    <div class="message"><em>TODO: use find and replace instead of prepending the 32 bit PATH</em></message>
     
 And that's it! At this point, you should have the 32 bit and 64 bit versions of Clang 3.7.0 and MinGW-w64 5.1.0 installed. You can now compile 64 bit windows applications through clang like this:
   
