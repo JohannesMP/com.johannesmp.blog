@@ -40,12 +40,12 @@ To be acceptable, any valid solutions would:
 
 int main()
 {
-std::vector<int> vect {1, 2, 3, 4, 5};
-for(auto el : vect)
-{
-std::cout << " - " << el << std::endl;
-}
-return 0;
+  std::vector<int> vect {1, 2, 3, 4, 5};
+  for(auto el : vect)
+  {
+    std::cout << " - " << el << std::endl;
+  }
+  return 0;
 }
 {% endhighlight %}
 
