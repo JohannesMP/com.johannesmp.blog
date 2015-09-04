@@ -17,7 +17,7 @@ description:        'Programmer, Graphic Designer, Web Developer and DigiPen Stu
 url:                http://blog.johannesmp.com
 baseurl:            ''
 paginate:           5
-excerpt_separator:  <!--more-->
+excerpt_separator:  <!-- more -->
 
 
 # About/contact
