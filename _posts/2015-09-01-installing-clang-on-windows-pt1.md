@@ -22,7 +22,8 @@ I tried a few [online tutorials](https://yongweiwu.wordpress.com/2014/12/24/inst
 - Some required you to build clang from source. Not a problem in its own right, but not very convenient, especially when compared to other platforms: `apt-get install clang-3.5`, `brew install llvm --with-clang --with-asan`, etc.
 
 So over the last month I tried to come up with a reliable tutorial to get clang to compiling *and* linking on windows that would avoid these issues.
-<!--more-->
+
+<!-- more -->
 
 #The Goal
 
