@@ -14,6 +14,7 @@ set_part_title: "Approach 1 - Clang 3.7"
 
 
 
+
 #Approach 1 - Clang 3.7
 
 <img src=http://i.imgur.com/UXbYbAO.png />
@@ -32,30 +33,32 @@ First quickly consider the following:
 
 Ok, let's get to the fun part:
 
-1. Clang for 64 bit - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win64.exe)**
-    - Download clang 3.7.0 (release candidate 3) 64 bit and run its installer.
-    - When you get to the PATH settings, make sure to add LLVM to the system PATH:
+1. Clang for 64 bit
+    - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win64.exe)** - clang 3.7.0 (release candidate 3) 64 bit.
+    - Run the installer. When you get to the PATH settings, make sure to add LLVM to the system PATH:
     <img src=http://i.imgur.com/AIjaxKk.png />
     - Use the default install location: `C:\Program Files\LLVM`. Once the installation completes hit 'Finish'.
     - `clang++.exe` should be located in `C:\Program Files\LLVM\bin`, which should be in your system PATH.
-2. Clang for 32 bit - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win32.exe)**
-    - Download clang 3.7.0 (release candidate 3) 32 bit and run its installer.
-    - **IMPORTANT**: because we technically just installed a different version of LLVM, the installer will see the 64 bit version as an 'older version' and will give you this warning:
+2. Clang for 32 bit
+    - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win32.exe)** - clang 3.7.0 (release candidate 3) 32 bit.
+    - Run the installer. **IMPORTANT**: because we technically just installed a different version of LLVM, the installer will see the 64 bit version as an 'older version' and will give you this warning:
         <img src="http://i.imgur.com/TcfUY3b.png" />
         You will want to click 'No', so that the 64 bit version doesn't get uninstalled. We want *both* the 32 *and* the 64 bit versions.
     - You will once again be prompted to add LLVM to the path. This time leave it set to `Do not add LLVM to the system PATH`.
     - Use the default install location: `C:\Program Files (x86)\LLVM` and complete the installation.
     - clang++.exe should be located in `C:\Program Files (x86)\LLVM\bin`, but should **NOT** be in your system path.
-3. MinGW-w64 for 64 bit - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/5.1.0/threads-posix/seh/x86_64-5.1.0-release-posix-seh-rt_v4-rev0.7z/download)**
-    - Download MinGW-w64: 64 bit, version 5.1.0 with posix threads and seh exceptions.
+3. MinGW-w64 for 64 bit
+    - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/5.1.0/threads-posix/seh/x86_64-5.1.0-release-posix-seh-rt_v4-rev0.7z/download)** - MinGW-w64: 64 bit, version 5.1.0 with posix threads and seh exceptions.
     - Extract the `x86_64....7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
     - Once done you should be able to find g++.exe in `C:\mingw64\bin`
     - Add `C:\mingw64\bin` to your system PATH.
-4. MinGW-w64 for 32 bit - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/5.1.0/threads-posix/dwarf/i686-5.1.0-release-posix-dwarf-rt_v4-rev0.7z/download)**
+4. MinGW-w64 for 32 bit
+    - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/5.1.0/threads-posix/dwarf/i686-5.1.0-release-posix-dwarf-rt_v4-rev0.7z/download)** -  MinGW-w64: 32 bit, version 5.1.0 with posix threads and dwarf exceptions.
     - Extract the `x686...7z` file, either to your desktop (and move it), or directly to your `C:` Drive.
     - Once done you should be able to find g++.exe in `C:\mingw32\bin`
     - **Do NOT mingw32 to your path!**
-5. Batch files - **[setgcc32.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc32.bat)** and **[setgcc64.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc64.bat)**
+5. Batch files
+    - Downloads (right click and save): **[setgcc32.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc32.bat)** and **[setgcc64.bat](https://gist.github.com/JohannesMP/1e7ed200367460255971/raw/61be418a184e6c0ab0ef36d07c5552d38a5670cf/setgcc64.bat)**.
     - I decided that the 64 bit version of clang/g++ should be used by default, and if you want to use the 32 bit versions you can temporarily add the 32 bit versions to your path. For that I created [two batch files](https://gist.github.com/JohannesMP/1e7ed200367460255971)
     - `setgcc32.bat` prepends the 32 bit locations to the path
     - `setgcc64.bat` (which resets the path to its previous state).
