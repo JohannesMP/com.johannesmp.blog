@@ -30,7 +30,7 @@ First quickly consider the following:
 - You will also need to be able to open `.7z` archives, so make sure to install **[7zip](http://www.7-zip.org/)** or something similar.
 
 
-Ok, let's get to the fun part:
+Ok, let's get to the fun part. You will need to install ***all*** of the following:
 
 1. Clang for 64 bit
     - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win64.exe)** - clang 3.7.0 (release candidate 3) 64 bit.
