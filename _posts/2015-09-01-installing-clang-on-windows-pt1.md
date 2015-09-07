@@ -16,16 +16,16 @@ set_part_title: The Problem
 
 # The Problem
 
-In the past I've struggled getting [clang](clang.llvm.org) to work on windows in as complete a capacity as it does when I'm working on mac or linux.
+In the past I've struggled getting [clang](clang.llvm.org) to work on windows in as complete a capacity as it does on mac or linux.
 
 I tried a few [online tutorials](https://yongweiwu.wordpress.com/2014/12/24/installing-clang-3-5-for-windows/) and suggested solutions on [stack overflow](http://stackoverflow.com/a/9427377/928062), but all of them had one drawback or another:
 
-- Some solutions would require you to use a separate linking step (since as of the time of this writing clang for windows does not have its own linker)
+- Some solutions required you to use a separate linking step (since as of the time of this writing clang for windows does not have its own linker)
 - Some solutions required massive `-I` and `-l` compiler flags so that all the proper headers and libraries were used.
-- And even when some solutions mostly worked, they often were unable to handle both 32 and 64 bit.
+- Even when some solutions mostly worked, they often were unable to handle both 32 and 64 bit.
 - Some required you to build clang from source. Not a problem in its own right, but not very convenient, especially when compared to other platforms: `apt-get install clang-3.5`, `brew install llvm --with-clang --with-asan`, etc.
 
-So over the last month I tried to come up with a reliable tutorial to get clang to compiling *and* linking on windows that would avoid these issues.
+So over the last month I tried to come up with a reliable tutorial to get clang to compile *and* link on windows 8.1 that would avoid these issues.
 
 <!-- more -->
 
