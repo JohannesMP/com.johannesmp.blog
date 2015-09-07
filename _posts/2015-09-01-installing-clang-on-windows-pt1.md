@@ -35,20 +35,7 @@ To be acceptable, any valid solutions would:
 
 - Be able to compile and build a simple c++ program in a single command. So effectively, given the following program:
 
-{% highlight c++ %} 
-#include <iostream>
-#include <vector>
-
-int main()
-{
-  std::vector<int> vect {1, 2, 3, 4, 5};
-  for(auto el : vect)
-  {
-    std::cout << " - " << el << std::endl;
-  }
-  return 0;
-}
-{% endhighlight %}
+{% gist 8514e437d47ac2577b3b %}
 
 the compile string would be:
 
