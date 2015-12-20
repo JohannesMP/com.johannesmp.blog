@@ -76,6 +76,6 @@ Uses [MSYS2](https://msys2.github.io/), a unix-like development environment (sim
 
 ----
 
-As an added bonus, in both of these approaches you also get the fully working gcc and g++ compilers thrown in for free.
+As an added bonus, with both of these approaches you also get the fully working gcc and g++ compilers thrown in for free.
 
 Note that these two approaches don't conflict with each other so you are welcome to try them both, or go with the one you prefer.
