@@ -33,7 +33,11 @@ So over the last month I tried to come up with a reliable tutorial to get clang 
 
 To be acceptable, any valid solutions would:
 
-- Be able to compile and build a simple c++ program in a single command. So effectively, given the following program:
+- Be able to compile and build a simple c++ program in a single command.
+- Be able to compile c++14 code
+- Be able to compile code as either 32 bit or 64 bit.
+
+So effectively, given the following program:
 
 {% gist 8514e437d47ac2577b3b %}
 
@@ -42,9 +46,6 @@ the compile string would be:
     clang++ main.cpp -o main.exe -std=c++14
 
 and it would result in a working 64 bit windows executable.
-
-- Be able to compile c++14 code
-- Be able to compile code as either 32 bit or 64 bit.
 
 It should also be noted that at this point my focus is less about performance, efficiency, or what linker clang is using under the hood. The main focus would be ease of use.
 
