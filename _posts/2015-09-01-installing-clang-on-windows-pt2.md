@@ -51,7 +51,7 @@ Ok, let's get to the fun part. You will need to install ***all*** of the followi
     - Extract the `x86_64….7z` file, either to your desktop (and move it), or directly to your `C:` Drive:
         <img src=http://i.imgur.com/uNrTJ7n.png />
         <img src=http://i.imgur.com/73ppN2J.png />
-    - Once done you should be able to find g++.exe in `C:\mingw64\bin`
+    - Once done you should be able to find g++.exe in `C:\mingw64\bin` - **you cannot change this location** because Clang has it hardcoded.
     - Add `C:\mingw64\bin` to your system PATH.
 4. MinGW-w64 for 32 bit
     - **[Download Link](http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/5.1.0/threads-posix/dwarf/i686-5.1.0-release-posix-dwarf-rt_v4-rev0.7z/download)** -  MinGW-w64: 32 bit, version 5.1.0 with posix threads and dwarf exceptions.
