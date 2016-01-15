@@ -45,7 +45,7 @@ sass:
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/JohannesMP/johannesmp.github.io
+  repo:              https://github.com/JohannesMP/com.johannesmp.blog
 
 
 # This is the list of pages to incldue in the header of the website.
