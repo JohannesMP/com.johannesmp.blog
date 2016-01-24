@@ -18,7 +18,7 @@ Some versions of gnu `make` for windows can encounter an exception when you try 
 
 I encountered this issue, and eventually stumbled upon a [stack overflow question](http://superuser.com/questions/375029/make-interrupt-exception-caught), the top answer of which recommended explicitly passing in the path of the SHELL to use. This did indeed fix the problem for me:
 
-![SHELL=C:/Windows/System32/cmd.exe](https://i.imgur.com/njKsqHr.png)
+![SHELL=C:/Windows/System32/cmd.exe](https://i.imgur.com/OtuThaZ.png)
 
 This is the fix that I used for a while:
 
@@ -27,8 +27,9 @@ This is the fix that I used for a while:
 > When running make, pass in this SHELL variable:
 > 
 >     SHELL=C:/Windows/System32/cmd.exe
->     
-> Or add it to the top of the make file. 
+>
+> Either as appended to the command line arguments, or add it to the top of the make file. 
+>
 
 This solution works, but doesn't fix the actual problem: why is `make` unable to find the shell?
 
