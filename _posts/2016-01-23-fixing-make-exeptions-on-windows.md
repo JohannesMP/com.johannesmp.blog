@@ -33,7 +33,7 @@ This solution works, but doesn't fix the actual problem: why is `make` unable to
 
 <!-- more -->
 
-In the comments of the stack overflow post some people mentioned that the problem might stem from the system `PATH`. I ended up switching to a [newer version of make (4.1)](http://www.equation.com/servlet/equation.cmd?fa=make] which, while it did not fix the problem, handled the exception more gracefully and sheds some light on what is actually happening:
+In the comments of the stack overflow post some people mentioned that the problem might stem from the system `PATH`. I ended up switching to a [newer version of make (4.1)](http://www.equation.com/servlet/equation.cmd?fa=make) which, while it did not fix the problem, handled the exception more gracefully and sheds some light on what is actually happening:
 
 ![sh: C:\Program: No such file or directory](https://i.imgur.com/zZ1PJU4.png)
 
