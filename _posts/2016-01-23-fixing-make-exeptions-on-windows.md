@@ -39,8 +39,9 @@ In the comments of the stack overflow post some people mentioned that the proble
 
 It displays an error that states `sh: C:\Program: No such file or directory`.
 
-Basically each instance of "Program Files" on the `PATH` contains a space that isn't escaped properly (as far as `make` is concerned). It is not the length of the path, but the spaces that are causing this issue. 
-Indeed, the top of my path looks like this:
+Basically each instance of "Program Files" on the `PATH` contains a space that isn't escaped properly (as far as `make` is concerned). It is not the length of the `PATH`, but the spaces that are causing this issue.
+
+Not surprisingly, the top of my `PATH` looks like this:
 
 ![PATH before fix](https://i.imgur.com/ONlEFaT.png)
 
