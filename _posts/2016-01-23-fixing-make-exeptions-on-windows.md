@@ -37,6 +37,8 @@ In the comments of the stack overflow post some people mentioned that the proble
 
 ![sh: C:\Program: No such file or directory](https://i.imgur.com/zZ1PJU4.png)
 
+It displays an error that states `sh: C:\Program: No such file or directory`.
+
 Basically each instance of "Program Files" on the `PATH` contains a space that isn't escaped properly (as far as `make` is concerned). It is not the length of the path, but the spaces that are causing this issue. 
 Indeed, the top of my path looks like this:
 
