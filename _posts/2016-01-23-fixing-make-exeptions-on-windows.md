@@ -65,4 +65,6 @@ This way I am able to maintain the order of my path, and don't have to add an ad
 
 # Summary
 
-Some people may not have a lot of things on their path, in which case I would strongly suggest that you just move system32 to the top. However if you can't easily do that, I hope these two solutions work for you.
+Some people may not have a lot of things on their path, in which case the you just move system32 to the top.
+
+However if you can't easily do that, I hope these two solutions work for you.
