@@ -20,8 +20,6 @@ I encountered this issue, and eventually stumbled upon a [stack overflow questio
 
 ![SHELL=C:/Windows/System32/cmd.exe](https://i.imgur.com/OtuThaZ.png)
 
-This is the fix that I used for a while:
-
 ## Solution 1 - The Quick Fix
 
 > When running make, pass in this SHELL variable:
