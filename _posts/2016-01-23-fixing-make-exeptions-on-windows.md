@@ -26,7 +26,7 @@ I encountered this issue, and eventually stumbled upon a [stack overflow questio
 > 
 >     SHELL=C:/Windows/System32/cmd.exe
 >
-> Either as appended to the command line arguments, or add it to the top of the make file. 
+> Either along with the command line arguments, or instead add it to the top of the make file. 
 >
 
 This solution works, but doesn't fix the actual problem: why is `make` unable to find the shell?
