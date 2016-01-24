@@ -16,7 +16,7 @@ Some versions of gnu `make` for windows can encounter an exception when you try 
 
 ![make: Interrupt/Exception caught (code = 0xc0000000, addr = 0x00000000)](https://i.imgur.com/njKsqHr.png)
 
-I encountered this issue, and eventually stumbled upon a [stack overflow question](http://superuser.com/questions/375029/make-interrupt-exception-caught), the top answer of which recommended explicitly passing in the path of the SHELL to use. This did indeed fix the problem for me:
+I encountered this issue, and eventually stumbled upon a [stack overflow question](http://superuser.com/questions/375029/make-interrupt-exception-caught), the top answer of which recommended explicitly passing SHELL variable. This did indeed fix the problem for me:
 
 ![SHELL=C:/Windows/System32/cmd.exe](https://i.imgur.com/OtuThaZ.png)
 
