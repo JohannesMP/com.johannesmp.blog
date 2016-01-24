@@ -54,6 +54,8 @@ A Better solution is to change the `PATH` to no longer include spaces. A clever 
 ## Solution 2 - Modify your PATH
 
 > Replace every instance of `Program Files` with `PROGRA~1` and `Program Files (x86)` with `PROGRA~2`
+>
+> These macros ultimately evaluate to the same thing and your path remains unchanged, but now it no longer contains any spaces.
 
 So my `PATH` now looks like this:
 
