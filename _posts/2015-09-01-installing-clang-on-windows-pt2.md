@@ -63,7 +63,6 @@ Ok, let's get to the fun part. You will need to install ***all*** of the followi
     - Right click **view raw** and save `setgcc32.bat` and `setgcc64.bat`:
     {% gist 1e7ed200367460255971 %}
     - Both batch files should be in a folder on the PATH. For example, create `C:\Utils`, place the batch files in there and add `C:\Utils` to your path.
-    <div class="message"><em>TODO: use find and replace instead of prepending the 32 bit PATH</em></message>
     
 And that's it! At this point, you should have the 32 bit and 64 bit versions of Clang 3.7.0 and MinGW-w64 5.1.0 installed. You can now compile 64 bit windows applications through clang like this:
   
