@@ -5,9 +5,9 @@ highlighter:      pygments
 
 # Permalinks
 #
-# Use of `relative_permalinks` ensures post links from the index work properly.
+# Use of `relative_permalinks` ensures post links from the index work properly - no longer supported by github
 permalink:           pretty
-relative_permalinks: true
+#relative_permalinks: true
 
 
 # Setup
