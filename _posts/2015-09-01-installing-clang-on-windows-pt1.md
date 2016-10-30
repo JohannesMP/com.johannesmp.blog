@@ -29,7 +29,7 @@ So over the last month I tried to come up with a reliable tutorial to get clang 
 
 <!-- more -->
 
-#The Goal
+# The Goal
 
 To be acceptable, any valid solutions would:
 
@@ -49,7 +49,7 @@ and it would result in a working 64 bit windows executable.
 
 It should also be noted that at this point my focus is less about performance, efficiency, or what linker clang is using under the hood. The main focus would be ease of use.
 
-#The Result
+# The Result
 
 With some help from [Stack Overflow](http://stackoverflow.com/questions/32239122/what-do-you-need-to-install-to-use-clang-on-windows-to-build-c14-for-64-bit) I came upon two different approaches, both of which satisfy all of my original goals.
 
