@@ -24,7 +24,7 @@ Several build tools exist that allow us to avoid these issues. [CMake](https://c
 
 Enter [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
 
-
+<br />
 ## What is Premake?
 <!-- more -->
 
@@ -43,7 +43,8 @@ This guide will be covering Premake5, the latest version. Official documentation
 
 _**NOTE**: if you ever search the web for premake questions, and see older resources on bitbucket or the 'Industrious One' forums, please ignore them. They are old and almost certainly out of date, often referring to Premake 4._
 
-## How to Use Premake
+<br />
+## A Simple Premake Example
 
 To help with the learning curve, I’ve provided you with an example Premake5 Project that will compile a simple ‘hello world’ program for Linux, MacOS and Windows: https://github.com/JohannesMP/Premake-for-Beginners
 
@@ -60,16 +61,17 @@ If you have never used LUA before, you can refer to the [LearnXinYminutes LUA pa
   
 
 #### Build a Visual Studio project on Windows
-- cd into the `Build` folder (running `dir` should show the `premake5.lua` file)
+- cd into the `Build` folder _(running `dir` should list the premake5.lua file)_
 - Run `premake5 vs2015` – this will generate a `project_vs2015` folder containing the VS solution and project files.
 - You can double click the `.sln` file to open the project in visual studio and compile it.
 
 #### To Build a Makefile on Mac or Linux
-- cd into the `Build` folder (running `ls -la` should show the premake5.lua file)
+- cd into the `Build` folder _(running `ls -la` should list the premake5.lua file)_
 - Run `./premake5 gmake` (or `./premake5_mac` for mac) – this will generate a `project_gmake` folder containing two Makefiles.
   - You get one master `Makefile`, and one `PROJECTNAME.make` file per project.
-  - If you run make help the console output will tell you how to build specific configurations. For example, to build a 32bit release you run `make config=release_x32`
-  - For debugging, you can have verbose output by running `make verbose=1` ...
+  - If you run `make help` the console output will tell you how to build specific configurations. For example, to build a 32bit release you run `make config=release_x32`
+  - For debugging, you can have verbose output by running `make verbose=1 ...`
 - cd into the project folder and run `make`
 
+#### Check out the Output
 For both Windows and Linux, the output directory containing your compiled binary will be named `bin_CONFIGURATION` based on your selected configuration (Release/Debug, 32/64 bit). For example, it will be named `bin_Debug_x64` for 64bit Debug.
