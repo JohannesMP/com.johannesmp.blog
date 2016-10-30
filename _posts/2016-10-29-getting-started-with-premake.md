@@ -13,16 +13,21 @@ comments: true
 ---
 # Getting Started with Premake
 
+This initial post will cover what Premake is, why you should use it, and will provide an example project you can download and try out. 
+
+Future posts will expand on the provided example by walking through the process of setting up more complicated premake configurations.
+
+
 ## Why Use a Build Configurator?
 
-Maintaining separate Makefiles and Visual Studio Solution files for cross-platform projects, or storing Visual Studio Project files in version control such as [Git](https://git-scm.com/) can be a pain.
+Maintaining separate _Makefiles_ and _Visual Studio Solution_ files for cross-platform projects, or storing _Visual Studio Project_ files in version control such as [Git](https://git-scm.com/) can be a pain.
 
 - Writing [Makefiles](https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html) for all but the simplest projects is tedious without automation, and can be difficult to debug.
 - Visual Studio Solution and Project Files are pre-generated, but are not designed to be easy to edit by hand, so resolving merge conflicts with them can be frustrating.
 
 Several build tools exist that allow us to avoid these issues. [CMake](https://cmake.org/) is widely used, but tends to have a high learning curve and uses a Proprietary scripting language.
 
-Enter [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
+This post will discuss [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
 
 <br />
 ## What is Premake?
@@ -36,8 +41,8 @@ Because _premake5.lua_ allows you to uniquely generate whatever build files you 
 
 Once you have a premake5.lua file, you can run the premake executable to generate your desired project files. For example:
 
-- To generate a Makefile on Linux you run **_./premake5 vs2015_**
-- To generate a VS 2015 Solution on Windows you run **_premake5 vs2015_**
+- To generate a Makefile on Linux you run `./premake5 vs2015`
+- To generate a VS 2015 Solution on Windows you run `premake5 vs2015`
 
 This guide will be covering Premake5, the latest version. Official documentation can be found on in a wiki on github: https://github.com/premake/premake-core/wiki. 
 
@@ -46,7 +51,7 @@ _**NOTE**: if you ever search the web for premake questions, and see older resou
 <br />
 ## A Simple Premake Example
 
-To help with the learning curve, I’ve provided you with an example Premake5 Project that will compile a simple ‘hello world’ program for Linux, MacOS and Windows: https://github.com/JohannesMP/Premake-for-Beginners
+To help with the learning curve, I’ve provided you with an example Premake5 Project that will compile a simple ‘hello world’ program for Linux, MacOS and Windows: [https://github.com/JohannesMP/Premake-for-Beginners](https://github.com/JohannesMP/Premake-for-Beginners)
 
 To use premake you will need to be familiar with basic LUA syntax. You will not need to install anything to make LUA work for premake - It is entirely contained in the tiny premake5.exe executable. 
 
@@ -74,4 +79,7 @@ If you have never used LUA before, you can refer to the [LearnXinYminutes LUA pa
 - cd into the project folder and run `make`
 
 #### Check out the Output
-For both Windows and Linux, the output directory containing your compiled binary will be named `bin_CONFIGURATION` based on your selected configuration (Release/Debug, 32/64 bit). For example, it will be named `bin_Debug_x64` for 64bit Debug.
+- For both Windows and Linux, the output directory containing your compiled binary will be named `bin_CONFIGURATION` based on your selected configuration (Release/Debug, 32/64 bit). 
+- For example, it will be named `bin_Debug_x64` for 64bit Debug.
+
+Please read through the premake5.lua_commented.lua file for a detailed breakdown of everything that is happening in the file.
