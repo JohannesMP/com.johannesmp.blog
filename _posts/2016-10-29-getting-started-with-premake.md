@@ -62,7 +62,7 @@ To use premake you will need to be familiar with basic LUA syntax. You will not 
 If you have never used LUA before, you can refer to the [LearnXinYminutes LUA page](https://learnxinyminutes.com/docs/lua/), or [The Lua Crash Course](http://luatut.com/crash_course.html).  I have also included a heavily commented version of premake5.lua which covers the relevant basics. You will not need to know more than basic LUA syntax.
 
 #### Run Premake
-- Download the repository to your prefered location.
+- Download the repository to your preferred location.
   - `Build` contains the premake files and binaries. Please note that the binaries are included for convenience - you can delete them if you copy the one for your OS to a location on your PATH.
     - `Build/premake5.lua` describes the project and allows you to generate the Project files you want.
     - `Build/premake5.lua_commented.lua` is the same file, but heavily commented for those that have never used LUA before, and goes into more detail explaining what premake's functions do.
