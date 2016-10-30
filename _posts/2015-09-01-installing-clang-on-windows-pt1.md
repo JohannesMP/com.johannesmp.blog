@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Installing clang++ to compile and link on Windows : Part 1"
-tags: 
+title: 'Installing clang++ to compile and link on Windows : Part 1'
+tags:
   - clang
   - windows
   - tutorial
@@ -56,7 +56,7 @@ With some help from [Stack Overflow](http://stackoverflow.com/questions/32239122
 
 ## Approach 1
 
-<img src=http://i.imgur.com/UXbYbAO.png />
+![](http://i.imgur.com/UXbYbAO.png)
 
 Works from the default windows command prompt and allows you to switch between 32 and 64 bit compiling via batch scripts that modify the path. This approach uses both the 32 and 64 bit builds of [Clang 3.7.0 (Release Candidate 3)](http://llvm.org/pre-releases/3.7.0/) and [MinGW-W64](http://sourceforge.net/projects/mingw-w64) gcc version 5.1.0 (although 4.9.3 also works).
 
@@ -66,7 +66,7 @@ Works from the default windows command prompt and allows you to switch between 3
 
 ## Approach 2
 
-<img src=http://i.imgur.com/b0ijGq1.png />
+![](http://i.imgur.com/b0ijGq1.png)
 
 Uses [MSYS2](https://msys2.github.io/), a unix-like development environment (similar to cygwin) that uses pacman as its package manager ([just like Arch Linux](https://wiki.archlinux.org/index.php/Pacman)). I particularly like its shell which is nicer and, at least with initial testing, has been more reliable than cygwin's terminal. It also installs both the 32 and 64 bit versions which you select by choosing the 32 bit or 64 bit shell.
 
