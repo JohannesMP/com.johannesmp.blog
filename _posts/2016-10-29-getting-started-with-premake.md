@@ -59,7 +59,7 @@ If you have never used LUA before, you can refer to the [LearnXinYminutes LUA pa
 
 #### Run Premake
 - Download the repository to your prefered location.
-  - `Build` contains the premake files and binaries. Please note that the binaries are included for convenience and you can delete them if you move the relevant relevant one for your OS to a location on your PATH.
+  - `Build` contains the premake files and binaries. Please note that the binaries are included for convenience - you can delete them if you copy the one for your OS to a location on your PATH.
     - `Build/premake5.lua` describes the project and allows you to generate the Project files you want.
     - `Build/premake5.lua_commented.lua` is the same file, but heavily commented for those that have never used LUA before, and goes into more detail explaining what premake's functions do.
   - `Source` contains the source code, in this case a simple hello world program in C++.
