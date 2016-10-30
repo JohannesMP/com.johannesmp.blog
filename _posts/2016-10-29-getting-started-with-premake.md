@@ -11,7 +11,9 @@ tags:
   - tool
 comments: true
 ---
-# Why Use a Build Configurator?
+# Getting Started with Premake
+
+## Why Use a Build Configurator?
 
 Maintaining separate Makefiles and Visual Studio Solution files for cross-platform projects, or storing Visual Studio Project files in version control such as [Git](https://git-scm.com/) can be a pain.
 
@@ -23,7 +25,7 @@ Several build tools exist that allow us to avoid these issues. [CMake](https://c
 Enter [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
 
 
-# What is Premake?
+## What is Premake?
 <!-- more -->
 
 As with CMake, Premake allows you to define the structure and contents of your project and then dynamically generate whatever build files (Makefiles, VS Solutions, Xcode Projects, etc) you need at the time.
