@@ -11,7 +11,7 @@ tags:
   - tool
 comments: true
 ---
-![](https://premake.github.io/premake-logo.png)
+![](http://i.imgur.com/gFD1zlI.png)
 
 This initial post will cover what Premake is, why you should use it, and provide an example project you can download and try out for yourself.
 
