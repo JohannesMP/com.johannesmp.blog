@@ -15,6 +15,7 @@ This initial post will cover what Premake is, why you should use it, and provide
 
 Future posts will expand on the provided example by walking through the process of setting up more complicated premake configurations, such as cross-platform libraries and dependencies.
 
+<br />
 
 ## Why Use a Build Configurator?
 
@@ -28,6 +29,7 @@ Several build tools exist that allow us to avoid these issues. [CMake](https://c
 This post will discuss [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
 
 <br />
+
 ## What is Premake?
 
 As with CMake, Premake allows you to define the structure and contents of your project and then dynamically generate whatever build files (Makefiles, VS Solutions, Xcode Projects, etc) you need at the time.
@@ -48,6 +50,7 @@ This guide will be covering Premake5, the latest version. Official documentation
 _**NOTE**: if you ever search the web for premake questions, and see older resources on bitbucket or the 'Industrious One' forums, please ignore them. They are old and almost certainly out of date, often referring to Premake 4._
 
 <br />
+
 ## A Simple Premake Example
 
 To help with the learning curve, I’ve provided you with an example Premake5 Project that will compile a simple ‘hello world’ program for Linux, MacOS and Windows: [https://github.com/JohannesMP/Premake-for-Beginners](https://github.com/JohannesMP/Premake-for-Beginners)
