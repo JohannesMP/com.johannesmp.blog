@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Installing clang++ to compile and link on Windows : Part 3"
-tags: 
+title: 'Installing clang++ to compile and link on Windows : Part 3'
+tags:
   - clang
   - windows
   - tutorial
@@ -11,13 +11,13 @@ published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows
 set_part_id: 3
-set_part_title: "Approach 2 - MSYS2"
+set_part_title: Approach 2 - MSYS2
 ---
 
 
-#Approach 2 - MSYS2
+# Approach 2 - MSYS2
 
-<img src=http://i.imgur.com/b0ijGq1.png />
+![](http://i.imgur.com/b0ijGq1.png)
 
 In this approach we'll be installing [MSYS2](https://msys2.github.io/) to create a unix-like dev environment on windows that we will install clang and gcc on. That dev environment will then be interacted with through its bash shell.
 
