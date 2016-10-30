@@ -42,3 +42,34 @@ Once you have a premake5.lua file, you can run the premake executable to generat
 This guide will be covering Premake5, the latest version. Official documentation can be found on in a wiki on github: https://github.com/premake/premake-core/wiki. 
 
 _**NOTE**: if you ever search the web for premake questions, and see older resources on bitbucket or the 'Industrious One' forums, please ignore them. They are old and almost certainly out of date, often referring to Premake 4._
+
+## How to Use Premake
+
+To help with the learning curve, I’ve provided you with an example Premake5 Project that will compile a simple ‘hello world’ program for Linux, MacOS and Windows: https://github.com/JohannesMP/Premake-for-Beginners
+
+To use premake you will need to be familiar with basic LUA syntax. You will not need to install anything to make LUA work for premake - It is entirely contained in the tiny premake5.exe executable. 
+
+If you have never used LUA before, you can refer to the [LearnXinYminutes LUA page](https://learnxinyminutes.com/docs/lua/), or [The Lua Crash Course](http://luatut.com/crash_course.html).  I have also included a heavily commented version of premake5.lua which covers the relevant basics. You will not need to know more than basic LUA syntax.
+
+#### Run Premake
+- Download the repository to your prefered location.
+  - `Build` contains the premake files and binaries. Please note that the binaries are included for convenience and you can delete them if you move the relevant relevant one for your OS to a location on your PATH.
+    - `Build/premake5.lua` describes the project and allows you to generate the Project files you want.
+    - `Build/premake5.lua_commented.lua` is the same file, but heavily commented for those that have never used LUA before, and goes into more detail explaining what premake's functions do.
+  - `Source` contains the source code, in this case a simple hello world program in C++.
+  
+
+#### Build a Visual Studio project on Windows
+- cd into the `Build` folder (running `dir` should show the `premake5.lua` file)
+- Run `premake5 vs2015` – this will generate a `project_vs2015` folder containing the VS solution and project files.
+- You can double click the `.sln` file to open the project in visual studio and compile it.
+
+#### To Build a Makefile on Mac or Linux
+- cd into the `Build` folder (running `ls -la` should show the premake5.lua file)
+- Run `./premake5 gmake` (or `./premake5_mac` for mac) – this will generate a `project_gmake` folder containing two Makefiles.
+  - You get one master `Makefile`, and one `PROJECTNAME.make` file per project.
+  - If you run make help the console output will tell you how to build specific configurations. For example, to build a 32bit release you run `make config=release_x32`
+  - For debugging, you can have verbose output by running `make verbose=1` ...
+- cd into the project folder and run `make`
+
+For both Windows and Linux, the output directory containing your compiled binary will be named `bin_CONFIGURATION` based on your selected configuration (Release/Debug, 32/64 bit). For example, it will be named `bin_Debug_x64` for 64bit Debug.
