@@ -13,9 +13,9 @@ comments: true
 ---
 # Getting Started with Premake
 
-This initial post will cover what Premake is, why you should use it, and will provide an example project you can download and try out. 
+This initial post will cover what Premake is, why you should use it, and provide an example project you can download and try out for yourself.
 
-Future posts will expand on the provided example by walking through the process of setting up more complicated premake configurations.
+Future posts will expand on the provided example by walking through the process of setting up more complicated premake configurations, such as cross-platform libraries and dependencies.
 
 
 ## Why Use a Build Configurator?
