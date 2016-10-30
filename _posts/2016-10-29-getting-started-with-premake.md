@@ -91,5 +91,5 @@ Please read through the premake5.lua_commented.lua file for a detailed breakdown
 
 ## Further Examples
 
-- The hello world program on the official Wiki: https://github.com/premake/premake-core/wiki/Your-First-Script
-- A more advanced project that uses dependencies (GLFW to render an opengl window) that should work cross-platform: https://github.com/JohannesMP/premake5_crossplatform_example
+- The hello world program on the official Wiki: [https://github.com/premake/premake-core/wiki/Your-First-Script](https://github.com/premake/premake-core/wiki/Your-First-Script)
+- A more advanced project that uses dependencies (GLFW to render an opengl window) that should work cross-platform: [https://github.com/JohannesMP/premake5_crossplatform_example](https://github.com/JohannesMP/premake5_crossplatform_example)
