@@ -83,3 +83,9 @@ If you have never used LUA before, you can refer to the [LearnXinYminutes LUA pa
 - For example, it will be named `bin_Debug_x64` for 64bit Debug.
 
 Please read through the premake5.lua_commented.lua file for a detailed breakdown of everything that is happening in the file.
+
+
+## Further Examples
+
+- The hello world program on the official Wiki: https://github.com/premake/premake-core/wiki/Your-First-Script
+- A more advanced project that uses dependencies (GLFW to render an opengl window) that should work cross-platform: https://github.com/JohannesMP/premake5_crossplatform_example
