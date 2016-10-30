@@ -29,9 +29,10 @@ This post will discuss [Premake5](https://premake.github.io/): A Lightweight, Op
 
 <br />
 ## What is Premake?
-<!-- more -->
 
 As with CMake, Premake allows you to define the structure and contents of your project and then dynamically generate whatever build files (Makefiles, VS Solutions, Xcode Projects, etc) you need at the time.
+
+<!-- more -->
 
 At the core of Premake is a **premake5.lua** file that describes your project (what programming language it uses, where to find source files, what dependencies it has, etc.). ‘**premake5.lua**’ is to _**Premake**_ what is ‘**Makefile**’ is to _[GNU Make](https://www.gnu.org/software/make/)_, and what ‘**doxyfile**’ is to _[Doxygen](http://www.stack.nl/~dimitri/doxygen/)_.
 
