@@ -8,7 +8,7 @@ I am a [BSCS degree](https://www.digipen.edu/academics/degree-programs/bs-in-com
 
 In the past I've worked as support for [Humble Bundle, Inc.](http://www.humblebundle.com) and as a full-stack developer at [Frozenbyte Games](http://www.frozenbyte.com/).
 
-#Site Credits
+# Site Credits
 
 I used the following resources when creating this blog:
 
