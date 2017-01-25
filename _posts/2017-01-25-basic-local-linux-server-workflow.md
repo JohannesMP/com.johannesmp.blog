@@ -19,6 +19,29 @@ This post assumes you have used VirtualBox for [running desktop versions of Linu
 
 Install virtualbox and MobaXterm.
 
+In VirtualBox, click 'New', then Choose Linux and Ubuntu(64-bit)
+![](https://i.imgur.com/6imS9c8.png)
+
+Allocate as much memory as you deem necessary. If you are using this virtual machine to mirror a dedicated Linux server, make sure to choose a comparable amount of memory.
+
+Continue setting up a Harddrive. You probably want a dynamically sized Virtual Harddrive with a size limit of at least 20GB.
+
+![](https://i.imgur.com/MUfj6em.png)
+
+The Virtual Machine should now be in VirtualBox's Left Sidebar. Select it and choose 'Start'. When prompted, select the Ubuntu 16.04.1 install ISO that you previously downloaded.
+
+Choose your relevant language, then 'Install Ubuntu Server'
+
+![](https://i.imgur.com/5LFwmqG.png)
+
+
+
+
+
+
+
+
+
 
 
 
