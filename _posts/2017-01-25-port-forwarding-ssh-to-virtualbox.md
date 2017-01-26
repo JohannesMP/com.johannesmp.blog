@@ -19,6 +19,7 @@ This post assumes you have used VirtualBox for [running desktop versions of Linu
 <!-- more -->
 
 <br />
+
 ## Downloads 
 
 - Download the latest version of Virtual box: [Download link](https://www.virtualbox.org/wiki/Downloads)
@@ -26,6 +27,7 @@ This post assumes you have used VirtualBox for [running desktop versions of Linu
 - Download the Latest version of Ubuntu Server, which at the time of this writing is 16.04.1: [Download link](https://www.ubuntu.com/download/server)
 
 <br />
+
 ## Installation
 
 Install VirtualBox and MobaXterm.
@@ -41,6 +43,7 @@ https://i.imgur.com/9mdAgY5.png
 
 
 <br />
+
 ## Initial Setup
 
 Once the install has finished, you will be prompted with the standard Linux login.
@@ -71,6 +74,7 @@ You can now type `exit` to log out of your user session. Ideally we will never h
 
 
 <br />
+
 ## Port forwarding SSH
 
 Minimize your server's window (make sure not to close it), select it in the VirtualBox Siderbar and choose '_Settings_'.
@@ -89,6 +93,7 @@ Click 'OK' to close the settings window and open your SSH client of choice, such
 
 
 <br />
+
 ## Connecting via SSH
 
 Start up MobaXterm:
@@ -103,6 +108,7 @@ You should now be able to connect to your Virtual Machine via this command: `ssh
 
 
 <br />
+
 ## More port forwarding
 
 You can forward any port from inside your VM this way. For example, if you running nginx as a webhost on port 80, you can forward it to your host OS to view the page it is hosting. Since port 80 would already be used by your main OS, you would use another unused port, such as port `8080`:
