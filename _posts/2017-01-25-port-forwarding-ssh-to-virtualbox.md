@@ -1,5 +1,13 @@
 ---
-published: false
+layout: post
+title: 'Port Forwarding SSH to Virtual Box'
+tags:
+  - clang
+  - windows
+  - tutorial
+  - mingw-w64
+published: true
+comments: true
 ---
 
 In this post I will discuss setting up port forwarding to manage a local linux virtual machine through ssh, with a focus on mirroring the workflow you might follow with a dedicated Linux server.
