@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Port Forwarding SSH to Virtual Box'
+title: 'Port Forwarding SSH from Virtual Box'
 tags:
   - clang
   - windows
