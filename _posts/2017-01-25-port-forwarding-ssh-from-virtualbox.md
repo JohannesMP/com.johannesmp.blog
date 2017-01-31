@@ -53,6 +53,7 @@ Once the install has finished, you will be prompted with the standard Linux logi
 
 
 While you can log in here and use this console to interact with your server, it is very limited:
+
 - You cannot resize the window.
 - You cannot copy/paste text from your host OS.
 - You cannot scroll to look at more history than is currently on the screen.
