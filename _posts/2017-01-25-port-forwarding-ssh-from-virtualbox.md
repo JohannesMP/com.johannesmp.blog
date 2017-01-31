@@ -2,10 +2,11 @@
 layout: post
 title: 'Port Forwarding SSH from Virtual Box'
 tags:
-  - clang
   - windows
+  - linux
   - tutorial
-  - mingw-w64
+  - ssh
+  - virtualization
 published: true
 comments: true
 ---
