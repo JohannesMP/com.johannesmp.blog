@@ -8,10 +8,10 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {% include custom/set_post_table.html show_set_title=false %}
+  {% include custom/post_note.html %}
   {{ content }}
   <hr />
   {% include custom/set_post_table.html show_set_title=true %}
-  {% include custom/post_note.html %}
 </div>
 
 <div class="related">
