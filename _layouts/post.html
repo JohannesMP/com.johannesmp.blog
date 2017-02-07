@@ -10,7 +10,10 @@ layout: default
   {% include custom/set_post_table.html show_set_title=false %}
   {% include custom/post_note.html %}
   {{ content }}
+  
+  {% if page.set_id != null %}
   <hr />
+  {% endif %}
   {% include custom/set_post_table.html show_set_title=true %}
 </div>
 
