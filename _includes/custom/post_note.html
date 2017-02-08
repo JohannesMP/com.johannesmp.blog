@@ -1,7 +1,9 @@
 {% if page.note != null %}
 
-<div class="post-note alert alert-info">
-{{page.note | markdownify}}
+<div class="post-note alert alert-info" role="alert">
+{{% assign note_prefix = 'NOTE:' %}
+{{% assign note_msg = '**' | append: note_prefix | append: '**' | append: page.note %}}
+{{note_msg | markdownify}}
 </div>
 
 {% endif %}
