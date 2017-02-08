@@ -9,7 +9,7 @@ tags:
   - virtualization
 published: true
 comments: true
-note_prefix: 'NOTE:'
+note_prefix: 'Note:'
 note: 'This post is supplementary material for [DigiPen](http://www.digipen.edu)'s [CS261](https://www.digipen.edu/coursecatalog/#CS261).'
 ---
 
