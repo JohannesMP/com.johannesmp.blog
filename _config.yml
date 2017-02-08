@@ -18,7 +18,7 @@ url:                http://blog.johannesmp.com
 baseurl:            ''
 paginate:           5
 excerpt_separator:  <!-- more -->
-
+repository:         'JohannesMP/com.johannesmp.blog'
 
 # About/contact
 author:

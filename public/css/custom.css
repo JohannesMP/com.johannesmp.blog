@@ -127,7 +127,7 @@
     border-color: #faebcc;
 }
 
-.alert-info strong, .alert-info b {
+.alert-warning strong, .alert-warning b {
   color: #8a6d3b;
 }
 
@@ -137,7 +137,7 @@
     border-color: #ebccd1;
 }
 
-.alert-info strong, .alert-info b {
+.alert-danger strong, .alert-danger b {
   color: #a94442;
 }
 

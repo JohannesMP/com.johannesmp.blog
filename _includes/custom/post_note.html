@@ -1,8 +1,13 @@
-{% if page.note != null %}
+{% if page.note_body != null and page.note_body != "" %}
 
-<div class="post-note alert alert-info" role="alert">
-<!-- {{% assign note_prefix = 'NOTE:' %}
-{{% assign note_msg = '**' | append: note_prefix | append: '**' | append: page.note %}} -->
+<div class="post-note {{ post.note_class | default: 'alert alert-info'}} "  role="alert">
+
+{% if page.note_prefix != null and page.note_prefix != null %}
+  {{ "**" | append: page.note_prefix | append: "**: " | append: page.note_body | markdownify }}
+{% else %}
+  {{ page.note_body | markdownify }}
+{% endif %}
+
 {{note_msg | markdownify}}
 </div>
 
