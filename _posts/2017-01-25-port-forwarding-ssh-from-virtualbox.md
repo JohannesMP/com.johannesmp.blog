@@ -10,7 +10,7 @@ tags:
 published: true
 comments: true
 note_prefix: 'Note:'
-note: 'This post is supplementary material for [DigiPen](http://www.digipen.edu)'s [CS261](https://www.digipen.edu/coursecatalog/#CS261).'
+note: 'This post is supplementary material for [DigiPen](http://www.digipen.edu)'s [Advanced Networking Class](https://www.digipen.edu/coursecatalog/#CS261)'
 ---
 
 In this post I will discuss setting up port forwarding to manage a local linux virtual machine through ssh, with a focus on mirroring the workflow you might follow with a dedicated Linux server.
