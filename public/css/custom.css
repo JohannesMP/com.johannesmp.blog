@@ -107,10 +107,18 @@
     border-color: #d6e9c6;
 }
 
+.alert-success strong, .alert-success b {
+  color: #3c763d;
+}
+
 .alert-info {
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1;
+}
+
+.alert-info strong, .alert-info b {
+  color: #31708f;
 }
 
 .alert-warning {
@@ -119,9 +127,20 @@
     border-color: #faebcc;
 }
 
+.alert-info strong, .alert-info b {
+  color: #8a6d3b;
+}
+
 .alert-danger {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
 }
 
+.alert-info strong, .alert-info b {
+  color: #a94442;
+}
+
+.post-note {
+  /* Placeholder */
+}
