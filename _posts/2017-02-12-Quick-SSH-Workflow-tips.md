@@ -166,15 +166,17 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 
 _**Note:** Certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead._
 
-### Use _**supervisorctl**_ to easily daemonize  
+### Use _**supervisorctl**_ to easily daemonize _anything_ 
 
-If you ever want to daemonize a script or application so that it runs without supervision, this can be a pain without specialized applications such as `pm2` for `node.js`.
+If you ever want to daemonize a script or application so that it runs without supervision, this can be a pain without specialized applications such as `pm2` for `node.js` applications.
 
 Enter [supervisor](http://supervisord.org/), a powerful solution for managing and running processes without having to resort to writing startup scripts or using screen.
 
-It is far too large to cover here, but it's so painless and useful compared to really any alternative, that it's worth mentioning. I personally use it for running several game servers that don't provide straightforward daemonization.
+It is far too large to cover here, but it's so painless and useful compared to really any alternative that it's worth mentioning. I personally use it for running several game servers that don't provide straightforward daemonization.
 
 Here is a good tutorial to get you started if you want to use it: https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
+
+_**Note**: for node.js applications [PM2](http://pm2.keymetrics.io/) should be used instead_
 
 
 
