@@ -16,9 +16,9 @@ note_body: >-
   class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
   knowledge.
 ---
-Here is a small collections of tips and tricks when working with a linux server. The intention is to help improve usability and general productivity when ssh-ing into a linux machine. It was written with Ubuntu/Debian in mind, but should also work on other linux versions such as Mint.
+Here is a small collections of tips and tricks with the intention to help improve usability and general productivity when ssh-ing into a linux machine. It was written with Ubuntu/Debian in mind, but should also work on other linux versions such as Mint.
 
-A quick Overview:
+What this post covers:
 
 1. Use _**history**_ and _**grep**_
 2. Use the command line faster
@@ -37,7 +37,7 @@ For the most part these are all fairly straightforward and this post will probab
 
 ## 1. Use _**history**_ and _**grep**_
 
-Often you may want to look up a command you ran earlier, or even days ago when you were installing something and you want to know exactly what you did (for example if you want to repeat the same steps on another server or VM).
+You may want to look up some commands you ran a while back (for example if you want to repeat the same steps on another server or VM).
 
 If you type `history` you will get a list of all commands you've typed recenctly, including past sessions.
 
@@ -61,7 +61,7 @@ history | grep "apt-get install"  # Running history as root
 
 Some basic, but useful tips to make using the command line far less tedious:
 
-### Use _**Tab**_ to autocomplete
+### Use _**tab**_ to autocomplete
 
 When you are navigating a complex folder structur, you should always press tab after typing the start of the path you want to travel. 
 
@@ -70,12 +70,12 @@ For example, if you want to navigate to:
 ````bash
 ~/ReallyReally/VeryLong/AwesomePath
 ````
-You can do so easily by typing `cd ~/R` _**Tab**_ `V` _**Tab**_ `A` _**Tab**_:
+You can do so easily by typing `cd ~/R` _**tab**_ `V` _**tab**_ `A` _**tab**_:
 ![](http://i.imgur.com/ex1NMoE.gif)
 
 Assuming that at each level the name of the directory is unique. Each time you hit path, the console would attempt to auto-complete as much of the path as possible.
 
-If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R` _**Tab**_ would autocomplete to where the two names differ, at which point typing either `R` _**Tab**_ or `S` _**Tab**_ would complete that directory name. When it stops you can hit tab again to see all possible options.
+If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R` _**tab**_ would autocomplete to where the two names differ, at which point typing either `R` _**tab**_ or `S` _**tab**_ would complete that directory name. When it stops you can hit tab again to see all possible options.
 
 This is different from the behavior of the Windows commandline, which auto-completes the first option, and each tab cycles to the next option.
 
