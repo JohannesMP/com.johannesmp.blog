@@ -1,0 +1,312 @@
+---
+published: false
+layout: post
+tags:
+  - linux
+  - tutorial
+  - ssh
+comments: true
+set_id: Linux Server Basics
+set_part_id: 2
+set_part_title: Quick SSH Workflow Tips
+note_class: alert alert-info
+note_prefix: Note
+note_body: >-
+  This post is reference [for a
+  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
+  knowledge.
+---
+A small selection of tips you can apply to your workflow when using ssh to manage a remote linux server or VM. This is for beginners and so will probably contain nothing new for anyone that has a good bit of linux experience.
+
+<br />
+
+
+# 1. Use history and grep
+
+Often you may want to look up a command you ran earlier, or even days ago when you were installing something and you want to know exactly what you did (for example if you want to repeat the same steps on another server or VM).
+
+If you type `history` you will get a list of all commands you've typed recenctly, including past sessions.
+
+You can pipe that output into the `grep` command to filter out all the commands that had a specific string. So for example if you want to find every command you've ever run containing "test", you can do `history | grep "test"`:
+
+![](https://i.imgur.com/KzuJY0H.png)
+
+Note that each user has their own history, so if you use a command with `sudo`, such as `sudo apt-get install ...` the command will only show up in the `root` user's history. 
+
+Running `sudo history` may result in a `sudo: history: command not found` error. To get around this you'll need to elevate yourself to be the root user first:
+
+````
+sudo su                           # You are now root
+history | grep "apt-get install"  # Running history as root
+````
+
+<br />
+
+
+# 2. Use the command line faster
+
+Some basic, but useful tips to make using the command line far less tedious:
+
+## Use Tab to autocomplete
+
+Very simple, but is worth mentioning. When you are navigating a complex folder structur, you should always press tab after typing the start of the path you want to travel. For example, if you want to navigate to
+
+````
+~/ReallyReally/VeryLong/AwesomePath
+````
+You can do so by typing `cd ~/R` _**TAB**_ `V` _**TAB**_ `A` _**TAB**_:
+![](http://i.imgur.com/ex1NMoE.gif)
+
+Assuming that at each level the name of the directory is unique. Each time you hit path, the console would attempt to auto-complete as much of the path as possible.
+
+If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R`_**TAB**_ would autocomplete to where the two names differ, at which point typing either `R` _**TAB**_ or `S` _**TAB**_ would complete that directory name. This is different from the behavior of the windows commandline, which completes the whole first name, and each tab cycles to the next option.
+
+## Use !!, !$ and !!:n to quickly repeat commands
+
+The `!!` macro is replaced by your last command, allowing you to quickly re-run commands with `sudo`:
+![](https://i.imgur.com/uWofC8b.png)
+
+Similarly you can grab only the arguments to the last command with `!$`, so you could use that to re-run a command that had `sudo`, without the `sudo`.
+
+Lastly, if you ever want to grab a specific argument from the last command, you can use !!:n to grab the n'th argument:
+
+![](https://i.imgur.com/casgnqE.png)
+
+
+## Use Ctrl+R to auto-complete past commands
+
+As in the windows commandline, you can press the up and down buttons to navigate your most recently run commands.
+
+However if you type `Ctrl`+`R` you can get an auto-completing `reverse-i-search`. Simply start typing and the best matching command will fill in, then press enter when you have selected the right command.
+
+This makes it really easy to quickly grab a command that you want to re-run but don't want to press up a dozen times to get back to it.
+
+
+
+<br />
+
+# 3. Use Nano for config files
+
+`nano` is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
+
+While learning more full-featured editors such as vi is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
+
+## Basic Nano Commands
+
+  - Creating/Opening a file:
+    nano <filename>
+  - The standard UI:
+    https://i.imgur.com/Tvt9Hm4.png
+      - The commands are listed at the bottom, and all are of the format `Ctrl+Letter` (`^` stands for `Ctrl`)
+  - `Ctrl`+`O` to save document.
+  - `Ctrl`+`X` to close document.
+    - If pending changes enter `y` and enter, and when prompted for filename hit enter again.
+  - `Ctrl`+`W` to search for a specific string in the document,
+  - `Ctrl`+`K` to 'cut' the current selection (default whole line) Use `Ctrl+U` to 'uncut' (copy and paste)
+  - `Ctrl`+`-` or `Ctrl`+`_` to jump the cursor to a given line number.
+  
+  - NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
+
+
+## Some Nano Configuration changes
+
+Some small changes can be made to the default nano configuration found in /etc/nano/
+
+`sudo nano /etc/nanorc`
+
+(Remember, you can use `Ctrl+W` to search for them)
+
+  - `set constantshow` : when enabled allows you to always see line number the bottom bar.
+  - `set mouse` : allows you to use the mouse for things, like setting the cursor's position.
+  - `set softwrap` : if you want to see long lines in one screen
+  - `set tabsize 8` : uncomment and change to whatever value you prefer.
+
+<br />
+
+
+# 4. Install TheF*ck
+
+We've all been here:
+
+![](https://i.imgur.com/P0k81SK.png)
+
+ > _AGH!! Yes of course I meant sudo_
+
+While you could use the `!!` macro (which stands for the most recent command) to simply re-run the command with sudo:
+
+![](http://i.imgur.com/r7npkyP.png)
+
+You can install [TheFuck](https://github.com/nvbn/thefuck) and simply vent your frustration, and fix your mistake all at the same time:
+
+![](https://i.imgur.com/HuOF3PG.png)
+
+It will intelligently try to auto-complete the most recent command you typed. It works for a ton of other commands as well.
+
+It is a python script that you can install via [pip](https://pypi.python.org/pypi/pip) like this:
+
+````
+sudo apt update
+sudo apt install python3-dev python3-pip
+sudo -H pip3 install thefuck
+````
+
+And then you will need to edit the `.bashrc` startup file located in your user's home directory:
+
+````
+nano ~/.bashrc
+````
+
+Navigate to the bottom and add the following:
+
+````
+#########
+# Default TheFuck Alias (type 'fuck' to activate)
+eval "$(thefuck --alias)"
+# Custom TheFuck Alias (type 'FUCK' to activate)
+eval "$(thefuck --alias FUCK)" 
+````
+
+And then re-load the startup file, either by disconnecting and reconnecting, or by running
+
+````
+source ~/.bashrc
+````
+
+<br />
+
+
+# 5. Customize your .bashrc file
+
+Speaking of `~/.bashrc`, there are several useful things you can do here.
+
+`.bashrc` is a startup script located in a user's home directory that is run when they log in. It defines things like what the part of their console to the left of the `$` looks like.
+
+As previously mentioned, any change you make to a `.bashrc` file will only take effect when it is reloaded, either by relogging or typing `source path/to/file`.
+
+**NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It can be useful to temporarilly switch to root via `sudo su` and so changes you make to your `~/.bashrc` file should also be applied to `/root/.bashrc`.
+
+
+## Add custom command aliases
+
+You can define custom command aliases easily with the format `alias <name>='<command>'`. 
+
+For example, if you are used to using `dir` in the windows commandline and can't stop accidentally typing that instead of `ls -la`, you can add this alias:
+````
+alias dir='ls -la'
+````
+
+Instead of typing `sudo apt-get update` and `sudo apt-get upgrade` you could define just `update` and `upgrade`:
+````
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+````
+
+## Change your PATH
+
+If you plan on installing custom commands and want to make sure they appear in your path, `.bashrc` is where you do so.
+
+Let's say you want to add `/home/username/testing` to your path. You would include the following line at the bottom of your `.bashrc` file (on linux the PATH variable is delimited with colon `:` characters))
+
+````
+export PATH=$PATH:/home/username/testing
+````
+
+Which would apprent your path to the end of the PATH variable.
+
+If you want to replace something already on the path, you'll want to prepend your path as follows:
+
+````
+export PATH=/home/username/testing:$PATH
+````
+To make sure that it is executed first before the path you are trying to replace.
+
+
+
+## Increase your history size
+
+As mentioned earlier, the `history` command is very useful for looking back at what you've previously done on a linux machine. The bashrc file defines two variables that determine how this data is stored:
+````
+HISTSIZE=1000      # the number of most recent commands that will be written to the history file
+HISTFILESIZE=2000  # the number of total commands the history file will store
+````
+
+While it is probably unlikely for you to run more than 1000 commands, it's pretty easy to reach more than 2000 commands total if you frequently run commands on your server. Therefore it's a good idea to increase the `HISTFILESIZE` to something larger like 50000. Since the only data that is stored is the command, not the resulting console output, the total size of the file will still be really small.
+
+
+## Enable console coloring
+
+Adding some color to your console can greatly improve the experience of working in the console. 
+
+newer versions of debian/ubuntu will already add some color to their output, but otherwise this is done by modifying the `PS1` variable, which is used to alter the appearance of the console string.
+
+First, you'll want `nano ~/bashrc` and change this line
+````
+#force_color_prompt=yes
+````
+to:
+````
+force_color_prompt=yes
+````
+
+Then the PS1 variable should be set as follows (note that on most recent ubuntu and debian installations this is the default):
+
+````
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+````
+
+This will change your commandline from this:
+
+{:.float-left}
+![](https://i.imgur.com/lZgGTkz.png)
+To This:
+{:.float-left}
+![](https://i.imgur.com/fBMAg7n.png)
+
+Additionally, this can be used to make it easier to tell when you are using root, by showing them as a different color:
+
+![](https://i.imgur.com/nlNTCsr.png)
+
+To do this, first follow the same steps as above with root's `.bashrc` file with `sudo nano /root/.bashrc`. (remember to also increase its `HISTFILESIZE` if you haven't yet).
+
+Then once color is enabled, you can change the color from green to red by changing the first `32m` in the PS1 variable to be `31m` instead.
+
+So for your root's `.bashrc` the line would now be:
+
+````
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+````
+
+
+## Show git repository branch
+
+When working with git repositories it is really useful to be able to see when you are inside a git repository, and which branch has been checked out in your working copy, like this:
+
+{:.float-left}
+![](https://i.imgur.com/jpqNnZo.png)
+
+To do this you first need to include this function at the bottom of your `.bashrc` file, which will be used to grab the current branch string.
+
+````
+# Git branch in terminal prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+}
+````
+
+Then you can modify the PS1 variable from this:
+
+````
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+````
+to this:
+````
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]\$ '
+````
+
+You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red.
+
+
