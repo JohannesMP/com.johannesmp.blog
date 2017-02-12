@@ -84,14 +84,14 @@ This is different from the behavior of the Windows commandline, which auto-compl
 The `!!` macro is replaced by your last command, allowing you to quickly re-run commands with `sudo`:
 ![](https://i.imgur.com/uWofC8b.png)
 
-Similarly you can grab only the arguments to the last command with `!$`, so you could use that to re-run a command that had `sudo`, without the `sudo`.
+Similarly you can grab only the arguments to the last command with `!$`, so you could use that to re-run just a command that followed `sudo`.
 
 Lastly, if you ever want to grab a specific argument from the last command, you can use `!!:n` to grab the n'th argument:
 
 ![](https://i.imgur.com/casgnqE.png)
 
 
-### Use _**Ctrl**_+_**R**_ to auto-complete past commands
+### Use _**Ctrl**_+_**R**_ to quickly run past commands
 
 As in the windows commandline, you can press the up and down buttons to navigate your most recently run commands.
 
@@ -105,7 +105,7 @@ Repeatedly hitting `Ctrl`+`R` will cycle through all commands that might match, 
 
 ## 3. Use _**nano**_ for config files
 
-`nano` is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
+[`nano`](http://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
 
 While learning more full-featured editors such as [vi](https://www.cs.colostate.edu/helpdocs/vi.html) is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
 
