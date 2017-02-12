@@ -172,7 +172,7 @@ _**Note:** Certain processes will only be visible to root, and can only be kille
 
 If you ever want to daemonize a script or application so that it runs without supervision, this can be a pain without specialized applications such as `pm2` for `node.js` applications.
 
-Enter [supervisor](http://supervisord.org/), a powerful solution for managing and running processes without having to resort to writing startup scripts or using screen.
+Enter [supervisor](http://supervisord.org/), a powerful solution for managing and running processes without having to resort to writing startup scripts or using [screen](https://www.howtoforge.com/linux_screen).
 
 It is far too large to cover here, but it's so painless and useful compared to really any alternative that it's worth mentioning. I personally use it for running several game servers that don't provide straightforward daemonization.
 
@@ -234,7 +234,7 @@ Speaking of `.bashrc`, it is a startup script located in a user's home directory
 
 Any change you make to a `.bashrc` file will only take effect when it is reloaded, either by relogging or typing `source path/to/file`.
 
-_**NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It can be useful to temporarilly switch to root via `sudo su` and so changes you make to your `~/.bashrc` file should also be applied to `/root/.bashrc`._
+_**NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It is what is loaded when you switch to root via `sudo su`_
 
 
 ### Add custom command aliases
