@@ -186,7 +186,7 @@ We've all been here:
 
 ![](https://i.imgur.com/P0k81SK.png)
 
- > _AGH!! Yes of course I meant use sudo_
+ > _AGH!! Yes just do it as root already, you know what I meant!_
 
 While you could use the `!!` macro  to simply re-run the command, you can install [TheFuck](https://github.com/nvbn/thefuck) and simply vent your frustration, and fix your mistake all at the same time:
 
