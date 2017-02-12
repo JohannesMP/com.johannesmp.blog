@@ -111,8 +111,7 @@ While learning more full-featured editors such as [vi](https://www.cs.colostate.
 
 ### Basic _**nano**_ Commands
 
-  - Creating/Opening a file:
-    nano <filename>
+  - Creating/Opening a file: `nano <filename>`
   - The standard UI:
     https://i.imgur.com/Tvt9Hm4.png
       - The commands are listed at the bottom, and all are of the format `Ctrl`+`Letter` (`^` stands for `Ctrl`)
@@ -123,19 +122,19 @@ While learning more full-featured editors such as [vi](https://www.cs.colostate.
   - `Ctrl`+`K` to 'cut' the current selection (default whole line) Use `Ctrl+U` to 'uncut' (copy and paste)
   - `Ctrl`+`-` or `Ctrl`+`_` to jump the cursor to a given line number.
 
-_**IMPORTANT**: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg`_
+_**IMPORTANT**: `Ctrl`+`Z` will minimize an open document **without actually closing it**. This is an easy mistake to make when first starting to use nano. To bring it back to the foreground use the command `fg`_
 
 
 ### Some _**nano**_ Configuration changes
 
-Some small changes can be made to the default nano configuration found in /etc/nano/
+Some small changes can be made to the default nano configuration found in `/etc/nano/`
 
 `sudo nano /etc/nanorc`
 
 (Remember, you can use `Ctrl+W` to search for them)
 
-  - `set constantshow` : when enabled allows you to always see line number the bottom bar.
-  - `set mouse` : allows you to use the mouse for things, like setting the cursor's position.
+  - `set constantshow` : you always see the current line number in the bottom bar.
+  - `set mouse` : can use mouse for some things, like setting the cursor's position.
   - `set softwrap` : if you want to see long lines in one screen
   - `set tabsize 8` : uncomment and change to whatever value you prefer.
 
@@ -146,7 +145,9 @@ Some small changes can be made to the default nano configuration found in /etc/n
 
 ### Use _**htop**_ to view running processes
 
-`htop` is a fantastic interactive process and system resource viewer. Simply install it with:
+`htop` is a fantastic interactive process and system resource viewer. You can view all currently running processes, as well as system Memory Usage, CPU usage, Load Average and system uptime.
+
+Simply install it with:
 
 ````bash
 apt-get install htop
@@ -156,12 +157,12 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 
 ![](https://i.imgur.com/8PDWqXa.png)
 
-- You can view all currently running processes, as well as system Memory Usage, CPU usage, Load Average and system uptime.
-- Press `F6` you can choose what column your processes are sorted by, allowing you to easily identify CPU or Memory hogs:![](https://i.imgur.com/gxptGzN.png)
-- Press `F5` to toggle between sorted mode and tree mode (where child processes are stacked below parent processes)
+Some useful commands:
+- `F6` you can choose what column your processes are sorted by, allowing you to easily identify CPU or Memory hogs:![](https://i.imgur.com/gxptGzN.png)
+- `F5` to toggle between sorted mode and tree mode (where child processes are stacked below parent processes)
 - Move the cursor up and down with the arrow keys and hit `F9` to send a signal, such as `Sigterm` to kill a process.
-- Press `F4`, type in a name to filter and hit enter to only display certain processes
-- Press `F2` and use the arrow keys to navigate the configuration settings.
+- `F4`, type in a name to filter and hit enter to only display certain processes
+- `F2` and use the arrow keys to navigate the configuration settings.
 
 
 _**Note:** Certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead._
