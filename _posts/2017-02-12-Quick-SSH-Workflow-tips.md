@@ -16,7 +16,13 @@ note_body: >-
   class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
   knowledge.
 ---
-A small selection of tips you can apply to your workflow when using ssh to manage a remote linux server or VM. This is for beginners and so will probably contain nothing new for anyone that has a good bit of linux experience.
+Here is a small collections of tips and tricks when working with a linux server. The intention is to help improve usability and general productivity when ssh-ing into a linux machine. It was written with Ubuntu/Debian in mind, but should also work on other linux versions such as Mint.
+
+This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions).
+
+For the most part these are all fairly straightforward and this post is for will probably contain nothing new for anyone that has a good bit of linux experience.
+
+<!-- more -->
 
 <br />
 
