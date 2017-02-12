@@ -134,7 +134,6 @@ Some small changes can be made to the default nano configuration found in `/etc/
 (Remember, you can use `Ctrl+W` to search for them)
 
   - `set constantshow` : you always see the current line number in the bottom bar.
-  - `set mouse` : can use mouse for some things, like setting the cursor's position.
   - `set softwrap` : if you want to see long lines in one screen
   - `set tabsize 8` : uncomment and change to whatever value you prefer.
 
@@ -353,15 +352,9 @@ parse_git_branch() {
 }
 ````
 
-Then you can modify the PS1 variable from this:
+Then you can modify the PS1 variable to replace `\[\033[00m\]` with `\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]`
 
-````bash
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-````
-
-to this:
+For non-root it should then look like:
 
 ````bash
 if [ "$color_prompt" = yes ]; then
@@ -369,7 +362,4 @@ if [ "$color_prompt" = yes ]; then
 else
 ````
 
-_**Note**: You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red._
-
-
-
+_**Note**: You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red._.
