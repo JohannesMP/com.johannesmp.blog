@@ -190,7 +190,7 @@ We've all been here:
 
  > _AGH!! Yes just do it as root already, you know what I meant!_
 
-While you could use the `!!` macro  to simply re-run the command, you can instead install [TheFuck](https://github.com/nvbn/thefuck) to simply vent your frustration, and fix your mistake all at the same time:
+While you could use the `!!` macro  to simply re-run the command, you can instead install [TheFuck](https://github.com/nvbn/thefuck) to automatically fix your command, and vent some frustration at the same time:
 
 ![](https://i.imgur.com/HuOF3PG.png)
 
