@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Port Forwarding SSH from Virtual Box'
+title: Port Forwarding SSH from Virtual Box
 tags:
   - windows
   - linux
@@ -9,9 +9,15 @@ tags:
   - virtualization
 published: true
 comments: true
-note_class: "alert alert-info"
-note_prefix: "Note"
-note_body: "This post is reference [for a class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior knowledge."
+note_class: alert alert-info
+note_prefix: Note
+note_body: >-
+  This post is reference [for a
+  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
+  knowledge.
+set_id: Linux Server Basics
+set_part_id: 1
+set_part_title: VirtualBox Port Forwarding
 ---
 
 In this post I will discuss setting up port forwarding to manage a local linux virtual machine through ssh, with a focus on mirroring the workflow you might follow with a dedicated Linux server.
@@ -123,15 +129,3 @@ You can forward any port from inside your VM this way. For example, if you runni
 Which you can then view in your host OS' browser as follows:
 
 ![](https://i.imgur.com/2UA0T95.png)
-
-
-
-
-
-
-
-
-
-
-
-
