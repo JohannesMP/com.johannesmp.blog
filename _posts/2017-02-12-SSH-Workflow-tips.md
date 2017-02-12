@@ -231,9 +231,9 @@ source ~/.bashrc
 
 Speaking of `.bashrc`, it is a startup script located in a user's home directory that is run when they log in. It sets up settings, such as what the part of their console to the left of the `$` looks like.
 
-As previously mentioned, any change you make to a `.bashrc` file will only take effect when it is reloaded, either by relogging or typing `source path/to/file`.
+Any change you make to a `.bashrc` file will only take effect when it is reloaded, either by relogging or typing `source path/to/file`.
 
-**NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It can be useful to temporarilly switch to root via `sudo su` and so changes you make to your `~/.bashrc` file should also be applied to `/root/.bashrc`.
+_**NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It can be useful to temporarilly switch to root via `sudo su` and so changes you make to your `~/.bashrc` file should also be applied to `/root/.bashrc`._
 
 
 ### Add custom command aliases
