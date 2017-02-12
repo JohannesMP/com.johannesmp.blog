@@ -35,7 +35,7 @@ For the most part these are all fairly straightforward and this post is for will
 <br />
 
 
-# 1. Use _**history**_ and _**grep**_
+## 1. Use _**history**_ and _**grep**_
 
 Often you may want to look up a command you ran earlier, or even days ago when you were installing something and you want to know exactly what you did (for example if you want to repeat the same steps on another server or VM).
 
@@ -57,11 +57,11 @@ history | grep "apt-get install"  # Running history as root
 <br />
 
 
-# 2. Use the command line faster
+## 2. Use the command line faster
 
 Some basic, but useful tips to make using the command line far less tedious:
 
-## Use _**Tab**_ to autocomplete
+### Use _**Tab**_ to autocomplete
 
 When you are navigating a complex folder structur, you should always press tab after typing the start of the path you want to travel. 
 
@@ -79,7 +79,7 @@ If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R` _**Tab**_
 
 This is different from the behavior of the Windows commandline, which auto-completes the first option, and each tab cycles to the next option.
 
-## Use _**!!**_, _**!$**_ and _**!!:n**_ to quickly repeat commands
+### Use _**!!**_, _**!$**_ and _**!!:n**_ to quickly repeat commands
 
 The `!!` macro is replaced by your last command, allowing you to quickly re-run commands with `sudo`:
 ![](https://i.imgur.com/uWofC8b.png)
@@ -91,7 +91,7 @@ Lastly, if you ever want to grab a specific argument from the last command, you 
 ![](https://i.imgur.com/casgnqE.png)
 
 
-## Use _**Ctrl**_+_**R**_ to auto-complete past commands
+### Use _**Ctrl**_+_**R**_ to auto-complete past commands
 
 As in the windows commandline, you can press the up and down buttons to navigate your most recently run commands.
 
@@ -103,13 +103,13 @@ Repeatedly hitting `Ctrl`+`R` will cycle through all commands that might match, 
 
 <br />
 
-# 3. Use _**nano**_ for config files
+## 3. Use _**nano**_ for config files
 
 `nano` is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
 
 While learning more full-featured editors such as vi is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
 
-## Basic _**nano**_ Commands
+### Basic _**nano**_ Commands
 
   - Creating/Opening a file:
     nano <filename>
@@ -126,7 +126,7 @@ While learning more full-featured editors such as vi is encouraged if you plan t
   - NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
 
 
-## Some _**nano**_ Configuration changes
+### Some _**nano**_ Configuration changes
 
 Some small changes can be made to the default nano configuration found in /etc/nano/
 
@@ -142,9 +142,9 @@ Some small changes can be made to the default nano configuration found in /etc/n
 <br />
 
 
-# 4. Some useful applications
+## 4. Some useful applications
 
-## Use _**htop**_ to view running processes
+### Use _**htop**_ to view running processes
 
 `htop` is a fantastic interactive process and system resource viewer. Simply install it with:
 
@@ -165,7 +165,7 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 
 Note that certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead.
 
-## Use _**supervisorctl**_ to easily daemonize  
+### Use _**supervisorctl**_ to easily daemonize  
 
 If you ever want to daemonize a script or application so that it runs without supervision, this can be a pain without specialized applications such as `pm2` for `node.js`.
 
@@ -177,7 +177,7 @@ Here is a good tutorial to get you started if you want to use it: https://www.di
 
 
 
-## Use _**TheF*ck**_ when frustrated
+### Use _**TheF*ck**_ when frustrated
 
 We've all been here:
 
@@ -224,7 +224,7 @@ source ~/.bashrc
 <br />
 
 
-# 5. Customize your _**.bashrc**_ file
+## 5. Customize your _**.bashrc**_ file
 
 Speaking of `~/.bashrc`, there are several useful things you can do here.
 
@@ -235,7 +235,7 @@ As previously mentioned, any change you make to a `.bashrc` file will only take 
 **NOTE:** each user has their own `.bashrc` file. For example root's is located in `/root/.bashrc` instead of `/home/<username>/.bashrc`. It can be useful to temporarilly switch to root via `sudo su` and so changes you make to your `~/.bashrc` file should also be applied to `/root/.bashrc`.
 
 
-## Add custom command aliases
+### Add custom command aliases
 
 You can define custom command aliases easily with the format `alias <name>='<command>'`. 
 
@@ -250,7 +250,7 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 ````
 
-## Change your _**PATH**_
+### Change your _**PATH**_
 
 If you plan on installing custom commands and want to make sure they appear in your path, `.bashrc` is where you do so.
 
@@ -271,7 +271,7 @@ To make sure that it is executed first before the path you are trying to replace
 
 
 
-## Increase your history size
+### Increase your history size
 
 As mentioned earlier, the `history` command is very useful for looking back at what you've previously done on a linux machine. The bashrc file defines two variables that determine how this data is stored:
 ````
@@ -282,7 +282,7 @@ HISTFILESIZE=2000  # the number of total commands the history file will store
 While it is probably unlikely for you to run more than 1000 commands, it's pretty easy to reach more than 2000 commands total if you frequently run commands on your server. Therefore it's a good idea to increase the `HISTFILESIZE` to something larger like 50000. Since the only data that is stored is the command, not the resulting console output, the total size of the file will still be really small.
 
 
-## Enable console coloring
+### Enable console coloring
 
 Adding some color to your console can greatly improve the experience of working in the console. 
 
@@ -330,7 +330,7 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[0
 ````
 
 
-## Show git repository branch
+### Show git repository branch
 
 When working with git repositories it is really useful to be able to see when you are inside a git repository, and which branch has been checked out in your working copy, like this:
 
