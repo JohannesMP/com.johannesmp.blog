@@ -176,7 +176,7 @@ Enter [supervisor](http://supervisord.org/), a powerful solution for managing an
 
 It is far too large to cover here, but it's so painless and useful compared to really any alternative that it's worth mentioning. I personally use it for running several game servers that don't provide straightforward daemonization.
 
-Here is a good tutorial to get you started if you want to use it: https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
+Here is a good tutorial to get you started if you want to use it: [https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps](https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps)
 
 _**Note**: for node.js applications [PM2](http://pm2.keymetrics.io/) should be used instead_
 
