@@ -228,9 +228,7 @@ source ~/.bashrc
 
 ## 5. Customize your _**.bashrc**_ file
 
-Speaking of `~/.bashrc`, there are several useful things you can do here.
-
-`.bashrc` is a startup script located in a user's home directory that is run when they log in. It defines things like what the part of their console to the left of the `$` looks like.
+Speaking of `.bashrc`, it is a startup script located in a user's home directory that is run when they log in. It sets up settings, such as what the part of their console to the left of the `$` looks like.
 
 As previously mentioned, any change you make to a `.bashrc` file will only take effect when it is reloaded, either by relogging or typing `source path/to/file`.
 
