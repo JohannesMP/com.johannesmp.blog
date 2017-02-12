@@ -28,7 +28,7 @@ A quick Overview:
 
 This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions).
 
-For the most part these are all fairly straightforward and this post is for will probably contain nothing new for anyone that has a good bit of linux experience.
+For the most part these are all fairly straightforward and this post will probably contain nothing new for anyone that has a fair amount of linux experience.
 
 <!-- more -->
 
