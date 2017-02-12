@@ -113,7 +113,7 @@ While learning more full-featured editors such as [vi](https://www.cs.colostate.
 
   - Creating/Opening a file: `nano <filename>`
   - The standard UI:
-    https://i.imgur.com/Tvt9Hm4.png
+    ![](https://i.imgur.com/Tvt9Hm4.png)
       - The commands are listed at the bottom, and all are of the format `Ctrl`+`Letter` (`^` stands for `Ctrl`)
   - `Ctrl`+`O` to save document.
   - `Ctrl`+`X` to close document.
