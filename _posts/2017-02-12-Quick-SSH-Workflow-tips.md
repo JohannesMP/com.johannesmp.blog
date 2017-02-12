@@ -341,7 +341,7 @@ When working with git repositories it is really useful to be able to see when yo
 
 To do this you first need to include this function at the bottom of your `.bashrc` file, which will be used to grab the current branch string.
 
-````
+````{r, engine='bash', count_lines}
 # Git branch in terminal prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
