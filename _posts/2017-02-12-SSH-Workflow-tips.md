@@ -158,6 +158,7 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 ![](https://i.imgur.com/8PDWqXa.png)
 
 Some useful commands:
+
 - `F6` you can choose what column your processes are sorted by, allowing you to easily identify CPU or Memory hogs:![](https://i.imgur.com/gxptGzN.png)
 - `F5` to toggle between sorted mode and tree mode (where child processes are stacked below parent processes)
 - Move the cursor up and down with the arrow keys and hit `F9` to send a signal, such as `Sigterm` to kill a process.
