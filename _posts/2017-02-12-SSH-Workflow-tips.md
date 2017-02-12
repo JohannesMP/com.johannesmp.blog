@@ -238,7 +238,10 @@ _**NOTE:** each user has their own `.bashrc` file. For example root's is located
 
 ### Add custom command aliases
 
-You can define custom command aliases easily with the format `alias <name>='<command>'`. 
+You can define custom command aliases easily with the format:
+````bash
+alias <name>='<command>'
+````
 
 For example, if you are used to using `dir` in the windows commandline and can't stop accidentally typing that instead of `ls -la`, you can add this alias:
 ````bash
