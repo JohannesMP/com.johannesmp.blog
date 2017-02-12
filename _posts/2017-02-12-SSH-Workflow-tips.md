@@ -296,11 +296,13 @@ Adding some color to your console can greatly improve the experience of working 
 
 newer versions of debian/ubuntu will already add some color to their output, but otherwise this is done by modifying the `PS1` variable, which is used to alter the appearance of the console string.
 
-First, you'll want `nano ~/bashrc` and change this line
+First, you'll want `nano ~/bashrc` and change this line:
+
 ````bash
 #force_color_prompt=yes
 ````
 to:
+
 ````bash
 force_color_prompt=yes
 ````
@@ -354,6 +356,7 @@ Then you can modify the PS1 variable from this:
 ````bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 ````
+
 to this:
 
 ````bash
