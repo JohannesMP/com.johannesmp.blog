@@ -117,7 +117,7 @@ While learning more full-featured editors such as [vi](https://www.cs.colostate.
       - The commands are listed at the bottom, and all are of the format `Ctrl`+`Letter` (`^` stands for `Ctrl`)
   - `Ctrl`+`O` to save document.
   - `Ctrl`+`X` to close document.
-    - If pending changes enter `y` and enter, and when prompted for filename hit enter again.
+    - If pending changes type `y` and enter, then when prompted for filename hit enter again.
   - `Ctrl`+`W` to search for a specific string in the document,
   - `Ctrl`+`K` to 'cut' the current selection (default whole line) Use `Ctrl+U` to 'uncut' (copy and paste)
   - `Ctrl`+`-` or `Ctrl`+`_` to jump the cursor to a given line number.
