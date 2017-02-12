@@ -61,19 +61,23 @@ history | grep "apt-get install"  # Running history as root
 
 Some basic, but useful tips to make using the command line far less tedious:
 
-## Use Tab to autocomplete
+## Use _**Tab**_ to autocomplete
 
-Very simple, but is worth mentioning. When you are navigating a complex folder structur, you should always press tab after typing the start of the path you want to travel. For example, if you want to navigate to
+When you are navigating a complex folder structur, you should always press tab after typing the start of the path you want to travel. 
+
+For example, if you want to navigate to:
 
 ````
 ~/ReallyReally/VeryLong/AwesomePath
 ````
-You can do so by typing `cd ~/R` _**TAB**_ `V` _**TAB**_ `A` _**TAB**_:
+You can do so easily by typing `cd ~/R` _**Tab**_ `V` _**Tab**_ `A` _**Tab**_:
 ![](http://i.imgur.com/ex1NMoE.gif)
 
 Assuming that at each level the name of the directory is unique. Each time you hit path, the console would attempt to auto-complete as much of the path as possible.
 
-If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R`_**TAB**_ would autocomplete to where the two names differ, at which point typing either `R` _**TAB**_ or `S` _**TAB**_ would complete that directory name. This is different from the behavior of the windows commandline, which completes the whole first name, and each tab cycles to the next option.
+If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R` _**Tab**_ would autocomplete to where the two names differ, at which point typing either `R` _**Tab**_ or `S` _**Tab**_ would complete that directory name. When it stops you can hit tab again to see all possible options.
+
+This is different from the behavior of the Windows commandline, which auto-completes the first option, and each tab cycles to the next option.
 
 ## Use _**!!**_, _**!$**_ and _**!!:n**_ to quickly repeat commands
 
