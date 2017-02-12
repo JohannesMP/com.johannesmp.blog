@@ -18,6 +18,14 @@ note_body: >-
 ---
 Here is a small collections of tips and tricks when working with a linux server. The intention is to help improve usability and general productivity when ssh-ing into a linux machine. It was written with Ubuntu/Debian in mind, but should also work on other linux versions such as Mint.
 
+A quick Overview:
+
+1. Use _**history**_ and _**grep**_
+2. Use the command line faster
+3. Use _**nano**_ for config files
+4. Some useful applications
+5. Customize your _**.bashrc**_ file
+
 This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions).
 
 For the most part these are all fairly straightforward and this post is for will probably contain nothing new for anyone that has a good bit of linux experience.
@@ -27,7 +35,7 @@ For the most part these are all fairly straightforward and this post is for will
 <br />
 
 
-# 1. Use history and grep
+# 1. Use _**history**_ and _**grep**_
 
 Often you may want to look up a command you ran earlier, or even days ago when you were installing something and you want to know exactly what you did (for example if you want to repeat the same steps on another server or VM).
 
@@ -67,7 +75,7 @@ Assuming that at each level the name of the directory is unique. Each time you h
 
 If you had both `~/ReallyReally` and `~/ReallySorta` then typing `~/R`_**TAB**_ would autocomplete to where the two names differ, at which point typing either `R` _**TAB**_ or `S` _**TAB**_ would complete that directory name. This is different from the behavior of the windows commandline, which completes the whole first name, and each tab cycles to the next option.
 
-## Use !!, !$ and !!:n to quickly repeat commands
+## Use _**!!**_, _**!$**_ and _**!!:n**_ to quickly repeat commands
 
 The `!!` macro is replaced by your last command, allowing you to quickly re-run commands with `sudo`:
 ![](https://i.imgur.com/uWofC8b.png)
@@ -79,7 +87,7 @@ Lastly, if you ever want to grab a specific argument from the last command, you 
 ![](https://i.imgur.com/casgnqE.png)
 
 
-## Use Ctrl+R to auto-complete past commands
+## Use _**Ctrl**_+_**R**_ to auto-complete past commands
 
 As in the windows commandline, you can press the up and down buttons to navigate your most recently run commands.
 
@@ -91,13 +99,13 @@ This makes it really easy to quickly grab a command that you want to re-run but 
 
 <br />
 
-# 3. Use Nano for config files
+# 3. Use _**nano**_ for config files
 
 `nano` is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
 
 While learning more full-featured editors such as vi is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
 
-## Basic Nano Commands
+## Basic _**nano**_ Commands
 
   - Creating/Opening a file:
     nano <filename>
@@ -114,7 +122,7 @@ While learning more full-featured editors such as vi is encouraged if you plan t
   - NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
 
 
-## Some Nano Configuration changes
+## Some _**nano**_ Configuration changes
 
 Some small changes can be made to the default nano configuration found in /etc/nano/
 
@@ -130,19 +138,50 @@ Some small changes can be made to the default nano configuration found in /etc/n
 <br />
 
 
-# 4. Install TheF*ck
+# 4. Some useful applications
+
+## Use _**htop**_ to view running processes
+
+`htop` is a fantastic interactive process and system resource viewer. Simply install it with:
+
+````
+apt-get install htop
+````
+
+And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
+
+![](https://i.imgur.com/8PDWqXa.png)
+
+- You can view all currently running processes, as well as system Memory Usage, CPU usage, Load Average and system uptime.
+- Press `F6` you can choose what column your processes are sorted by, allowing you to easily identify CPU or Memory hogs:![](https://i.imgur.com/gxptGzN.png)
+- Press `F5` to toggle between sorted mode and tree mode (where child processes are stacked below parent processes)
+- Move the cursor up and down with the arrow keys and hit `F9` to send a signal, such as `Sigterm` to kill a process.
+- Press `F4`, type in a name to filter and hit enter to only display certain processes
+- Press `F2` and use the arrow keys to navigate the configuration settings.
+
+Note that certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead.
+
+## Use _**supervisorctl**_ to easily daemonize  
+
+If you ever want to daemonize a script or application so that it runs without supervision, this can be a pain without specialized applications such as `pm2` for `node.js`.
+
+Enter [supervisor](http://supervisord.org/), a powerful solution for managing and running processes without having to resort to writing startup scripts or using screen.
+
+It is far too large to cover here, but it's so painless and useful compared to really any alternative, that it's worth mentioning. I personally use it for running several game servers that don't provide straightforward daemonization.
+
+Here is a good tutorial to get you started if you want to use it: https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
+
+
+
+## Use _**TheF*ck**_ when frustrated
 
 We've all been here:
 
 ![](https://i.imgur.com/P0k81SK.png)
 
- > _AGH!! Yes of course I meant sudo_
+ > _AGH!! Yes of course I meant use sudo_
 
-While you could use the `!!` macro (which stands for the most recent command) to simply re-run the command with sudo:
-
-![](http://i.imgur.com/r7npkyP.png)
-
-You can install [TheFuck](https://github.com/nvbn/thefuck) and simply vent your frustration, and fix your mistake all at the same time:
+While you could use the `!!` macro  to simply re-run the command, you can install [TheFuck](https://github.com/nvbn/thefuck) and simply vent your frustration, and fix your mistake all at the same time:
 
 ![](https://i.imgur.com/HuOF3PG.png)
 
@@ -181,7 +220,7 @@ source ~/.bashrc
 <br />
 
 
-# 5. Customize your .bashrc file
+# 5. Customize your _**.bashrc**_ file
 
 Speaking of `~/.bashrc`, there are several useful things you can do here.
 
@@ -207,7 +246,7 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 ````
 
-## Change your PATH
+## Change your _**PATH**_
 
 If you plan on installing custom commands and want to make sure they appear in your path, `.bashrc` is where you do so.
 
@@ -314,3 +353,6 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 ````
 
 You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red.
+
+
+
