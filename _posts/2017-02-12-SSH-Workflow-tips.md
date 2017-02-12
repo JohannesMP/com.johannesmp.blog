@@ -264,7 +264,7 @@ Let's say you want to add `/home/username/testing` to your path. You would inclu
 export PATH=$PATH:/home/username/testing
 ````
 
-Which would apprent your path to the end of the PATH variable.
+Which would append your path to the end of the PATH variable.
 
 If you want to replace something already on the path, you'll want to prepend your path as follows:
 
@@ -351,6 +351,7 @@ Then you can modify the PS1 variable from this:
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 ````
 to this:
+
 ````bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]\$ '
 ````
