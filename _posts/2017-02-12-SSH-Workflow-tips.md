@@ -49,7 +49,7 @@ Note that each user has their own history, so if you use a command with `sudo`, 
 
 Running `sudo history` may result in a `sudo: history: command not found` error. To get around this you'll need to elevate yourself to be the root user first:
 
-````
+````bash
 sudo su                           # You are now root
 history | grep "apt-get install"  # Running history as root
 ````
@@ -67,7 +67,7 @@ When you are navigating a complex folder structur, you should always press tab a
 
 For example, if you want to navigate to:
 
-````
+````bash
 ~/ReallyReally/VeryLong/AwesomePath
 ````
 You can do so easily by typing `cd ~/R` _**Tab**_ `V` _**Tab**_ `A` _**Tab**_:
@@ -148,7 +148,7 @@ Some small changes can be made to the default nano configuration found in /etc/n
 
 `htop` is a fantastic interactive process and system resource viewer. Simply install it with:
 
-````
+````bash
 apt-get install htop
 ````
 
@@ -196,7 +196,7 @@ It will intelligently try to auto-complete the most recent command you typed. It
 
 It is a python script that you can install via [pip](https://pypi.python.org/pypi/pip) like this:
 
-````
+````bash
 sudo apt update
 sudo apt install python3-dev python3-pip
 sudo -H pip3 install thefuck
@@ -204,13 +204,13 @@ sudo -H pip3 install thefuck
 
 And then you will need to edit the `.bashrc` startup file located in your user's home directory:
 
-````
+````bash
 nano ~/.bashrc
 ````
 
 Navigate to the bottom and add the following:
 
-````
+````bash
 # Default TheFuck Alias (type 'fuck' to activate)
 eval "$(thefuck --alias)"
 # Custom TheFuck Alias (type 'FUCK' to activate)
@@ -219,7 +219,7 @@ eval "$(thefuck --alias FUCK)"
 
 And then re-load the startup file, either by disconnecting and reconnecting, or by running
 
-````
+````bash
 source ~/.bashrc
 ````
 
@@ -240,12 +240,12 @@ As previously mentioned, any change you make to a `.bashrc` file will only take 
 You can define custom command aliases easily with the format `alias <name>='<command>'`. 
 
 For example, if you are used to using `dir` in the windows commandline and can't stop accidentally typing that instead of `ls -la`, you can add this alias:
-````
+````bash
 alias dir='ls -la'
 ````
 
 Instead of typing `sudo apt-get update` and `sudo apt-get upgrade` you could define just `update` and `upgrade`:
-````
+````bash
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 ````
@@ -256,7 +256,7 @@ If you plan on installing custom commands and want to make sure they appear in y
 
 Let's say you want to add `/home/username/testing` to your path. You would include the following line at the bottom of your `.bashrc` file (on linux the PATH variable is delimited with colon `:` characters))
 
-````
+````bash
 export PATH=$PATH:/home/username/testing
 ````
 
@@ -264,7 +264,7 @@ Which would apprent your path to the end of the PATH variable.
 
 If you want to replace something already on the path, you'll want to prepend your path as follows:
 
-````
+````bash
 export PATH=/home/username/testing:$PATH
 ````
 To make sure that it is executed first before the path you are trying to replace.
@@ -274,7 +274,7 @@ To make sure that it is executed first before the path you are trying to replace
 ### Increase your history size
 
 As mentioned earlier, the `history` command is very useful for looking back at what you've previously done on a linux machine. The bashrc file defines two variables that determine how this data is stored:
-````
+````bash
 HISTSIZE=1000      # the number of most recent commands that will be written to the history file
 HISTFILESIZE=2000  # the number of total commands the history file will store
 ````
@@ -289,17 +289,17 @@ Adding some color to your console can greatly improve the experience of working 
 newer versions of debian/ubuntu will already add some color to their output, but otherwise this is done by modifying the `PS1` variable, which is used to alter the appearance of the console string.
 
 First, you'll want `nano ~/bashrc` and change this line
-````
+````bash
 #force_color_prompt=yes
 ````
 to:
-````
+````bash
 force_color_prompt=yes
 ````
 
 Then the PS1 variable should be set as follows (note that on most recent ubuntu and debian installations this is the default):
 
-````
+````bash
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -308,11 +308,8 @@ fi
 ````
 
 This will change your commandline from this:
-
-{:.float-left}
 ![](https://i.imgur.com/lZgGTkz.png)
 To This:
-{:.float-left}
 ![](https://i.imgur.com/fBMAg7n.png)
 
 Additionally, this can be used to make it easier to tell when you are using root, by showing them as a different color:
@@ -325,7 +322,7 @@ Then once color is enabled, you can change the color from green to red by changi
 
 So for your root's `.bashrc` the line would now be:
 
-````
+````bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 ````
 
@@ -333,13 +330,11 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[0
 ### Show git repository branch
 
 When working with git repositories it is really useful to be able to see when you are inside a git repository, and which branch has been checked out in your working copy, like this:
-
-{:.float-left}
 ![](https://i.imgur.com/jpqNnZo.png)
 
 To do this you first need to include this function at the bottom of your `.bashrc` file, which will be used to grab the current branch string.
 
-````{r, engine='bash', count_lines}
+````bash
 # Git branch in terminal prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
@@ -348,11 +343,11 @@ parse_git_branch() {
 
 Then you can modify the PS1 variable from this:
 
-````
+````bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 ````
 to this:
-````
+````bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]\$ '
 ````
 
