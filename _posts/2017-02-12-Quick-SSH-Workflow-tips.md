@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 tags:
   - linux
@@ -308,5 +308,3 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 ````
 
 You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red.
-
-
