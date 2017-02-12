@@ -123,8 +123,7 @@ While learning more full-featured editors such as [vi](https://www.cs.colostate.
   - `Ctrl`+`K` to 'cut' the current selection (default whole line) Use `Ctrl+U` to 'uncut' (copy and paste)
   - `Ctrl`+`-` or `Ctrl`+`_` to jump the cursor to a given line number.
 
-{.:alert alert-warning}
-NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
+_**IMPORTANT**: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg`_
 
 
 ### Some _**nano**_ Configuration changes
@@ -164,8 +163,8 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 - Press `F4`, type in a name to filter and hit enter to only display certain processes
 - Press `F2` and use the arrow keys to navigate the configuration settings.
 
-{.:alert alert-info}
-Certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead.
+
+_**Note:** Certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead._
 
 ### Use _**supervisorctl**_ to easily daemonize  
 
