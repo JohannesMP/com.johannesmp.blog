@@ -86,7 +86,7 @@ The `!!` macro is replaced by your last command, allowing you to quickly re-run 
 
 Similarly you can grab only the arguments to the last command with `!$`, so you could use that to re-run a command that had `sudo`, without the `sudo`.
 
-Lastly, if you ever want to grab a specific argument from the last command, you can use !!:n to grab the n'th argument:
+Lastly, if you ever want to grab a specific argument from the last command, you can use `!!:n` to grab the n'th argument:
 
 ![](https://i.imgur.com/casgnqE.png)
 
@@ -95,10 +95,10 @@ Lastly, if you ever want to grab a specific argument from the last command, you 
 
 As in the windows commandline, you can press the up and down buttons to navigate your most recently run commands.
 
-However if you type `Ctrl`+`R` you can get an auto-completing `reverse-i-search`. Simply start typing and the best matching command will fill in, then press enter when you have selected the right command.
+However if you type `Ctrl`+`R` you can get an auto-completing `reverse-i-search`. Simply start typing and the best matching command will fill in, then press enter when you have selected the right command. 
 
-This makes it really easy to quickly grab a command that you want to re-run but don't want to press up a dozen times to get back to it.
-
+Repeatedly hitting `Ctrl`+`R` will cycle through all commands that might match, even with fuzzy searching:
+![](http://i.imgur.com/M0fcqEB.gif)
 
 
 <br />
