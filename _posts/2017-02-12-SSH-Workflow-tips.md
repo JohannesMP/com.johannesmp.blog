@@ -369,7 +369,7 @@ if [ "$color_prompt" = yes ]; then
 else
 ````
 
-You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red.
+_**Note**: You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red._
 
 
 
