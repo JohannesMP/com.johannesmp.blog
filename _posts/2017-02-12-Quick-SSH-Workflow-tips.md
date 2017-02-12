@@ -107,7 +107,7 @@ Repeatedly hitting `Ctrl`+`R` will cycle through all commands that might match, 
 
 `nano` is probably the easiest linux text editor to get into, and ideal for small config changes. It's what I'll be using in the rest of this tutorial, and there are some small changes you can make to make it more usable.
 
-While learning more full-featured editors such as vi is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
+While learning more full-featured editors such as [vi](https://www.cs.colostate.edu/helpdocs/vi.html) is encouraged if you plan to do serious development on linux servers, nano is really easy to get a hang of. 
 
 ### Basic _**nano**_ Commands
 
@@ -115,15 +115,16 @@ While learning more full-featured editors such as vi is encouraged if you plan t
     nano <filename>
   - The standard UI:
     https://i.imgur.com/Tvt9Hm4.png
-      - The commands are listed at the bottom, and all are of the format `Ctrl+Letter` (`^` stands for `Ctrl`)
+      - The commands are listed at the bottom, and all are of the format `Ctrl`+`Letter` (`^` stands for `Ctrl`)
   - `Ctrl`+`O` to save document.
   - `Ctrl`+`X` to close document.
     - If pending changes enter `y` and enter, and when prompted for filename hit enter again.
   - `Ctrl`+`W` to search for a specific string in the document,
   - `Ctrl`+`K` to 'cut' the current selection (default whole line) Use `Ctrl+U` to 'uncut' (copy and paste)
   - `Ctrl`+`-` or `Ctrl`+`_` to jump the cursor to a given line number.
-  
-  - NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
+
+{.:alert alert-warning}
+NOTE: `Ctrl`+`Z` will minimize an open document without actually closing it. This is an easy mistake to make when first starting to use nano. To bring it back to the _foreground_ use the command `fg` 
 
 
 ### Some _**nano**_ Configuration changes
@@ -163,7 +164,8 @@ And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 - Press `F4`, type in a name to filter and hit enter to only display certain processes
 - Press `F2` and use the arrow keys to navigate the configuration settings.
 
-Note that certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead.
+{.:alert alert-info}
+Certain processes will only be visible to root, and can only be killed by root, so when necessary run `sudo htop` instead.
 
 ### Use _**supervisorctl**_ to easily daemonize  
 
