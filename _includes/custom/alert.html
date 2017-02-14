@@ -1,6 +1,22 @@
-<div markdown="0" class="alert {% if include.type == 'success'
-   or include.type == 'info' 
-   or include.type == 'warning'
-   or include.type == 'danger' %}
-alert-{{include.type}}
-{% endif %}{% if include.class != null %} {{include.class}}{% endif %}" role="alert">{{include.message}}</div>
+{% capture alert-type %}
+  {% if include.type == 'success' 
+     or include.type == 'warning' 
+     or include.type == 'danger' 
+  %}
+    alert-{{include.type}}
+  {% else %}
+    alert-info
+  {% endif %}
+{% endcapture %}
+
+{% capture alert-class %}
+  {% if include.class != null %} 
+    {{include.class}}
+  {% endif %}
+{% endcapture %}
+
+<div markdown="0" class="alert {{alert-type}}{{alert-class}}" role="alert">
+  <span markdown="1" class="alert-message">
+    {{include.message}}
+  </div>
+</div>
