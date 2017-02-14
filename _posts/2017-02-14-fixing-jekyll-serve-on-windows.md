@@ -25,7 +25,7 @@ Having struggled through this twice now on two separate Windows installations, I
 ### What this guide does *NOT* cover:
 - How to create a new Jekyll project or how to use Github pages. 
 
-If you would like to learn how to make a new Github Pages Jekyll Project [please see step 2 and 3 in the official github pages guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-1-create-a-local-repository-for-your-jekyll-site), or other tutorials. For example:
+If you would like to learn how to make a new Github Pages Jekyll Project [please see step 2 and 3 in the official github pages guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-1-create-a-local-repository-for-your-jekyll-site), or look into other tutorials. For example:
 
   - [https://blog.webjeda.com/](https://blog.webjeda.com/)
   - [http://jmcglone.com/guides/github-pages/](http://jmcglone.com/guides/github-pages/)
