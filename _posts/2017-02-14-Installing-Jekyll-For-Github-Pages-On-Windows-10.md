@@ -111,7 +111,9 @@ With a command prompt cd into the directory containing the `Gemfile` and use bun
 bundle install
 ```
 
-{% include alert.html message="If at this point you get a compiler error related to a json gem, that means your Ruby Development Kit was not installed correctly. Double check that they are both the latest version, both are 64 bit, and you ran the commands to init and install the `dk.rb` file" type="info"%}
+{% include alert.html message="If at this point you get a compiler error related to a json gem, that means your Ruby Development Kit was not installed correctly. 
+
+Double check that they are both the latest version, both are 64 bit, and you ran the commands to init and install the `dk.rb` file" type="info"%}
 
 <br />
 
