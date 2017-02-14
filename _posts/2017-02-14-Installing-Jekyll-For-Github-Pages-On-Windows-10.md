@@ -112,7 +112,7 @@ bundle install
 ```
 
 {% include alert.html message="If at this point you get a compiler error related to a json gem, that means your Ruby Development Kit was not installed correctly. 
-
+<br />
 Double check that they are both the latest version, both are 64 bit, and you ran the commands to init and install the `dk.rb` file" type="info"%}
 
 <br />
@@ -163,14 +163,15 @@ Now when you run `jekyll serve` you may see this error:
 ```
 ERROR: YOUR SITE COULD NOT BE BUILT:
        ------------------------------------
-       No repo name found. Specify using PAGES_REPO_NWO environment variables, 
-       'repository' in your configuration, or set up an 'origin' git remote 
+       No repo name found. Specify using PAGES_REPO_NWO 
+       environment variables, 'repository' in your 
+       configuration, or set up an 'origin' git remote 
        pointing to your github.com repository.
 ```
 
-This is due to your jekyll project's `_config.yml` not containing a path to the github-pages repository.
+It should be noted that my project's `.git/config` *does* have an 'origin' git remote pointing at my github.com repository, but for some reason that is not enough. While environment variables are fun, they are not portable, so I chose to modify my `_config.yml` file instead to define the `repository` variable.
 
-I was able to fix this issue by adding a `repository` key with value `<USERNAME>/<REPOSTIROY_NAME>` which in my case was:
+Simply add a `repository` key with value `<USERNAME>/<REPOSTIROY_NAME>` on a new line anywhere in the `_config.yml` file, which in my case was:
 
 ```
 repository:         'JohannesMP/com.johannesmp.blog'
