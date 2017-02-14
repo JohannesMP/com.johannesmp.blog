@@ -49,10 +49,10 @@ Note that each user has their own history, so if you use a command with `sudo`, 
 
 Running `sudo history` may result in a `sudo: history: command not found` error. To get around this you'll need to elevate yourself to be the root user first:
 
-````bash
+```bash
 sudo su                           # You are now root
 history | grep "apt-get install"  # Running history as root
-````
+```
 
 <br />
 
@@ -67,9 +67,9 @@ When you are navigating a complex folder structur, you should always press tab a
 
 For example, if you want to navigate to:
 
-````bash
+```bash
 ~/ReallyReally/VeryLong/AwesomePath
-````
+```
 You can do so easily by typing `cd ~/R` _**tab**_ `V` _**tab**_ `A` _**tab**_:
 ![](http://i.imgur.com/ex1NMoE.gif)
 
@@ -148,9 +148,9 @@ Some small changes can be made to the default nano configuration found in `/etc/
 
 Simply install it with:
 
-````bash
+```bash
 apt-get install htop
-````
+```
 
 And run it by typing `htop`, and close it with `F10` or the standard `Ctrl`+`C`.
 
@@ -197,32 +197,32 @@ It will intelligently try to auto-complete the most recent command you typed. It
 
 It is a python script that you can install via [pip](https://pypi.python.org/pypi/pip) like this:
 
-````bash
+```bash
 sudo apt update
 sudo apt install python3-dev python3-pip
 sudo -H pip3 install thefuck
-````
+```
 
 And then you will need to edit the `.bashrc` startup file located in your user's home directory:
 
-````bash
+```bash
 nano ~/.bashrc
-````
+```
 
 Navigate to the bottom and add the following:
 
-````bash
+```bash
 # Default TheFuck Alias (type 'fuck' to activate)
 eval "$(thefuck --alias)"
 # Custom TheFuck Alias (type 'FUCK' to activate)
 eval "$(thefuck --alias FUCK)" 
-````
+```
 
 And then re-load the startup file, either by disconnecting and reconnecting, or by running
 
-````bash
+```bash
 source ~/.bashrc
-````
+```
 
 <br />
 
@@ -240,22 +240,22 @@ _**NOTE:** each user has their own `.bashrc` file. For example root's is located
 
 You can define custom command aliases easily with the format:
 
-````bash
+```bash
 alias <name>='<command>'
-````
+```
 
 For example, if you are used to using `dir` in the windows commandline and can't stop accidentally typing that instead of `ls -la`, you can add this alias:
 
-````bash
+```bash
 alias dir='ls -la'
-````
+```
 
 Instead of typing `sudo apt-get update` and `sudo apt-get upgrade` you could define just `update` and `upgrade`:
 
-````bash
+```bash
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-````
+```
 
 ### Change your _**PATH**_
 
@@ -263,17 +263,17 @@ If you plan on installing custom commands and want to make sure they appear in y
 
 Let's say you want to add `/home/username/testing` to your path. You would include the following line at the bottom of your `.bashrc` file (on linux the PATH variable is delimited with colon `:` characters))
 
-````bash
+```bash
 export PATH=$PATH:/home/username/testing
-````
+```
 
 Which would append your path to the end of the PATH variable.
 
 If you want to replace something already on the path, you'll want to prepend your path as follows:
 
-````bash
+```bash
 export PATH=/home/username/testing:$PATH
-````
+```
 To make sure that it is executed first before the path you are trying to replace.
 
 
@@ -281,10 +281,11 @@ To make sure that it is executed first before the path you are trying to replace
 ### Increase your history size
 
 As mentioned earlier, the `history` command is very useful for looking back at what you've previously done on a linux machine. The bashrc file defines two variables that determine how this data is stored:
-````bash
+
+```bash
 HISTSIZE=1000      # the number of most recent commands that will be written to the history file
 HISTFILESIZE=2000  # the number of total commands the history file will store
-````
+```
 
 While it is probably unlikely for you to run more than 1000 commands, it's pretty easy to reach more than 2000 commands total if you frequently run commands on your server. Therefore it's a good idea to increase the `HISTFILESIZE` to something larger like 50000. Since the only data that is stored is the command, not the resulting console output, the total size of the file will still be really small.
 
@@ -297,24 +298,24 @@ newer versions of debian/ubuntu will already add some color to their output, but
 
 First, you'll want `nano ~/bashrc` and change this line:
 
-````bash
+```bash
 #force_color_prompt=yes
-````
+```
 to:
 
-````bash
+```bash
 force_color_prompt=yes
-````
+```
 
 Then the PS1 variable should be set as follows (note that on most recent ubuntu and debian installations this is the default):
 
-````bash
+```bash
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-````
+```
 
 This will change your commandline from this:
 ![](https://i.imgur.com/lZgGTkz.png)
@@ -331,11 +332,11 @@ Then once color is enabled, you can change the color from green to red by changi
 
 So for your root's `.bashrc` the line would now be:
 
-````bash
+```bash
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-````
+```
 
 
 ### Show git repository branch
@@ -345,21 +346,21 @@ When working with git repositories it is really useful to be able to see when yo
 
 To do this you first need to include this function at the bottom of your `.bashrc` file, which will be used to grab the current branch string.
 
-````bash
+```bash
 # Git branch in terminal prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
 }
-````
+```
 
 Then you can modify the PS1 variable to replace `\[\033[00m\]` with `\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]`
 
 For non-root it should then look like:
 
-````bash
+```bash
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[32m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
-````
+```
 
 _**Note**: You'll once again want to apply that change to root's `.bashrc` file as well, and make sure to change that first `32m` to `31m` to ensure its color remains red._.
