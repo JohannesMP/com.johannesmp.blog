@@ -105,9 +105,7 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 ```
 
-With a command prompt cd into the directory containing the `Gemfile`
-
-And use bundler to install the github-pages jekyll dependencies:
+With a command prompt cd into the directory containing the `Gemfile` and use bundler to install the github-pages jekyll dependencies:
 
 ```
 bundle install
