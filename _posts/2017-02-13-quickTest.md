@@ -15,4 +15,7 @@ note_body: >-
 ---
 ## This is a quick test
 
+{% include custom/notebox.html %}
+
+
 please ignore :)
