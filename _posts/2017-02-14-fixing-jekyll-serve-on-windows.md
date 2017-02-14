@@ -17,7 +17,7 @@ While there are several guides for installing jekyll for Windows ([official gith
 Having struggled through this twice now on two separate Windows installations, I'm now making this guide so that at least I'll be able to refer to it quickly. I hope it helps anyone else that has issues getting `jekyll serve` to just work as intended.
 
 ### What This guide covers:
-- The setup required to be able locally serve existing jekyll projects on Windows 10.
+- The setup required to serve existing jekyll projects on Windows 10.
 - Errors while compiling the json gem in Ruby.
 - Errors regarding SSL authentication when trying to run `jekyll serve`.
 - Errors regarding Github Authentication when trying to run `jekyll serve`.
