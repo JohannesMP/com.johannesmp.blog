@@ -1,3 +1,12 @@
+---
+published: false
+layout: post
+tags:
+  - windows
+  - github pages
+  - jekyll
+comments: true
+---
 This blog is hosted on github pages using jekyll, a blog-aware static website generator.
 
 While there several guides for installing jekyll for windows ([official github pages](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/), [just jekyll](http://jekyll-windows.juthilo.com)) They seem to skip several key points that have given me trouble when attempting to install the latest version of ruby (2.3.3 as of this writing) on windows 10.
