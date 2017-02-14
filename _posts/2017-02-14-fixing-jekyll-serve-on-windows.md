@@ -34,7 +34,7 @@ Having struggled through this twice now on two separate Windows installations, I
 
 # 1. Install all Jekyll Dependencies
 
-First we need to make sure that we have all dependencies for Jekyll on Windows 10. If you have Ruby, Ruby Development Kit and Bundler already installed and working, feel free to skip down to the ** 2. Get *Jekyll Server* Working** section below.
+First we need to make sure that we have all dependencies for Jekyll on Windows 10. If you have Ruby, Ruby Development Kit and Bundler already installed and working, feel free to skip down to the **2. Get *Jekyll Server* Working** section below.
 
 This guide assumes that you know how to modify the PATH and set environment variables. I highly recommended the free [Windows Environment Variables Editor](http://eveditor.com/) which greatly improves that experience over the default Windows Environment variable UI, even in Windows 10.
 
