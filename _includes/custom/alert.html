@@ -1,13 +1,2 @@
 
-<div markdown="0" class="alert{% if include.class != null %} {{include.class}}{% endif %}
-{% if include.type == 'success'
-   or include.type == 'info' 
-   or include.type == 'warning'
-   or include.type == 'danger' %}
-alert-{{include.type}}
-{% endif %}
-" role=alert>
-<div markdown="0" class="alert-message">
-{{include.message}}
-</div>
-</div>
+<div markdown="0" class="alert{% if include.class != null %} {{include.class}}{% endif %}" role=alert><div markdown="0" class="alert-message">{{include.message}}</div></div>
