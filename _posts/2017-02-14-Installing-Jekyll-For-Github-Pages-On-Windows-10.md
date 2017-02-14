@@ -66,19 +66,19 @@ When you run the executable it will simply ask you for a directory to extract to
 
 You need to first initialize and then bind the devkit to your Ruby installation. Open a command prompt and navigate to the newly extracted folder:
 
-```
+```bash
 cd C:\RubyDevKit
 ```
 
 Then to initialize the devkit run:
 
-```
+```ruby
 ruby dk.rb init
 ```
 
 Finally install and bind the devkit to your ruby installation:
 
-```
+```ruby
 ruby dk.rb install
 ```
 
@@ -87,7 +87,7 @@ ruby dk.rb install
 
 Install bundler with:
 
-```
+```ruby
 gem install bundler
 ```
 
@@ -99,7 +99,7 @@ Fairly straightforward.
 As mentioned earlier, this guide assumes you have already created a github pages jekyll site that you've cloned on your windows machine and want to serve locally.
 Your project should contain a [Gemfile](http://bundler.io/gemfile.html) that contains at least the following:
 
-```
+```ruby
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
@@ -107,7 +107,7 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 With a command prompt cd into the directory containing the `Gemfile` and use bundler to install the github-pages jekyll dependencies:
 
-```
+```ruby
 bundle install
 ```
 
@@ -123,7 +123,7 @@ This is where most tutorials leave off and where the majority of my frustration 
 
 At this point, the offical guide claims that you should be able to just run:
 
-```
+```ruby
 jekyll serve
 ```
 
@@ -173,7 +173,7 @@ It should be noted that my project's `.git/config` *does* have an 'origin' git r
 
 Simply add a `repository` key with value `<USERNAME>/<REPOSTIROY_NAME>` on a new line anywhere in the `_config.yml` file, which in my case was:
 
-```
+```yml
 repository:         'JohannesMP/com.johannesmp.blog'
 ```
 
@@ -182,10 +182,10 @@ repository:         'JohannesMP/com.johannesmp.blog'
 
 Lastly, when trying to run `jekyll serve` you may see one of these errors:
 
-```
+```bash
 Error:  The GitHub API credentials you provided aren't valid.
 ```
-```
+```bash
 GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
 ```
 
