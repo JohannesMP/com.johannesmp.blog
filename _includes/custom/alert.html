@@ -1,0 +1,12 @@
+
+
+<div class="alert{% if include.class != null %} {{include.class}}{% endif %}
+{% if include.type == 'success'
+   or include.type == 'info' 
+   or include.type == 'warning'
+   or include.type == 'danger' %}
+alert-{{include.type}}
+{% endif %}
+" role=alert>
+{{include.message}}
+</div>
