@@ -15,7 +15,9 @@ note_body: >-
 ---
 ## This is a quick test
 
-{% include custom/notebox.html content="This is my note. All the content I type here is treated as a single paragraph." %}
+{% include custom/notebox.html message="Note1" %}
+
+{% include custom/notebox.html message="Note2" %}
 
 
 please ignore :)
