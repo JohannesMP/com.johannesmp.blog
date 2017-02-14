@@ -41,7 +41,7 @@ This guide assumes that you know how to modify the PATH and set environment vari
 
 ![](https://i.imgur.com/oRqtG1N.png)
 
-The latest direct download link for 64 bit as of this writing is: [rubyinstaller-2.3.3-x64.exe](https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe) *(located on the download page [in the top **RubyInstallers** section](http://rubyinstaller.org/downloads/)*.
+The latest direct download link for 64 bit as of this writing is: [rubyinstaller-2.3.3-x64.exe](https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe)  *(located on the download page [in the top **RubyInstallers** section](http://rubyinstaller.org/downloads/))*.
 
 Run the installer, and install in the default location. For 2.3.3 64bit this would be `C:\Ruby23-x64`
 
@@ -58,7 +58,7 @@ ruby --version
 
 ![](https://i.imgur.com/iRX53qj.png)
 
-The latest direct download link as of this writing is: [DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe](https://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe) *located on the download page [in the **Other Useful Downloads > DEVELOPMENT KIT** section](http://rubyinstaller.org/downloads/)*.
+The latest direct download link as of this writing is: [DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe](https://dl.bintray.com/oneclick/rubyinstaller/DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe)  *(located on the download page [in the **Other Useful Downloads > DEVELOPMENT KIT** section](http://rubyinstaller.org/downloads/))*.
 
 {% include alert.html message="**NOTE**: If you manually downloaded the latest version from the download page, make sure both are 64 bit or not, and make sure that the dev kit is the latest version, since it lists the latest version at the *bottom* for some reason, instead of the *top* like the normal ruby download." type="warning" %}
 
