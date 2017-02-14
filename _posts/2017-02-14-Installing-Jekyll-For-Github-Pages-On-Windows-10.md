@@ -11,7 +11,7 @@ comments: true
 ---
 This blog is hosted on [github pages](https://pages.github.com/) using [jekyll](https://jekyllrb.com/), a blog-aware static website generator.
 
-While there are several guides for installing jekyll for Windows ([official github pages](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/), [just jekyll](http://jekyll-windows.juthilo.com)) They seem to skip some key points that have given me trouble with the latest version of ruby (2.3.3 as of this writing) on Windows 10.
+While there are several guides for installing jekyll for Windows ([official github pages article](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/), [Run Jekyll on Windows](http://jekyll-windows.juthilo.com)) They seem to skip some key points that have given me trouble with the latest version of ruby (2.3.3 as of this writing) on Windows 10.
 
 Having struggled through this twice now on two separate Windows installations, I'm now making this guide so that at least I'll be able to refer to it quickly. I hope it helps anyone else that has issues getting `jekyll serve` to just work as intended.
 
