@@ -23,7 +23,9 @@ Having struggled through this twice now on two separate Windows installations, I
 - Errors regarding Github Authentication when trying to run `jekyll serve`.
 
 ### What this guide does *NOT* cover:
-- How to create a new Jekyll project, or how to use Jekyll pages. [Please see step 2 and 3 in the official github pages guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-1-create-a-local-repository-for-your-jekyll-site), or find another beginners tutorial. For example:
+- How to create a new Jekyll project or how to use Github pages. 
+
+If you would like to learn how to make a new Github Pages Jekyll Project [please see step 2 and 3 in the official github pages guide](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/#step-1-create-a-local-repository-for-your-jekyll-site), or find another beginners tutorial. For example:
   - [https://blog.webjeda.com/](https://blog.webjeda.com/)
   - [https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
   - [http://jmcglone.com/guides/github-pages/](http://jmcglone.com/guides/github-pages/)
