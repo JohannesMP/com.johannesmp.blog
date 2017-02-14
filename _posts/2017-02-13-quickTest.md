@@ -15,9 +15,9 @@ note_body: >-
 ---
 ## This is a quick test
 
-{% include custom/notebox.html message="Note1" %}
+{% include custom/alert.html message="Note1" %}
 
-{% include custom/notebox.html message="Note2" %}
+{% include custom/alert.html message="Note2" type="success" %}
 
+{% include custom/alert.html message="Note3" type="warning" %}
 
-please ignore :)
