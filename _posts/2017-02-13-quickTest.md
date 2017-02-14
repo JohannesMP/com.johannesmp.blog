@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 tags:
   - linux
@@ -9,7 +9,7 @@ comments: true
 ---
 ## This is a quick test
 
-{% include alert.html message="Note1" %}
+{% include alert.html message="Note1" type="info"%}
 
 {% include alert.html message="Note2" type="success" %}
 
