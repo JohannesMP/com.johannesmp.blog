@@ -1,5 +1,5 @@
 
-
+{% raw %}
 <div class="alert{% if include.class != null %} {{include.class}}{% endif %}
 {% if include.type == 'success'
    or include.type == 'info' 
@@ -10,3 +10,4 @@ alert-{{include.type}}
 " role=alert>
 {{include.message}}
 </div>
+{% endraw %}
