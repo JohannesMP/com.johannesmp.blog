@@ -3,6 +3,7 @@ published: true
 layout: post
 tags:
   - windows
+  - fix
   - github-pages
   - jekyll
   - ruby
@@ -212,12 +213,3 @@ Make sure that you did not accidentally copy any spaces to either side of the to
 And with that, `jekyll serve` should finally work as intended:
 
 ![](https://i.imgur.com/kX04XY8.png)
-
-
-
-
-
-
-
-
-
