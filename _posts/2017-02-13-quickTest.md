@@ -21,3 +21,4 @@ note_body: >-
 
 {% include custom/alert.html message="Note3" type="warning" %}
 
+{% include custom/alert.html message="Note3" type="danger" %}
