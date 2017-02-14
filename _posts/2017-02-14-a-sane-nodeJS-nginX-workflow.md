@@ -18,15 +18,14 @@ set_id: Linux Server Basics
 set_part_id: 3
 set_part_title: A sane NodeJS NginX workflow
 ---
-One of the hardest thing when starting out working with web backends like [NodeJS](https://nodejs.org/en/) and [NginX](https://www.nginx.com/resources/wiki/) is how to structure your projects. 
+One of the hardest thing when starting out with web backends like [NodeJS](https://nodejs.org/en/) and [NginX](https://www.nginx.com/resources/wiki/) is how to structure your projects. 
 
-- You want to be able to easily test and run code on a local VM, but also be able to deploy it quickly on a remote instance. 
-- You want to be able to version and manage configuration files in `/etc/...` and re-use them on other machines, while also having the ability of changing behavior (such as favoring debugging on a development server, and favoring speed and reliability on a production server).
-- You may want to be able to have old versions of your app up and running on separate directories or subdomains without having to change their code.
+- You want to be able to easily test in a VM, and deploy on a Server.
+- You want to be able to manage configuration files in `/etc/...` and re-use them on other machines.
+- You may want to have old versions of your app up and running on separate URLs without having to change their code.
+- Lastly, you want to remain sane while doing all of this.
 
-This post will walk you through some general concepts and best practices within the context of a NodeJS app, using NginX as the HTTP frontend. It is based off my own experience working with and maintaining a variety of personal Servers and Webapps over the last few years. 
-
-Please Be aware that many of my decisions are highly subjective and may be frowned upon in other contexts (such as larger, more distributed systems). The core focus is to make evrything sane and managable, especially for someone that hasn't used Linux for long.
+This post will walk you through some general best practices I have developped within the context of a NodeJS app, using NginX as the HTTP frontend. It is subjective, being based off of my own experience with running Linux servers for a few years. As always in programming, there is no 'correct' way and so the focus of this guide is usability and maintainability.
 
 This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), and know how to [run Ubuntu in a VirtualBox](http://www.beopensource.com/2016/05/how-to-install-Ubuntu-1604-LTS-in-Virtual-Box-VmWare.html). Please see the previous posts in this series linked at the top of the post before continuing.
 
@@ -47,6 +46,9 @@ A is a basic overview of the topics Covered:
 <br />
 
 # 1. Linux Directory Overview
+
+before we jump into setting up a web app we first need to know about the common directories that we'll need to know about:
+
 
 
 <br />
