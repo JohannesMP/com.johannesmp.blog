@@ -51,6 +51,8 @@ Run the installer, and install in the default location. For 2.3.3 64bit this wou
 
 During the installation make sure to have ruby added to the path, or do so manually by adding `C:\Ruby23-x64\bin` to your path.
 
+![](https://i.imgur.com/6vfhgPb.png)
+
 You can verify that your path has been modified correctly by opening a new command prompt and typing (a command prompt that was open previously will not yet have the new PATH):
 
 ```
