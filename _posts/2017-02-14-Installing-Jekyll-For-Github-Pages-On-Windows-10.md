@@ -145,7 +145,7 @@ This file will need to be stored in a permanent location. Since we already have 
 
 ![](https://i.imgur.com/uLEUJCx.png)
 
-Now we need to set up an environment variable by the name `SSL_CERT_FILE`. To do so with [Eveditor](http://eveditor.com/), launch the program and click 'System variables' in the left sidebar and click the 'Run as administrator' button to restart the program with elevated priviledges.
+Now we need to set up an environment variable named `SSL_CERT_FILE`. To do so with [Eveditor](http://eveditor.com/), launch the program and click 'System variables' in the left sidebar and click the 'Run as administrator' button to restart the program with elevated priviledges.
 
 Now click 'New' In the menu bar, then at the bottom enter `SSL_CERT_FILE` as the `Name` and the full path for the file for the `Value`, which in my case is `C:\RubyDevKit\SSLCert\cacert.pem`.
 
