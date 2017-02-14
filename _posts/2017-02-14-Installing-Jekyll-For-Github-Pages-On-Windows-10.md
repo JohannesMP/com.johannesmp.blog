@@ -27,6 +27,8 @@ Having struggled through this twice now on two separate Windows installations, I
   - [https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
   - [http://jmcglone.com/guides/github-pages/](http://jmcglone.com/guides/github-pages/)
 
+<!-- more -->
+
 <br />
 
 # 1. Install all Jekyll Dependencies
