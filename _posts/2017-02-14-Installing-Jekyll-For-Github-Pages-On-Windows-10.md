@@ -64,7 +64,7 @@ The latest direct download link as of this writing is: [DevKit-mingw64-64-4.7.2-
 
 When you run the executable it will simply ask you for a directory to extract to. **DO NOT EXCTRACT TO YOUR DOWNLOADS FOLDER**, which will dump dozens of files. Instead provide a path next to the ruby installation such as `C:\RubyDevKit`.
 
-You need to first initialize and then bind the devkit to your Ruby instllation. Open a command prompt and navigate to the newly extracted folder:
+You need to first initialize and then bind the devkit to your Ruby installation. Open a command prompt and navigate to the newly extracted folder:
 
 ```
 cd C:\RubyDevKit
