@@ -1,7 +1,7 @@
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
-
+gem: [jekyll-admin]
 
 # Permalinks
 #
