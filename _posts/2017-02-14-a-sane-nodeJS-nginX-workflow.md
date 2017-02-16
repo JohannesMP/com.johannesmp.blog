@@ -1,18 +1,20 @@
 ---
 title: A Sane Nodejs Nginx Workflow
-published: 'false'
+published: false
 layout: post
 tags:
-- windows
-- linux
-- tutorial
-- ssh
-- virtualization
+  - windows
+  - linux
+  - tutorial
+  - ssh
+  - virtualization
 comments: true
 note_class: alert alert-info
 note_prefix: Note
-note_body: This post is reference [for a class](https://www.digipen.edu/coursecatalog/#CS261)
-  and assumes some prior knowledge.
+note_body: >-
+  This post is reference [for a
+  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
+  knowledge.
 set_id: Linux Server Basics
 set_part_id: 3
 set_part_title: A sane NodeJS NginX workflow
