@@ -1,5 +1,6 @@
 ---
 title: Understanding Symbolic Links
+published: false
 ---
 
 Symbolic links, or *"Symlinks"* are a fundamental tool in the Linux arsenal.
