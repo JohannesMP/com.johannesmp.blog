@@ -16,6 +16,8 @@ While there are several guides for installing jekyll for Windows ([official gith
 
 Having struggled through this twice now on two separate Windows installations, I'm making this guide so that at least I'll be able to refer to it quickly. I hope it helps anyone else that has issues getting `jekyll serve` to just work as intended.
 
+<!-- more -->
+
 ### What This guide covers:
 - The setup required to serve existing jekyll projects on Windows 10.
 - Errors while compiling the json gem in Ruby.
@@ -30,8 +32,6 @@ If you would like to learn how to make a new Github Pages Jekyll Project [please
   - [https://blog.webjeda.com/](https://blog.webjeda.com/)
   - [http://jmcglone.com/guides/github-pages/](http://jmcglone.com/guides/github-pages/)
   - [https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
-
-<!-- more -->
 
 <br />
 
