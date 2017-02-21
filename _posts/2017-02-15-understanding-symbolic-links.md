@@ -141,10 +141,10 @@ When the time comes to install **`my_app_v4/`**, you can remove the old symlinc 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
 
 
-### Config Files Management
+### Config File Management
 Most Applications on linux store their configuration files in **`/etc/<appname>`**
 
-For example *mysql* might store its configuration files in **`/etc/mysql/`**, *php5*  could have its files in **`/etc/php5/apache2/`**, etc.
+For example, *mysql* might store its configuration files in **`/etc/mysql/`**, *php5*  could have its files in **`/etc/php5/apache2/`**, etc.
 
 While you *could* modify each file on its own as necessary, this is not very maintainable in the long run:
 
