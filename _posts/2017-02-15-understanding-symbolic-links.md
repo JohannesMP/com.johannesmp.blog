@@ -118,7 +118,7 @@ If instead we had created it with the path **`b/`**:
 ```bash
 ln -s b/ s_b
 ```
-Then the path stored would only ever evaluate to a directory, since files cannot contain the ** `/`** character:
+Then the path stored would only ever evaluate to a directory, since files cannot contain the **`/`** character:
 ![](https://i.imgur.com/o4QkdjG.png)
 
 
