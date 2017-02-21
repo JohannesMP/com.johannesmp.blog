@@ -82,7 +82,7 @@ To create a symbolic link we use the [**`ln`** command](https://en.wikipedia.org
 ln -s <path/to/source> <path/to/link>
 ```
 
-To mirror the reference example above, let's create **`a.txt`** and a symbolic link named **`s_a.txt`**:
+To mirror the ``C++ reference` example above, let's create **`a.txt`** and a symbolic link named **`s_a.txt`**:
 
 ```bash
 echo "1" > a.txt      # 'a.txt' is a text file that contains '1'
