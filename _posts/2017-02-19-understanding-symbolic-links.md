@@ -66,7 +66,7 @@ printf(a);     // 5
 printf(r_a);   // 5
 ```
 
-A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own location in memory. They are modifying it as if it was its own int.
+A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own discrete location in memory. They are modifying it as if it was its own int.
 
 Let's try re-creating this example with symlinks.
 
@@ -83,7 +83,7 @@ To mirror the reference example above, let's create **`a.txt`** and a symbolic l
 
 ```bash
 echo "1" > a.txt      # 'a.txt' is a text file that contains '1'
-ln -s a.txt l_a.txt   # 's_a.txt' is a symbolic link to 'a.txt'
+ln -s a.txt s_a.txt   # 's_a.txt' is a symbolic link to 'a.txt'
 ```
 
 ![](https://i.imgur.com/G4ROeXb.png)
@@ -95,7 +95,7 @@ We can now access the data, as well as modify it through the symlink:
 You can also create a symbolic link to a directory, then interact with it as if it was a real folder:
 ![](https://i.imgur.com/d1bS1T8.png)
 
-A symbolic link is technically **neither a file nor a directory**, and how it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
+A symbolic link is technically **neither a file nor a directory**. How it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
 
 
 <br />
@@ -109,7 +109,7 @@ Start with symbolic link **`s_b`** pointing to a directory named **`b`**:
 If we remove the original directory **`b`**, the symbolic link is now invalid (as you can see by the **red** color), and cannot be accessed:
 ![](https://i.imgur.com/YMj9kc2.png)
 
-And if we now create a **text file** named `b` then the same symbolic link **`s_b`** is now pointing to that file:
+If we now create a **text file** named **`b`** then the same symbolic link **`s_b`** will now point to that file:
 ![](https://i.imgur.com/qwp4Aoj.png)
 
 This only works because **`s_b`** was created using path **`b`**.
@@ -127,7 +127,7 @@ Then the path stored would only ever evaluate to a directory, since files cannot
 Symbolic links have many useful applications. Here are a few examples:
 
 ### Easy Versioning
-If you recall the gcc example above, it is not uncommon to want to access the latest version of a file or directory without having to explicitly state the version number.
+If you recall the *gcc* example above, it is not uncommon to want to access the latest version of a file or directory without having to explicitly state the version number.
 
 For example, let's say you have several versions of your app: **`my_app_v1/`**, **`my_app_v2/`**, **`my_app_v3/`** and want to have a webserver only host the latest version. 
 
@@ -139,6 +139,8 @@ When the time comes to install **`my_app_v4/`**, you can remove the old symlinc 
 ![](https://i.imgur.com/SjCNqmY.png)
 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
+
+With a web servers like *apache2* or *nginx* you would have to reload a config file after changing it, but this way there is no need to restart them, since as far as they are concerned, nothing has actually changed.
 
 
 ### Config File Management
