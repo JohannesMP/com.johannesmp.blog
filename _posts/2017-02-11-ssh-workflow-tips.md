@@ -16,6 +16,8 @@ note_body: >-
   This post is reference [for a
   class](https://www.digipen.edu/coursecatalog/#CS261). It is assumed that you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions).
 ---
+![](http://i.imgur.com/ZNBXIg2.png)
+
 Here is a small collections of tips and tricks with the intention to help improve usability and general productivity when ssh-ing into a linux machine. It was written with Ubuntu/Debian in mind, but should also work on other linux versions such as Mint.
 
 What this post covers:
