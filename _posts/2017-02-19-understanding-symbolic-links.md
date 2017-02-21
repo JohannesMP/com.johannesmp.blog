@@ -21,7 +21,7 @@ note_body: >-
 
 ![](http://i.imgur.com/IKCybXy.png)
 
-Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible as if by reference from another location.
+Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible from another location as if by reference.
 
 Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
