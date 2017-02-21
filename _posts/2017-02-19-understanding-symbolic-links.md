@@ -33,7 +33,7 @@ Symbolic links are used ***everywhere*** in Linux. Many applications like [apach
 <br />
 ## What are Symlinks?
 
-I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html) on a Linux server. I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
+I tend to use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html). On one of my servers I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
 ![](https://i.imgur.com/JrL2EYB.png)
 
 But I can also run gcc via just **`gcc`**, which defaults to version 4.9:
