@@ -22,7 +22,7 @@ note_body: >-
 
 Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible from another location as if by reference.
 
-Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
+Symbolic links are used ***everywhere*** in Linux. Many applications like [apache2](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
 
 
@@ -32,7 +32,7 @@ Symbolic links are used ***everywhere*** in Linux. Many applications like [apach
 <br />
 ## What are Symbolic Links?
 
-I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html), and on one of my servers I have both version **4.6** as well as version **4.9** installed, which can be run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
+When using compilers such as [gcc](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html), It is not uncommon to have multiple versionis installed for different projects. On one of my servers I have both version **4.6** as well as version **4.9** installed, which can be run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
 
 ![](https://i.imgur.com/JrL2EYB.png)
 
