@@ -13,8 +13,7 @@ note_class: alert alert-info
 note_prefix: Note
 note_body: >-
   This post is reference [for a
-  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
-  knowledge.
+  class](https://www.digipen.edu/coursecatalog/#CS261). It is assumed that you have used VirtualBox for [running desktop versions of Linux](http://www.beopensource.com/2016/05/how-to-install-Ubuntu-1604-LTS-in-Virtual-Box-VmWare.html), and have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php).
 set_id: Linux Server Basics
 set_part_id: 1
 set_part_title: VirtualBox Port Forwarding
@@ -23,8 +22,6 @@ set_part_title: VirtualBox Port Forwarding
 In this post I will discuss setting up port forwarding to manage a local linux virtual machine through ssh, with a focus on mirroring the workflow you might follow with a dedicated Linux server.
 
 This guide will be using Ubuntu 16.04.1 and [MobaXterm](http://mobaxterm.mobatek.net/) as the SSH client. You are welcome to use another SSH client such as [bash for windows in Windows 10](http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) if you so choose.
-
-This post assumes you have used VirtualBox for [running desktop versions of Linux](http://www.beopensource.com/2016/05/how-to-install-Ubuntu-1604-LTS-in-Virtual-Box-VmWare.html), and have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php).
 
 <!-- more -->
 
