@@ -43,7 +43,7 @@ But I can also run gcc via just **`gcc`**, which defaults to version 4.9:
 
 So how does Linux know which version to run? Are there two copies of the same program installed under different names?
 
-If check the directory that contains gcc (which we can find by running **`which gcc`**) we will see the following output with **`ls -l`**:
+When looking in the directory that contains gcc (which we can find by running **`which gcc`**) we will see the following output with **`ls -l`**:
 
 ![](https://i.imgur.com/JVSc2zr.png)
 
