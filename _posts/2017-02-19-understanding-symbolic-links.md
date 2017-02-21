@@ -46,7 +46,7 @@ If we look in the directory that contains gcc (which we can find by running **`w
 
 It turns out that **`gcc`** is not actually its own executable file, but instead is a symbolic link that points to **`gcc-4.9`**.  
 
-Assuming you've enabled color in your .bashrc file, the **turquoise** text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named **`gcc`** and pointing to the file **`gcc-4.9`**
+Assuming you've [enabled color in your .bashrc file](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/#enable-console-coloring), the **turquoise** text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named **`gcc`** and pointing to the file **`gcc-4.9`**
 
 ------
 
