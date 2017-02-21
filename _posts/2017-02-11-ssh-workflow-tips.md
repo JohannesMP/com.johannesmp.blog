@@ -1,5 +1,6 @@
 ---
 published: true
+title: SSH Workflow Tips
 layout: post
 tags:
   - linux

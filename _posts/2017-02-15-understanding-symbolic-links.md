@@ -1,39 +1,57 @@
 ---
+published: true
 title: Understanding Symbolic Links
-published: false
+layout: post
+tags:
+  - linux
+  - tutorial
+  - server
+comments: true
+set_id: Linux Server Basics
+set_part_id: 3
+set_part_title: Understanding Symbolic Links
+note_class: alert alert-info
+note_prefix: Note
+note_body: >-
+  This post is reference [for a
+  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
+  knowledge.
 ---
 
-Symbolic links, or *"Symlinks"* are a fundamental tool in the Linux arsenal.
 
-They are used ***everywhere*** in Linux and are exceedingly useful in organizing configuration files as well as speeding up your workflow.
+![](http://i.imgur.com/IKCybXy.png)
 
-Symlinks allow you to make a file or folder accessible as if by reference at another location.
+Symbolic links, or *"Symlinks"* are a fundamental tool in the Linux arsenal. They allow you to make a file or folder accessible as if by reference from another location.
+
+Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
 {% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions)." %}
 
 <!-- more -->
 
-## Symbolic link Examples
 
-For example, I use the gcc compiler on a linux server. I have both version 4.6 as well as version 4.9 installed, which I can run with `gcc-4.6`and `gcc-4.9` respectively:
+<br />
+## What are Symlinks?
 
+I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html) on a linux server. I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
 ![](https://i.imgur.com/JrL2EYB.png)
 
-But I can also run gcc via just `gcc`, which defaults to version 4.9:
-
+But I can also run gcc via just **`gcc`**, which defaults to version 4.9:
 ![](https://i.imgur.com/00jrgJB.png)
 
-So how does Linux know which version to run? are there two copies of the same program on my computer under different names?
+So how does Linux know which version to run? Are there two copies of the same program installed under different names?
 
-If we look in the directory that contains gcc (which we can find by running `which gcc`) we will see the following:
-
+If we look in the directory that contains gcc (which we can find by running **`which gcc`**) we will see the following:
 ![](https://i.imgur.com/JVSc2zr.png)
 
-The *turqoise* text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named `gcc` and pointing to the file `gcc-4.9`
+It turns out that **`gcc`** is not actually its own executable file, but instead is a symbolic link that points to **`gcc-4.9`**.  
+
+The **turqoise** text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named **`gcc`** and pointing to the file **`gcc-4.9`**
 
 ------
 
-To help understand exactly how this works, let's take a step back and look at another example. If you've used C++ you should be familiar with the concept of a reference:
+To help understand exactly how this works, let's take a step back and look at another example. If you've used *C++*you should be familiar with the concept of a *reference*:
+
 
 ```c++
 int    a = 1;
@@ -48,52 +66,117 @@ printf(a);     // 5
 printf(r_a);   // 5
 ```
 
-A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that `r_a` is effectively a pointer and not its own location in memory. They are modifying it as if it was its own int.
+A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own location in memory. They are modifying it as if it was its own int.
 
+Let's try re-creating this example with symlinks.
+
+<br />
 ## Creating a Symbolic Link
 
-To create a symbolic link we use the `ls` command with the `-s` flag. There are other kinds of links but we will not be covering those here. The basic format is:
+To create a symbolic link we use the [**`ln`** command](https://en.wikipedia.org/wiki/Ln_(Unix) ) with the **`-s`** flag. The basic format is:
 
 ```bash
 ln -s <path/to/source> <path/to/link>
 ```
 
-For example, try the following in an empty directory:
+To mirror the reference example above, let's create **`a.txt`** and a symbolic link named **`s_a.txt`**:
 
 ```bash
-echo "bar" > foo.txt        # `foo.txt` is a text file with contents `bar`
-ln -s foo.txt foo_link.txt  # `foo_link.txt` is a symlink to `foo.txt`
-ls -la 
+echo "1" > a.txt      # 'a.txt' is a text file that contains '1'
+ln -s a.txt l_a.txt   # 's_a.txt' is a symbolic link to 'a.txt'
 ```
 
-![](https://i.imgur.com/1DDlU7B.png)
+![](https://i.imgur.com/G4ROeXb.png)
 
-When viewed with `ls -la` valid symbolic links show up as *turqoise*, while broken symbolic links will show up as *red* (assuming you have console colors enabled in your `.bashrc` file):
+We can now access the data, as well as modify it through the symlink:
 
-![](https://i.imgur.com/FZ8XXWZ.png)
+![](https://i.imgur.com/83gpBiA.png)
 
-If we print the contents of the file to our  screen with the [`cat` command](http://www.linuxtechi.com/cat-command-examples-for-beginners-in-linux/), we can see that both the original file as well as the symlink:
+You can also create a symbolic link to a directory, then interact with it as if it was a real folder:
+![](https://i.imgur.com/d1bS1T8.png)
 
-![](https://i.imgur.com/eH0UkSv.pnghttp://)
-
-Going back to our references example with` foo.txt` and `foo_link.txt`, If you modify the file, either via the original file `foo.txt` or the link, both will show the change. In this regard the symbolic link behaves *exactly* like a reference:
-
-![](https://i.imgur.com/ocqsrFn.png)
+A symbolic link is technically **neither a file nor a directory**, and how it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
 
 
-## Absolute versus Relative Symbolic Links
+<br />
+## How symlinks are evaluated
 
-When you viewing a symbolic link in `ls -la`, you'll note that the permission string shows an `l` where directories show a `d`. That is because as a link, it can refer to *either* a file *or* a folder, and how it is interpreted depends on which it is pointing at.
+When you create a symbolic link, the only thing it stores is the  ***path/to/source*** you provided. Whether a symbolic link represents a file, a directory, or nothing (a path that doesn't exist), is not decided until the exact moment you attempt to access it. 
 
-So if you link to a directory, it will be interpreted as a directory, and the when viewed with `ls -la` you will see the link:
-![](https://i.imgur.com/qTC9ux2.png)
+Start with symbolic link **`s_b`** pointing to a directory named **`b`**:
+![](https://i.imgur.com/S0P2mgk.png)
 
-Symbolic links differ from references in how they store the 'reference' to their target.
+If we remove the original directory **`b`**, the symbolic link is now invalid (as you can see by the **red** color), and cannot be accessed:
+![](https://i.imgur.com/YMj9kc2.png)
 
-When you create the link with `ln <path/to/source> </path/to/link>` the reference is defined as the exact ***path/to/source*** you provided.
+And if we now create a **text file** named `b` then all of a sudden the same symbolic link **`s_b`** is now pointing to that file:
+![](https://i.imgur.com/qwp4Aoj.png)
 
-Symbolic links are evaluated the moment a program attempts to access them, though the OS does cache them so they are actually very efficient. It does mean that if you define the path to your symbolic link in a relative manner that they break.
+This only works because **`s_b`** was created using path **`b`**.
 
-![](https://i.imgur.com/iZhbd2h.png)
+If instead we had created it with the path **`b/`**:
+```bash
+ln -s b/ s_b
+```
+Then the path stored would only ever evaluate to a directory, since files cannot contain the ** `/`** character:
+![](https://i.imgur.com/o4QkdjG.png)
 
-## So Why are they useful? 
+
+<br />
+## Using symlinks in your workflow
+Symbolic links have many useful applications. Here are a few examples:
+
+### Easy Versioning
+If you recall the gcc example above, it is not uncommon to want to access the latest version of a file or directory without having to explicitly state the version number.
+
+For example, let's say you have several versions of your app: **`my_app_v1/`**, **`my_app_v2/`**, **`my_app_v3/`** and want to have a webserver only host the latest version. 
+
+You can create a symbolic link called **`my_app_latest`** which points latest version you need.  That way you can just always point your webserver to **`my_app_latest/`**:
+
+![](https://i.imgur.com/rU1tjs5.png)
+
+When the time comes to install **`my_app_v4/`**, you can remove the old symlinc with **`rm`** and re-create it:
+![](https://i.imgur.com/SjCNqmY.png)
+
+In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
+
+
+### Config Files Management
+Most Applications on linux store their configuration files in **`/etc/<appname>`**
+
+For example *mysql* might store its configuration files in **`/etc/mysql/`**, *php5*  could have its files in **`/etc/php5/apache2/`**, etc.
+
+While you *could* modify each file on its own as necessary, this is not very maintainable in the long run:
+
+- If you ever want to set up a similar configuration on another server, you'll have to hunt for the files.
+- If you ever need to revert a configuration to a previous state, you will have no way to do so.
+
+
+Ideally you would really want to use version control like *git*  so you could store your configurations, revert them, and clone them on other machines as needed, but the files are all spread around.
+
+That is where Symbolic links come in.
+
+If you set up a single directory for your app's files, such as **`/opt/my_app/`**, you can set up a git repo for its config files, located in (for example) **`/opt/my_app/configs/`**.
+
+You would move the config files you need into the repository, then create a symlink back in the original location:
+
+```bash
+cd /etc/example
+sudo mv file.conf /opt/my_app/configs/etc_example/
+sudo ln -s /opt/my_app/configs/etc_example/file.conf
+```
+
+You can store configs in your repo under subdirectories that mirror their location in **`/etc/...`**. This makes it really easy to know where the config files should be symlinked to when you later clone this repo on a new server.
+
+------
+
+Additionally, several linux applications that have config files in **`/etc/`** have the ability to load additional configuration files from a directory. 
+
+For example, while the default configuration file for *php5* might be **`/etc/php5/apache2/php.ini`**, it also provides a directory **`/etc/php5/apache2/conf.d/`**, and any config file stored there (including symlinks) will be loaded after the default config file.
+
+This lends itself really well to symlinks. you can store all of your configuration files in one place, and then only symlink the ones you need on a given server.
+
+
+
+
+
