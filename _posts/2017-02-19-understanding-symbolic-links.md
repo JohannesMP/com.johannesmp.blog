@@ -25,7 +25,7 @@ Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. The
 
 Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
-{% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions)." %}
+{% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), as well as some of the [SSH workflow tips covered previously](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/)" %}
 
 <!-- more -->
 
