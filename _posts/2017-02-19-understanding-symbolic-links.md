@@ -14,14 +14,11 @@ note_class: alert alert-info
 note_prefix: Note
 note_body: >-
   This post is reference [for a
-  class](https://www.digipen.edu/coursecatalog/#CS261) and assumes some prior
-  knowledge.
+  class](https://www.digipen.edu/coursecatalog/#CS261). It is assumed that you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), as well as some of the [SSH workflow tips covered previously](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/).
 ---
 
 
 ![](http://i.imgur.com/IKCybXy.png)
-
-{% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), as well as some of the [SSH workflow tips covered previously](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/)." %}
 
 Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible from another location as if by reference.
 
