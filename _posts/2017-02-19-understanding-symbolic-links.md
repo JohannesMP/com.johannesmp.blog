@@ -58,15 +58,15 @@ To help understand exactly how this works, let's take a step back and look at an
 
 ```c++
 int    a = 1;
-int &r_a = a;  // storing a reference to `a`
+int &r_a = a;         // storing a reference to `a`
 
-printf(a);     // 1
-printf(r_a);   // 1
+cout <<   a << endl;  // 1
+cout << r_a << endl;  // 1
 
-r_a = 5;       // modifying `a` via the reference
+r_a = 5;              // modifying `a` via the reference
 
-printf(a);     // 5
-printf(r_a);   // 5
+cout <<   a << endl;  // 5
+cout << r_a << endl;  // 5
 ```
 
 A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own discrete location in memory. They are modifying it as if it was its own `int`.
