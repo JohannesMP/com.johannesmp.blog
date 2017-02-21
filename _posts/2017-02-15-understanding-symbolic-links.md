@@ -168,9 +168,7 @@ sudo ln -s /opt/my_app/configs/etc_example/file.conf
 
 You can store configs in your repo under subdirectories that mirror their location in **`/etc/...`**. This makes it really easy to know where the config files should be symlinked to when you later clone this repo on a new server.
 
-------
-
-Additionally, several linux applications that have config files in **`/etc/`** have the ability to load additional configuration files from a directory. 
+Furthermore, several linux applications that have config files in **`/etc/`** have the ability to load additional configuration files from a directory. 
 
 For example, while the default configuration file for *php5* might be **`/etc/php5/apache2/php.ini`**, it also provides a directory **`/etc/php5/apache2/conf.d/`**, and any config file stored there (including symlinks) will be loaded after the default config file.
 
