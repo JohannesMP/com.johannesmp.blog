@@ -50,7 +50,7 @@ Assuming you've [enabled color in your .bashrc file](http://blog.johannesmp.com/
 
 ------
 
-To help understand exactly how this works, let's take a step back and look at another example. If you've used *C++*you should be familiar with the concept of a *reference*:
+To help understand exactly how this works, let's take a step back and look at another example. If you've used *C++* you should be familiar with the concept of a *reference*:
 
 
 ```c++
@@ -66,7 +66,7 @@ printf(a);     // 5
 printf(r_a);   // 5
 ```
 
-A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own discrete location in memory. They are modifying it as if it was its own int.
+A Symbolic link is very similar to a reference. For the user touching the reference, they don't know or care that **`r_a`** is effectively a proxy and not its own discrete location in memory. They are modifying it as if it was its own `int`.
 
 Let's try re-creating this example with symlinks.
 
