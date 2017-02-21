@@ -151,7 +151,7 @@ With a web servers like *apache2* or *nginx* you would have to reload a config f
 
 
 ### Config File Management
-Most Applications on Linux store their configuration files in **`/etc/<appname>`**
+Most Applications on Linux store their configuration files in **`/etc/<appname>`**.
 
 For example, *mysql* might store its configuration files in **`/etc/mysql/`**,<br/>
 *php5* could have its files in **`/etc/php5/apache2/`**, etc.
