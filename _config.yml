@@ -16,7 +16,7 @@ tagline:            'Assorted Code snippets and Dev devices'
 description:        'Programmer, Graphic Designer, Web Developer and DigiPen Student' 
 url:                http://blog.johannesmp.com
 baseurl:            ''
-paginate:           5
+paginate:           10
 excerpt_separator:  <!-- more -->
 repository:         'JohannesMP/com.johannesmp.blog'
 
