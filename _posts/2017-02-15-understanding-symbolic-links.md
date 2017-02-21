@@ -21,7 +21,7 @@ note_body: >-
 
 ![](http://i.imgur.com/IKCybXy.png)
 
-Symbolic links, or *"Symlinks"* are a fundamental tool in the Linux arsenal. They allow you to make a file or folder accessible as if by reference from another location.
+Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible as if by reference from another location.
 
 Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
@@ -33,7 +33,7 @@ Symbolic links are used ***everywhere*** in Linux. Many applications like [apach
 <br />
 ## What are Symlinks?
 
-I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html) on a linux server. I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
+I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html) on a Linux server. I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
 ![](https://i.imgur.com/JrL2EYB.png)
 
 But I can also run gcc via just **`gcc`**, which defaults to version 4.9:
@@ -46,7 +46,7 @@ If we look in the directory that contains gcc (which we can find by running **`w
 
 It turns out that **`gcc`** is not actually its own executable file, but instead is a symbolic link that points to **`gcc-4.9`**.  
 
-The **turqoise** text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named **`gcc`** and pointing to the file **`gcc-4.9`**
+Assuming you've enabled color in your .bashrc file, the **turquoise** text represents a symbolic link, followed by an arrow that shows what the link is linking to. In this case, the symbolic link is named **`gcc`** and pointing to the file **`gcc-4.9`**
 
 ------
 
@@ -101,7 +101,7 @@ A symbolic link is technically **neither a file nor a directory**, and how it is
 <br />
 ## How symlinks are evaluated
 
-When you create a symbolic link, the only thing it stores is the  ***path/to/source*** you provided. Whether a symbolic link represents a file, a directory, or nothing (a path that doesn't exist), is not decided until the exact moment you attempt to access it. 
+When you create a symbolic link, the only thing it stores is the  ***path/to/source*** you provided. Whether a symbolic link represents a file, a directory, or nothing (a path that doesn't exist), is not decided until the exact moment you attempt to access it. We can observe that as follows:
 
 Start with symbolic link **`s_b`** pointing to a directory named **`b`**:
 ![](https://i.imgur.com/S0P2mgk.png)
@@ -109,7 +109,7 @@ Start with symbolic link **`s_b`** pointing to a directory named **`b`**:
 If we remove the original directory **`b`**, the symbolic link is now invalid (as you can see by the **red** color), and cannot be accessed:
 ![](https://i.imgur.com/YMj9kc2.png)
 
-And if we now create a **text file** named `b` then all of a sudden the same symbolic link **`s_b`** is now pointing to that file:
+And if we now create a **text file** named `b` then the same symbolic link **`s_b`** is now pointing to that file:
 ![](https://i.imgur.com/qwp4Aoj.png)
 
 This only works because **`s_b`** was created using path **`b`**.
@@ -135,14 +135,14 @@ You can create a symbolic link called **`my_app_latest`** which points latest ve
 
 ![](https://i.imgur.com/rU1tjs5.png)
 
-When the time comes to install **`my_app_v4/`**, you can remove the old symlinc with **`rm`** and re-create it:
+When the time comes to install **`my_app_v4/`**, you can remove the old symlinc with **`rm`** and re-create it, without having to restart the webserver:
 ![](https://i.imgur.com/SjCNqmY.png)
 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
 
 
 ### Config File Management
-Most Applications on linux store their configuration files in **`/etc/<appname>`**
+Most Applications on Linux store their configuration files in **`/etc/<appname>`**
 
 For example, *mysql* might store its configuration files in **`/etc/mysql/`**, *php5*  could have its files in **`/etc/php5/apache2/`**, etc.
 
@@ -168,7 +168,7 @@ sudo ln -s /opt/my_app/configs/etc_example/file.conf
 
 You can store configs in your repo under subdirectories that mirror their location in **`/etc/...`**. This makes it really easy to know where the config files should be symlinked to when you later clone this repo on a new server.
 
-Furthermore, several linux applications that have config files in **`/etc/`** have the ability to load additional configuration files from a directory. 
+Furthermore, several Linux applications that have config files in **`/etc/`** have the ability to load additional configuration files from a directory. 
 
 For example, while the default configuration file for *php5* might be **`/etc/php5/apache2/php.ini`**, it also provides a directory **`/etc/php5/apache2/conf.d/`**, and any config file stored there (including symlinks) will be loaded after the default config file.
 
