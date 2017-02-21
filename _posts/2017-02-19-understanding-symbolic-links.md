@@ -34,9 +34,11 @@ Symbolic links are used ***everywhere*** in Linux. Many applications like [apach
 ## What are Symlinks?
 
 I use the [gcc compiler](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html), and on one of my servers I have both version **4.6** as well as version **4.9** installed, which I can run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
+
 ![](https://i.imgur.com/JrL2EYB.png)
 
 But I can also run gcc via just **`gcc`**, which defaults to version 4.9:
+
 ![](https://i.imgur.com/00jrgJB.png)
 
 So how does Linux know which version to run? Are there two copies of the same program installed under different names?
@@ -104,12 +106,15 @@ A symbolic link is technically **neither a file nor a directory**. How it is int
 When you create a symbolic link, the only thing it stores is the  ***path/to/source*** you provided. Whether a symbolic link represents a file, a directory, or nothing (a path that doesn't exist), is not decided until the exact moment you attempt to access it. We can observe that as follows:
 
 Start with symbolic link **`s_b`** pointing to a directory named **`b`**:
+
 ![](https://i.imgur.com/S0P2mgk.png)
 
 If we remove the original directory **`b`**, the symbolic link is now invalid (as you can see by the **red** color), and cannot be accessed:
+
 ![](https://i.imgur.com/YMj9kc2.png)
 
 If we now create a **text file** named **`b`** then the same symbolic link **`s_b`** will now point to that file:
+
 ![](https://i.imgur.com/qwp4Aoj.png)
 
 This only works because **`s_b`** was created using path **`b`**.
@@ -119,6 +124,7 @@ If instead we had created it with the path **`b/`**:
 ln -s b/ s_b
 ```
 Then the path stored would only ever evaluate to a directory, since files cannot contain the **`/`** character:
+
 ![](https://i.imgur.com/o4QkdjG.png)
 
 
@@ -136,6 +142,7 @@ You can create a symbolic link called **`my_app_latest`** which points latest ve
 ![](https://i.imgur.com/rU1tjs5.png)
 
 When the time comes to install **`my_app_v4/`**, you can remove the old symlink with **`rm`** and re-create it, without having to restart the webserver:
+
 ![](https://i.imgur.com/SjCNqmY.png)
 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
@@ -154,7 +161,7 @@ While you *could* modify each file on its own as necessary, this is not very mai
 - If you ever need to revert a configuration to a previous state, you will have no way to do so.
 
 
-Ideally you would really want to use version control like *git*  so you could store your configurations, revert them, and clone them on other machines as needed, but the files are all spread around.
+Ideally you would really want to use version control like [git](https://en.wikipedia.org/wiki/Git)  so you could store your configurations, revert them, and clone them on other machines as needed, but the files are all spread around.
 
 That is where Symbolic links come in.
 
