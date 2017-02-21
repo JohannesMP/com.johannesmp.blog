@@ -17,6 +17,8 @@ This initial post will cover what Premake is, why you should use it, and provide
 
 Future posts will expand on the provided example by walking through the process of setting up more complicated premake configurations, such as cross-platform libraries and dependencies.
 
+<!-- more -->
+
 <br />
 
 ## Why Use a Build Configurator?
@@ -30,7 +32,6 @@ Several build tools exist that allow us to avoid these issues. [CMake](https://c
 
 This post will discuss [Premake5](https://premake.github.io/): A Lightweight, Open-source, Lua-based alternative to CMake.
 
-<!-- more -->
 
 <br />
 
