@@ -135,7 +135,7 @@ You can create a symbolic link called **`my_app_latest`** which points latest ve
 
 ![](https://i.imgur.com/rU1tjs5.png)
 
-When the time comes to install **`my_app_v4/`**, you can remove the old symlinc with **`rm`** and re-create it, without having to restart the webserver:
+When the time comes to install **`my_app_v4/`**, you can remove the old symlink with **`rm`** and re-create it, without having to restart the webserver:
 ![](https://i.imgur.com/SjCNqmY.png)
 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
