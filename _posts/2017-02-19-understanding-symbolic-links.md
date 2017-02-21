@@ -96,6 +96,7 @@ We can now access the data, as well as modify it through the symlink:
 ![](https://i.imgur.com/83gpBiA.png)
 
 You can also create a symbolic link to a directory, then interact with it as if it was a real folder:
+
 ![](https://i.imgur.com/d1bS1T8.png)
 
 A symbolic link is technically **neither a file nor a directory**. How it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
