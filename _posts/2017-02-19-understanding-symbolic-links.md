@@ -21,11 +21,13 @@ note_body: >-
 
 ![](http://i.imgur.com/IKCybXy.png)
 
+{% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), as well as some of the [SSH workflow tips covered previously](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/)." %}
+
 Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible from another location as if by reference.
 
 Symbolic links are used ***everywhere*** in Linux. Many applications like [apache](https://httpd.apache.org/) and [nginx](https://www.nginx.com/resources/wiki/) require them for their configuration files, and they can be a powerful tool for your workflow.
 
-{% include alert.html type="info" message="This post assumes you have a [basic grasp of Linux commands](http://linuxcommand.org/learning_the_shell.php) such as [apt-get](https://help.ubuntu.com/community/AptGet/Howto) and [linux file permissions](https://help.ubuntu.com/community/FilePermissions), as well as some of the [SSH workflow tips covered previously](http://blog.johannesmp.com/2017/02/11/ssh-workflow-tips/)." %}
+
 
 <!-- more -->
 
@@ -82,7 +84,7 @@ To create a symbolic link we use the [**`ln`** command](https://en.wikipedia.org
 ln -s <path/to/source> <path/to/link>
 ```
 
-To mirror the *C++ reference* example above, let's create **`a.txt`** and a symbolic link named **`s_a.txt`**:
+To mirror the reference example above, let's create **`a.txt`** and a symbolic link named **`s_a.txt`**:
 
 ```bash
 echo "1" > a.txt      # 'a.txt' is a text file that contains '1'
@@ -96,10 +98,9 @@ We can now access the data, as well as modify it through the symlink:
 ![](https://i.imgur.com/83gpBiA.png)
 
 You can also create a symbolic link to a directory, then interact with it as if it was a real folder:
-
 ![](https://i.imgur.com/d1bS1T8.png)
 
-A symbolic link is technically **neither a file nor a directory**. How it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
+A symbolic link is technically neither a file nor a directory. How it is interpreted depends only on the path it was created with, and what that path contains when the symbolic link is evaluated.
 
 
 <br />
@@ -115,7 +116,7 @@ If we remove the original directory **`b`**, the symbolic link is now invalid (a
 
 ![](https://i.imgur.com/YMj9kc2.png)
 
-If we now create a **text file** named **`b`** then the same symbolic link **`s_b`** will now point to that file:
+If we now create a text file named **`b`** then the same symbolic link **`s_b`** will now point to that file:
 
 ![](https://i.imgur.com/qwp4Aoj.png)
 
@@ -155,9 +156,10 @@ With a web servers like *apache2* or *nginx* you would have to reload a config f
 ### Config File Management
 Most Applications on Linux store their configuration files in **`/etc/<appname>`**
 
-For example, *mysql* might store its configuration files in **`/etc/mysql/`**, *php5*  could have its files in **`/etc/php5/apache2/`**, etc.
+For example, *mysql* might store its configuration files in **`/etc/mysql/`**,
+*php5*  could have its files in **`/etc/php5/apache2/`**, etc.
 
-While you *could* modify each file on its own as necessary, this is not very maintainable in the long run:
+While you could modify each file on its own as necessary, this is not very maintainable in the long run:
 
 - If you ever want to set up a similar configuration on another server, you'll have to hunt for the files.
 - If you ever need to revert a configuration to a previous state, you will have no way to do so.
@@ -183,7 +185,7 @@ Furthermore, several Linux applications that have config files in **`/etc/`** ha
 
 For example, while the default configuration file for *php5* might be **`/etc/php5/apache2/php.ini`**, it also provides a directory **`/etc/php5/apache2/conf.d/`**, and any config file stored there (including symlinks) will be loaded after the default config file.
 
-This lends itself really well to symlinks. you can store all of your configuration files in one place, and then only symlink the ones you need on a given server.
+This lends itself really well to symlinks by design, and is demonstrative of Linux design in general. You can store all of your configuration files in one place, and then only symlink the ones you need on a given server.
 
 
 
