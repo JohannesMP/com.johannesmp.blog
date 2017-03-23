@@ -32,7 +32,7 @@ Symbolic links are used ***everywhere*** in Linux. Many applications like [apach
 <br />
 ## What are Symbolic Links?
 
-When using compilers such as [gcc](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html), It is not uncommon to have multiple versionis installed for different projects. On one of my servers I have both version **4.6** as well as version **4.9** installed, which can be run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
+When using compilers such as [gcc](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html), It is not uncommon to have multiple versions installed for different projects. On one of my servers I have both version **4.6** as well as version **4.9** installed, which can be run with **`gcc-4.6`** and **`gcc-4.9`** respectively:
 
 ![](https://i.imgur.com/JrL2EYB.png)
 
