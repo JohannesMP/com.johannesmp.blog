@@ -147,7 +147,7 @@ When the time comes to install **`my_app_v4/`**, you can remove the old symlink 
 
 In this case, manually swapping out the symbolic link would be much easier than updating the webserver's configuration file, especially if multiple other applications all rely on **`my_app`**.
 
-With a web servers like *apache2* or *nginx* you would have to reload a config file after changing it, but this way there is no need to restart them, since as far as they are concerned, nothing has actually changed.
+With web servers like *apache2* or *nginx* you would have to reload a config file after changing it, but this way there is no need to restart them, since as far as they are concerned, nothing has actually changed.
 
 
 ### Config File Management
