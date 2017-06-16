@@ -18,7 +18,7 @@ note_body: >-
 ---
 
 
-![](http://i.imgur.com/IKCybXy.png)
+![](http://i.imgur.com/BY6OrXK.png)
 
 Symbolic links, or *"Symlinks"* are a fundamental part of the Linux toolbox. They allow you to make a file or folder accessible from another location as if by reference.
 
