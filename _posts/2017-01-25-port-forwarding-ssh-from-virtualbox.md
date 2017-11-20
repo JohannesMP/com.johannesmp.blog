@@ -121,7 +121,7 @@ You should now be able to connect to your Virtual Machine via this command: `ssh
 
 ## More port forwarding
 
-You can forward any port from inside your VM this way. For example, if you running nginx as a webhost on port 80, you can forward it to your host OS to view the page it is hosting. Since port 80 would already be used by your main OS, you would use another unused port, such as port `8080`:
+You can forward any port from inside your VM this way. For example, if you are running [nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04) as a webhost on port 80 in your VM, you can forward it to your host OS to view the page it is hosting. Since port 80 would already be used by your main OS, you would use another unused port, such as port `8080`:
 
 ![](https://i.imgur.com/wBKzbU1.png)
 
