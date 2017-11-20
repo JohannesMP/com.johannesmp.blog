@@ -44,7 +44,7 @@ Go through the general VirtualBox install for ubuntu. Keep in mind:
 - Choose a Dynamically sized Virtual Harddrive of a reasonable size, probably limited to 20GB or so (can always be changed later)
 - When starting for the first time, select your downloaded ISO when prompted.
 - Most settings should be left default.
-- When prompted to choose `Software to install`, make sure to install OpenSSH Server (miove the cursor down and press space to select it, **NOT** enter.)
+- When prompted to choose `Software to install`, make sure to install OpenSSH Server (move the cursor down and press space to select it, **NOT** enter.)
 ![](https://i.imgur.com/9mdAgY5.png)
   - If you accidentally skip installing the OpenSSH Server you can always install it later with `sudo apt-get install openssh-server`
 
@@ -73,10 +73,12 @@ Then you have ssh properly installed.
 
 If you see an error then you may need to install ssh with `sudo apt-get install openssh-server`
 
-Once you see that SSH is running we will need the local IP address that VirtualBox is using internall for this Virtual Machine. To do so we can run ifconfig and filter it for lines that contain the string "inet addr". Run `ifconfig | grp "inet addr"`
+Once you see that SSH is running we will need the local IP address that VirtualBox is using internall for this Virtual Machine. To do so we can run ifconfig and filter it for lines that contain the string "inet addr". 
+
+Run `ifconfig | grp "inet addr"`
 ![](https://i.imgur.com/QNw8eVl.png)
 
-127.0.0.1 is your loopback addtress so In this case the IP address you want is **`10.0.2.15`** but that may be different in your case. Make a note of this IP address, so we can use it to port forward SSH connections from your host OS into the virtual machine.
+127.0.0.1 is your loopback address so In this case the IP address you want is **`10.0.2.15`** but that may be different in your case. Make a note of this IP address, so we can use it to port forward SSH connections from your host OS into the virtual machine.
 
 You can now type `exit` to log out of your user session. Ideally we will never have to log in through this console again, and will instead use SSH.
 
@@ -90,7 +92,7 @@ Minimize your server's window (make sure not to close it), select it in the Virt
 Select the '_Network_' tab and expand the '_Advanced_' section:
 ![](https://i.imgur.com/C93FvOI.png)
 
-We will now forward an unused port from our native host OS to the SSH port (port `22`) on the virtual machine. To do so we will have to pick a port that is not already in use. In this case we will use port `2222`.
+We will now forward an unused port from our native host OS to the SSH port (port `22`) on the virtual machine. To do so we will have to pick a port that is not already in use on your host computer. In this case we will use port `2222`.
 
 Click '_Port Forwarding_', and create a new Rule as follows (make sure to change `10.0.2.15` to match the IP address you noted down earlier):
 ![](https://i.imgur.com/KZj31Jh.png)
