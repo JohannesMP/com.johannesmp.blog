@@ -45,7 +45,7 @@ Go through the general VirtualBox install for ubuntu. Keep in mind:
 - When starting for the first time, select your downloaded ISO when prompted.
 - Most settings should be left default.
 - When prompted to choose `Software to install`, make sure to install OpenSSH Server (miove the cursor down and press space to select it, **NOT** enter.)
-https://i.imgur.com/9mdAgY5.png
+![](https://i.imgur.com/9mdAgY5.png)
   - If you accidentally skip installing the OpenSSH Server you can always install it later with `sudo apt-get install openssh-server`
 
 
