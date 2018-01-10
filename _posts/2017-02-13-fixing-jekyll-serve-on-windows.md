@@ -222,10 +222,7 @@ Make sure that you did not accidentally copy any spaces to either side of the to
 Lastly, you may get a dependency error that states: 
 
     Dependency Error: Yikes! It looks like you don't have jekyll-remote-theme or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is:  
-        'Could not open library 'libcurl': The specified module could not be found. . 
-        Could not open library 'libcurl.dll': The specified module could not be found. . 
-        Could not open library 'libcurl.so.4': The specified module could not be found. . 
-        Could not open library 'libcurl.so.4.dll': The specified module could not be found.' 
+        'Could not open library 'libcurl': The specified module could not be found. . Could not open library 'libcurl.dll': The specified module could not be found. . Could not open library 'libcurl.so.4': The specified module could not be found. . Could not open library 'libcurl.so.4.dll': The specified module could not be found.' 
         
     If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
 
