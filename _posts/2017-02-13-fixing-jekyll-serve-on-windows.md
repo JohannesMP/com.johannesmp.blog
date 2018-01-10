@@ -228,7 +228,7 @@ Lastly, you may get a dependency error that states:
 
 As of the time of this writing (January 2018), this is will occur if you are using the github-pages gem on Windows, because v171 of the gem added the default theme `jekyll-remote-theme` as a dependency which in turn requires `libcurl`.
 
-For more info please refer to the relevant issue on the github pages gem bug tracker: https://github.com/github/pages-gem/issues/509
+For more info please refer to the relevant issue on the github pages gem bug tracker: [https://github.com/github/pages-gem/issues/509](https://github.com/github/pages-gem/issues/509)
 
 Hopefully future updates of this gem will remove the dependency, but for the time being you have two options:
 - Install the libcurl dependency yourself.
