@@ -189,7 +189,7 @@ repository:         'JohannesMP/com.johannesmp.blog'
 
 ## Fix "The GitHub API credentials you provided aren't valid."
 
-Lastly, when trying to run `jekyll serve` you may see one of these errors:
+When trying to run `jekyll serve` you may see one of these errors:
 
 ```bash
 Error:  The GitHub API credentials you provided aren't valid.
@@ -215,6 +215,37 @@ Open your favorite environment variable editor and create a new System Variable.
 ![](https://i.imgur.com/rliKTQb.png)
 
 Make sure that you did not accidentally copy any spaces to either side of the token! Make sure to hit `Set` to save the token, and re-open your command prompt so that it reloads the env vars.
+
+
+## Fix jekyll-remote-theme/libcurl dependency error
+ 
+Lastly, you may get a dependency error that states: 
+
+    Dependency Error: Yikes! It looks like you don't have jekyll-remote-theme or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. The full error message from Ruby is:  
+        'Could not open library 'libcurl': The specified module could not be found. . 
+        Could not open library 'libcurl.dll': The specified module could not be found. . 
+        Could not open library 'libcurl.so.4': The specified module could not be found. . 
+        Could not open library 'libcurl.so.4.dll': The specified module could not be found.' 
+        
+    If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
+
+As of the time of this writing (January 2018), this is will occur if you are using the github-pages gem on Windows, because v171 of the gem added the default theme `jekyll-remote-theme` as a dependency which in turn requires `libcurl`.
+
+For more info please refer to the relevant issue on the github pages gem bug tracker: https://github.com/github/pages-gem/issues/509
+
+Hopefully future updates of this gem will remove the dependency, but for the time being you have two options:
+- Install the libcurl dependency yourself.
+- Modify your Gemfile to force version 170 which doesn't have this dependency.
+
+For the time being I chose to do the latter, and so in my Gemfile I changed
+
+    gem 'github-pages'
+
+To
+    
+    gem 'github-pages', '170'
+
+
 
 # Conclusion
 
