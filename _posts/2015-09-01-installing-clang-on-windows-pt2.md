@@ -33,13 +33,13 @@ First quickly consider the following:
 Ok, let's get to the fun part. You will need to install ***all*** of the following:
 
 1. Clang for 64 bit
-    - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win64.exe)** - clang 3.7.0 (release candidate 3) 64 bit.
+    - **[Download Link](http://releases.llvm.org/3.7.0/LLVM-3.7.0-win64.exe)** - clang 3.7.0 64 bit.
     - Run the installer. When you get to the PATH settings, make sure to add LLVM to the system PATH:
     ![](http://i.imgur.com/AIjaxKk.png)
     - Use the default install location: `C:\Program Files\LLVM`. Once the installation completes hit 'Finish'.
     - `clang++.exe` should be located in `C:\Program Files\LLVM\bin`, which should be in your system PATH.
 2. Clang for 32 bit
-    - **[Download Link](http://llvm.org/pre-releases/3.7.0/rc3/LLVM-3.7.0-rc3-win32.exe)** - clang 3.7.0 (release candidate 3) 32 bit.
+    - **[Download Link](http://releases.llvm.org/3.7.0/LLVM-3.7.0-win32.exe)** - clang 3.7.0 32 bit.
     - Run the installer. **IMPORTANT**: because we technically just installed a different version of LLVM, the installer will see the 64 bit version as an 'older version' and will give you this warning:
         ![](http://i.imgur.com/TcfUY3b.png)
         You will want to click 'No', so that the 64 bit version doesn't get uninstalled. We want *both* the 32 *and* the 64 bit versions.
