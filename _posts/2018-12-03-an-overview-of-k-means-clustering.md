@@ -11,9 +11,10 @@ note_prefix: Note
 note_body: >-
   I originally wrote this writeup [for a
   class](https://www.digipen.edu/coursecatalog/#MAT345) I was taking, and was
-  meant to help explain a concept discussed in class to some classmates.<br>As
-  such it assumes a bit of pre-existing knowledge regarding Machine Learning
-  Algorithms and was written less formally than my usual writing style.
+  meant to help explain a concept discussed in class to some
+  classmates.<br><br>As such it assumes a bit of pre-existing knowledge
+  regarding Machine Learning Algorithms and was written less formally than my
+  usual writing style.
 ---
 
 ![](https://i.imgur.com/ttlzHP6.png)
