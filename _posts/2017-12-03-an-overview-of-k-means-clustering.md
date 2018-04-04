@@ -92,8 +92,8 @@ You want **n** points in **k** groups.
 ## Live examples
 
 Here are two excellent online examples that provide an interactive demonstration of K-means clustering:
-- https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
-- http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html
+- [https://www.naftaliharris.com/blog/visualizing-k-means-clustering/](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+- [http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
 
 I will use the first one, placing 3 centroids, and using 'Gaussian Mixture' to place the points, which is bassically 3 clusters of points:
 
