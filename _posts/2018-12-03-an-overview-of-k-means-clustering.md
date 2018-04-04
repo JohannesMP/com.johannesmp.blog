@@ -13,7 +13,7 @@ note_body: >-
   class](https://www.digipen.edu/coursecatalog/#MAT345)
 ---
 
-![](https://i.imgur.com/ERR8B6i.png)
+![](https://i.imgur.com/ttlzHP6.png)
 
 ## What is K-means? 
 It is a clustered, unsupervised learning algorithm
@@ -77,13 +77,13 @@ You want **n** points in **k** groups.
  - Now we average the position of all the points for a given centroid, a 'mean'.
  - We move each centroid to their respective new mean.
    - you can think of the centroids in the first step being C0, with the new position now being C1
- - I made this example up in paint.net, so I can't actually run it, but you'd see how red would move up some, while green and blue kinda just stay where they are
+ - I made this example up in paint.net, so I can't actually run it, but you'd see how red would move up some, while green and blue kinda just stay where they are,
  
  - And now we repeat: assign points, calculate mean, move centroids, continue...
  
 ## Live example
 
-Here are two excellennt online examples that provide an interactive demonstration of K-means clustering:
+Here are two excellent online examples that provide an interactive demonstration of K-means clustering:
 - https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
 - http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html
 
