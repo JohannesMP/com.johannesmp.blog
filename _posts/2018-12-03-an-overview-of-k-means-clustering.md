@@ -6,13 +6,19 @@ tags:
   - math
   - algorithm
 comments: true
+note_class: alert alert-info
+note_prefix: Note
+note_body: >-
+  This post is reference [for a
+  class](https://www.digipen.edu/coursecatalog/#MAT345)
 ---
-## K-Means Overview
 
-### What is K-means? 
-It is clustered, unsupervised learning algorithm
+![](https://i.imgur.com/nSUnKaI.png)
 
-### What do you use it for?
+## What is K-means? 
+It is a clustered, unsupervised learning algorithm
+
+## What do you use it for?
 You have **n** objects and want to split them into **k** groups. n is normally much bigger than k, so you want to have multiple objects per group.
 
 For example:
@@ -24,9 +30,9 @@ We will first cover the case where we know **k**, but you might also want to fig
 <!-- more -->
 
 
-## K-Means Algorithm
+# K-Means Algorithm
 
-### TL;DR:
+## TL;DR:
 
 You want **n** points in **k** groups.
 
@@ -45,7 +51,7 @@ You want **n** points in **k** groups.
     4. Repeat the loop until you reach a steady state where points no longer change centroid set.
 
 
-### Algorithm illustrated
+## Algorithm illustrated
 
  - We have a bunch points. In this case they are 2 dimensional:
  
@@ -75,7 +81,7 @@ You want **n** points in **k** groups.
  
  - And now we repeat: assign points, calculate mean, move centroids, continue...
  
-### Live example
+## Live example
 
 Here are two excellennt online examples that provide an interactive demonstration of K-means clustering:
 - https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
@@ -101,7 +107,7 @@ Finally, here is an example where I add 7 centroids (k=7) randomly, with points 
 Notice how it takes several iterations of things kinda just shifting around before we reach an equilibrium.
 
 
-## Actual math example
+# Actual math example
 
 Now that you have an intuition for what this algorithm does, let's work through an example you might see in a classroom.
 
@@ -183,7 +189,7 @@ This is our final state:
 
 
 
-## Optimizing k
+# Optimizing k
 
 So, all in all the algorithm is pretty straight forward, especially if you know what K you are using.
 
@@ -191,7 +197,7 @@ However picking a value for k, how many categories we want to divide our data in
 
 Our goal with picking a value for k would be to minimize the overal distance between each point and the centroid it ends up being associated with. In other words, if you calculate the distance of each point to its centroid, and average all these distances, the resulting `Mean square point-centroid distance` lets you know how well your categories fit your data. To make it easier to talk about, let's just refer to "Mean square point-centroid distance" as the "error" from now on.
 
-### Example
+## Example
 
 To give you some intuition, we can use the 2nd link provided in the 'Live Examples' section above to visualize the error.
 
@@ -202,7 +208,7 @@ While for the same set of data the error for 9 random centroids is: 5762.44
 ![](https://i.imgur.com/4CJkGWC.png)
 
 
-### Overfitting k
+## Overfitting k
 
 The larger your k value is, the smaller your error will be, to the point where if your k is the same as your n (so you have one centroid per data point) the error is zero, but you also have not really categorized anything now.
 
