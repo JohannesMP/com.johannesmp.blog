@@ -79,13 +79,17 @@ You want **n** points in **k** groups.
 ![](https://i.imgur.com/UFsz6d4.png)
 
  - Now we average the position of all the points for a given centroid, a 'mean'.
+ 
+![](https://i.imgur.com/aQab5H3.png)
+
  - We move each centroid to their respective new mean.
    - you can think of the centroids in the first step being C0, with the new position now being C1
- - I made this example up in paint.net, so I can't actually run it, but you'd see how red would move up some, while green and blue kinda just stay where they are,
- 
+
+![](https://i.imgur.com/jdhNpDr.png)
+
  - And now we repeat: assign points, calculate mean, move centroids, continue...
  
-## Live example
+## Live examples
 
 Here are two excellent online examples that provide an interactive demonstration of K-means clustering:
 - https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
