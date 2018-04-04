@@ -13,12 +13,15 @@ comments: true
 It is clustered, unsupervised learning algorithm
 
 ### What do you use it for?
-You have **n** objects and want to split them into **k** groups. n is normally much bigger than k, so you want to have multiple objects per group,.
+You have **n** objects and want to split them into **k** groups. n is normally much bigger than k, so you want to have multiple objects per group.
 
 For example:
 - You have **n** addresses and want to build **k** post offices to best cover them all.
 
 We will first cover the case where we know **k**, but you might also want to figure out what the best value for k is.
+
+
+<!-- more -->
 
 
 ## K-Means Algorithm
