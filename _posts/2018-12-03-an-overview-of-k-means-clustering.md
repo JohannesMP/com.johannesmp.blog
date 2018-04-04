@@ -13,7 +13,7 @@ note_body: >-
   class](https://www.digipen.edu/coursecatalog/#MAT345)
 ---
 
-![](https://i.imgur.com/uGEI2cK.png)
+![](https://i.imgur.com/ERR8B6i.png)
 
 ## What is K-means? 
 It is a clustered, unsupervised learning algorithm
