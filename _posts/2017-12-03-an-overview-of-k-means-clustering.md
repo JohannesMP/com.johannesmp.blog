@@ -173,7 +173,7 @@ x2| 1 | 1
 x3 | -1 | 1
 x4| 1 | 2
 x5 | 0 | 2
-mean1 | 0.25| 1.5
+mean2 | 0.25| 1.5
 
 ![](https://i.imgur.com/o1xHYM1.png)
 
