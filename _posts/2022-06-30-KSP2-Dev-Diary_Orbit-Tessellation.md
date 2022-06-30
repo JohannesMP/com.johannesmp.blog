@@ -20,8 +20,6 @@ note_body: >-
 
 ![]({{site.baseurl}}/public/assets/2022-06-30-KSP2-Dev-Diary_Orbit-Tessellation/orbit-tessellation_header.png)
 
-Hello all, I’m Johannes Peter – A programmer on Kerbal Space Program 2 – and I love solving interesting problems!
-
 The problems we face in game development rarely have a single “correct” answer. The more specialized your game is, the more specialized your problems are, and the more creative your solutions need to be. As a rocketry simulator on an interplanetary scale, Kerbal Space Program has already tackled a wealth of unique programming challenges.
 
 Today I want to share a solution I’ve worked on for a problem that is fairly unique to KSP: _How to draw accurate orbits that look stellar regardless of where they’re viewed from?_
