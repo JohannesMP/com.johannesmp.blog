@@ -3,8 +3,8 @@ published: true
 title: "KSP2 Dev Diary: Orbit Tessellation"
 layout: post
 tags:
-  - dev blog
   - math
+  - geometry
   - algorithm
   - rendering
   - ksp2
