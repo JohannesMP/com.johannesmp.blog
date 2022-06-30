@@ -145,3 +145,29 @@
   margin-bottom: 0;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  min-width: 0px;
+  min-height: 0px;
+  margin-bottom: 1rem;
+  padding-bottom: 56.25%;
+  height: 0px;
+  overflow: hidden;
+}
+
+.video-container > iframe, .video-container > video {
+  border: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.video-content {
+  object-fit: contain;
+  background-color: black;
+  cursor: pointer;
+}
+
