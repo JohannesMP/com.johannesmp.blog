@@ -65,8 +65,8 @@ If a curve can be described as a parametric equation it is easy for us to draw.
 
 In general, to draw a parametric curve we need to:
 
-- Choose a start and end parameter, as well as how many points we want to generate.
-- Generate the points by passing values into the parametric function that range from start to end.
+- Choose a **start** and **end** parameter, as well as how many **points** we want to generate.
+- Generate the points by passing values into the parametric function that range from **start** to **end**.
 - Draw a line between each consecutive pair of points.
 
 For example, to draw a standard [sine wave](https://en.wikipedia.org/wiki/Sine_wave), we can use this parametric function:
