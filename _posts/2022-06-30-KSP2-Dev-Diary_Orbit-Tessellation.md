@@ -129,7 +129,7 @@ Here is an example of what that looks like:
 
 The green line is the ideal sine curve that we want to draw, and the blue line is the result of our **GenerateParametricPoints** and **DrawParametricCurve** functions.
 
-Changing the **start** and **end** parameters (shown here in degrees) affects the position and length of the curve and the more points we generate the better the lines match the ideal curve.
+Changing the **start** and **end** parameters (shown here in degrees) affects the position and length of the curve and the more **points** we generate the better the lines match the ideal curve.
 
 <br />
 
