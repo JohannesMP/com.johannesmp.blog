@@ -17,8 +17,7 @@ note_body: >-
   You can find the original post [on the KSP forums](https://forum.kerbalspaceprogram.com/index.php?/topic/201736-developer-insights-9-%E2%80%93-orbit-tessellation/).
 ---
 
-
-![]({{site.baseurl}}/public/assets/2022-06-30-KSP2-Dev-Diary_Orbit-Tessellation/orbit-tessellation_header.png)
+<img src="{{site.baseurl}}/public/assets/2022-06-30-KSP2-Dev-Diary_Orbit-Tessellation/orbit-tessellation_header.png" alt="Nature" class="responsive-image">
 
 The problems we face in game development rarely have a single “correct” answer. The more specialized your game is, the more specialized your problems are, and the more creative your solutions need to be. As a rocketry simulator on an interplanetary scale, Kerbal Space Program has already tackled a wealth of unique programming challenges.
 
