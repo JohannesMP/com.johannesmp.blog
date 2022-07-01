@@ -90,12 +90,12 @@ void GenerateParametricPoints(
 {
     points.Clear();
     // Need at least two points to draw a line
-    if(count < 2) return; 
+    if (count < 2) return; 
 
     // Generate points using a parameter that
     // inclusively ranges from 'start' to 'end'
     float stepSize = (end - start) / (count - 1);
-    for(int step = 0; step < count; ++step)
+    for (int step = 0; step < count; ++step)
     {
         float parameter = start + stepSize * step;
         Vector3 point = GetParametricPoint(parameter);
@@ -110,7 +110,7 @@ And assuming that we have a function to draw a line between two points, we can f
 void DrawParametricCurve(List<Vector3> points)
 {
     int count = points.Count - 1;
-    for(int step = 0; step < count; ++step)
+    for (int step = 0; step < count; ++step)
     {
         Vector3 from = points[step];
         Vector3 to = points[step + 1];
