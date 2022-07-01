@@ -140,7 +140,8 @@ Let’s assume that we have the following:
 - A parametric equation of our orbit. The exact equation is [outside the scope of this post](https://en.wikipedia.org/wiki/Orbital_elements), but for those curious, you can see better results if it uses the eccentric anomaly as its parameter.
 - A **start** and an **end** parameter that we’ll step between. A full orbit’s [parametric equation](https://en.wikipedia.org/wiki/Eccentric_anomaly) generally ranges from 0 to 2π radians, or 0 to 360 degrees.
 - The number of points we want to generate. The default in KSP1 is 180 points for a full orbit.
-- A graphics package to do the rendering. We need a way to draw a line between two points.
+- A graphics package to do the rendering. We need a way to draw a line between two points. 
+  - The visuals in this article were created using the [Shapes vector drawing library](https://acegikmo.com/shapes/) by [Freya Holmér](https://twitter.com/FreyaHolmer).
 
 As with the sine wave, we generate points using parameters ranging from the **start** to the **end** value, and by increasing the number of points we generate, we get a smoother looking orbit:
 
