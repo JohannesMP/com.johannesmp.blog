@@ -20,7 +20,9 @@ note_body: >-
 ![]({{site.baseurl}}/public/assets/2022-06-30-KSP2-Dev-Diary_Orbit-Tessellation/orbit-tessellation_header.png)
 
 
-The problems we face in game development rarely have a single “correct” answer. The more specialized your game is, the more specialized your problems are, and the more creative your solutions need to be. As a rocketry simulator on an interplanetary scale, Kerbal Space Program has already tackled a wealth of unique programming challenges.
+The problems we face in game development rarely have a single “correct” answer. 
+
+The more specialized your game is, the more specialized your problems are, and the more creative your solutions need to be. As a rocketry simulator on an interplanetary scale, Kerbal Space Program has already tackled a wealth of unique programming challenges.
 
 Today I want to share a solution I’ve worked on for a problem that is fairly unique to KSP: _How to draw accurate orbits that look stellar regardless of where they’re viewed from?_
 
@@ -127,7 +129,7 @@ Here is an example of what that looks like:
 
 The green line is the ideal sine curve that we want to draw, and the blue line is the result of our **GenerateParametricPoints** and **DrawParametricCurve** functions.
 
-Changing the **start** and **end** parameters (shown here in degrees) affects the position and length of the curve and the more points we generate the better the lines match the ideal curve.
+Changing the **start** and **end** parameters (shown here in degrees) affects the position and length of the curve and the more **points** we generate the better the lines match the ideal curve.
 
 <br />
 
@@ -135,10 +137,11 @@ Changing the **start** and **end** parameters (shown here in degrees) affects th
 
 Let’s assume that we have the following:
 
-- A parametric equation of our orbit. The exact equation is [outside the scope of this post](https://en.wikipedia.org/wiki/Orbital_elements), but for those curious, you can see better results if it uses the eccentric anomaly as its parameter.
-- A **start** and an **end** parameter that we’ll step between. A full orbit’s [parametric equation](https://en.wikipedia.org/wiki/Eccentric_anomaly) generally ranges from 0 to 2π radians, or 0 to 360 degrees.
+- A parametric equation of our orbit. The exact equation is [outside the scope of this post](https://en.wikipedia.org/wiki/Orbital_elements), but for those curious, you can see better results if it uses the [eccentric anomaly](https://en.wikipedia.org/wiki/Eccentric_anomaly) as its parameter.
+- A **start** and an **end** parameter that we’ll step between. A full orbit’s parametric equation generally ranges from 0 to 2π radians, or 0 to 360 degrees.
 - The number of points we want to generate. The default in KSP1 is 180 points for a full orbit.
-- A graphics package to do the rendering. We need a way to draw a line between two points.
+- A graphics package to do the rendering. We need a way to draw a line between two points. 
+  - The visuals in this article were created using the [Shapes vector drawing library](https://acegikmo.com/shapes/) by [Freya Holmér](https://twitter.com/FreyaHolmer).
 
 As with the sine wave, we generate points using parameters ranging from the **start** to the **end** value, and by increasing the number of points we generate, we get a smoother looking orbit:
 
