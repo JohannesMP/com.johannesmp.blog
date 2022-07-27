@@ -14,7 +14,7 @@ note_prefix: Note
 note_body: >-
   I originally wrote this article as an official [Kerbal Space Program 2 dev diary](https://www.kerbalspaceprogram.com/dev-diaries) in April of 2021. It assumes that the reader has basic familiarity with [Kerbal Space Program](https://www.kerbalspaceprogram.com/games-kerbal-space-program).
   <br /><br />
-  You can find the original post [on the KSP forums](https://forum.kerbalspaceprogram.com/index.php?/topic/201736-developer-insights-9-%E2%80%93-orbit-tessellation/).
+  You can still find the original post [on the KSP forums](https://forum.kerbalspaceprogram.com/index.php?/topic/201736-developer-insights-9-%E2%80%93-orbit-tessellation/).
 ---
 
 ![]({{site.baseurl}}/public/assets/2022-06-30-KSP2-Dev-Diary_Orbit-Tessellation/orbit-tessellation_header.png)
