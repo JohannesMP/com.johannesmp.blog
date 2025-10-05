@@ -6,6 +6,7 @@ tags:
   - windows
   - tutorial
   - mingw-w64
+  - digipen
 published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows

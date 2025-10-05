@@ -5,6 +5,7 @@ tags:
   - linux
   - tutorial
   - ssh
+  - digipen
 comments: true
 note_class: alert alert-info
 note_prefix: Note

@@ -7,6 +7,7 @@ tags:
   - tutorial
   - ssh
   - virtualization
+  - digipen
 published: true
 comments: true
 note_class: alert alert-info

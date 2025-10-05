@@ -6,6 +6,7 @@ tags:
   - linux
   - tutorial
   - server
+  - digipen
 comments: true
 set_id: Linux Server Basics
 set_part_id: 3

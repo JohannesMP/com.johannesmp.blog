@@ -7,6 +7,7 @@ tags:
   - tutorial
   - msys2
   - bash
+  - digipen
 published: true
 comments: true
 set_id: Installing clang++ to compile and link on Windows
